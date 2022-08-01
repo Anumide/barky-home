@@ -11,7 +11,7 @@ const names = fs
 	.map((iconName) => `'${iconName}' = '${iconName}'`)
 	.join(',\n  ')
 
-const content = `// THIS FILE IS AUTO GENERATED 
+const content = `// THIS FILE IS AUTO GENERATED
 
 /* eslint-disable */
 

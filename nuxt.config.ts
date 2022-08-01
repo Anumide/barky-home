@@ -21,8 +21,8 @@ export default defineNuxtConfig({
 
 	css: ['/src/assets/css/main.css'],
 	components: [
-		'@/components'
-		// { path: '@/components/core', extensions: ['vue'] },
+		'@/components',
+		{ path: '@/components/core', extensions: ['vue'] }
 	],
 
 	build: {
