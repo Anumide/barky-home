@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from 'nuxt';
+import eslintPlugin from 'vite-plugin-eslint';
 
 export default defineNuxtConfig({
 	ssr: false,
@@ -32,5 +33,8 @@ export default defineNuxtConfig({
 		layouts: './src/layouts',
 		pages: './src/pages',
 		middleware: './src/middleware',
+	},
+	vite: {
+		plugins: [eslintPlugin()],
 	},
 });

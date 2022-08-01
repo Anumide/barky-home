@@ -7,8 +7,8 @@
 <script setup lang="ts">
 definePageMeta({
 	layout: 'auth',
-	middleware: ['hello-world'],
-});
+	middleware: ['hello-world']
+})
 </script>
 
 <style scoped></style>
