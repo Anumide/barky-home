@@ -1,13 +1,12 @@
 <template>
-	<div class="text-8xl font-bold">
-		Hello World
+	<div>
+		<sideNav />
+		<slot />
 	</div>
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-	layout: 'dashboard'
-})
+
 </script>
 
 <style scoped></style>
