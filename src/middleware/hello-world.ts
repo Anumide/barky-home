@@ -1,3 +1,3 @@
 export default function helloWorld(route) {
-	alert('hello world');
+	console.log('hello world');
 }

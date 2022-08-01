@@ -7,7 +7,7 @@
 <script setup lang="ts">
 definePageMeta({
 	layout: 'auth',
-	middleware: ['helloWorld'],
+	middleware: ['hello-world'],
 });
 </script>
 
