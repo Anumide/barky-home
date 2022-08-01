@@ -21,11 +21,10 @@ export default defineNuxtConfig({
 		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
 	},
 	alias: {
-		'@': '/<rootDir>/src',
+		'@': './src',
 	},
 
 	css: ['/src/assets/css/main.css'],
-	// plugins: ['@/plugins/add'],
 	components: [
 		'@/components',
 		// { path: '@/components/core', extensions: ['vue'] },
@@ -36,12 +35,9 @@ export default defineNuxtConfig({
 			postcssOptions: require('./postcss.config.js'),
 		},
 	},
-	// generate: { fallback: true },
-
-	runtimeConfig: {
-		public: {
-			GATEWAY_ENDPOINT: process.env.VITE_GATEWAY_ENDPOINT || '',
-		},
+	dir: {
+		layouts: './src/layouts',
+		pages: './src/pages',
+		middleware: './src/middleware',
 	},
-	env: { GATEWAY_ENDPOINT: process.env.VITE_GATEWAY_ENDPOINT || '' },
 });
