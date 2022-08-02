@@ -6,7 +6,17 @@ module.exports = {
     "./src/pages/**/*.vue",
   ],
   theme: {
-    extend: {},
+   		extend: {
+			colors: {
+				primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
+        white: 'var(--white)',
+				dark_blue: 'var(--dark_blue)',
+				grey: 'var(--grey)',
+				light_grey: 'var(--light_grey)',
+				purple: 'var(--purple)',
+			},
+		},
   },
   plugins: [],
 }
