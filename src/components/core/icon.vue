@@ -6,14 +6,15 @@
 
 <script lang="ts">
 /* eslint-disable vue/require-default-prop */
+import { PropType } from 'vue'
+import { IconNames } from '../../assets/icons/iconNames'
 import iconSvg from '@/assets/icons/sprite.svg'
-
 export default {
 	name: 'IconComp',
 	props: {
 		name: {
 			required: true,
-			type: String
+			type: String as PropType<IconNames>
 		}
 	},
 	data() {
