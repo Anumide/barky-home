@@ -8,7 +8,7 @@
 				<icon name="notification" class="w-5 text-[#292D32] fill-transparent" />
 				<icon name="category" class="w-5 text-[#292D32] fill-transparent" />
 			</div>
-			<div class="profile w- flex p-3 items-center justify-between">
+			<div class="profile w-56 flex p-3 items-center justify-between">
 				<div class="profile-image w-10 h-10 text-center rounded-full overflow-hidden text-[#292D32] border border-[#292D32] flex justify-between items-center">
 					<!-- <img src="@/assets/image/Traq.png" alt=""> -->
 					BA

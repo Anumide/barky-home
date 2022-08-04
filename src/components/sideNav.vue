@@ -1,7 +1,7 @@
 <template>
 	<div class="lg:w-80 w-60 h-full text-white bg-[#201A62]">
 		<div class="py-6 lg:py-8">
-			<div class="logo text-neutral-50 pl-6 lg:pl-12">
+			<div class="logo flex text-neutral-50 pl-6 lg:pl-12">
 				<icon name="hamburger" class="w-5 text-neutral-50" />
 				<img src="@/assets/image/Traq.png" alt="">
 			</div>
