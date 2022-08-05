@@ -2,47 +2,49 @@
 defineProps({
   label: {
     type: String,
-    required: true,
+    required: true
   },
   disabled: {
     type: Boolean,
     required: false,
-    default: false,
+    default: false
   },
   linkTo: {
     type: String,
-    default: "#",
+    default: '#'
   },
   theme: {
     type: String,
     required: true,
     validator(value) {
-      return ["submit", "link"].includes(value);
-    },
-  },
-});
-defineEmits(["click"]);
+      return ['submit', 'link'].includes(value)
+    }
+  }
+})
+defineEmits(['click'])
 </script>
 
 <template>
-  <button
-    v-if="theme === 'submit'"
-    @click.prevent="$emit('click')"
-    class="w-full text-white bg-[#3F51B5] rounded-[6px] text-[16px] py-[13px] cursor-pointer"
-    :disabled="disabled"
-  >
-    {{ label }}
-  </button>
+	<button
+		v-if="theme === 'submit'"
+		class="w-full cursor-pointer rounded-[6px] bg-[#3F51B5] h-[48px] py-2  text-[16px] text-white"
+		:disabled="disabled"
+		@click.prevent="$emit('click')"
+	>
+		{{ label }}
+	</button>
 
-  <NuxtLink
-    v-else-if="theme == 'link'"
-    :to="linkTo"
-    class="text-white bg-[#3F51B5] rounded-full text-[16px] py-[18px] px-[45px] cursor-pointer inline-block"
-  >
-    {{ label }}
-  </NuxtLink>
+	<NuxtLink
+		v-else-if="theme == 'link'"
+		:to="linkTo"
+		class="inline-block cursor-pointer rounded-full bg-[#3F51B5] py-[18px] px-[45px] text-[16px] text-white"
+	>
+		{{ label }}
+	</NuxtLink>
 
-  <button v-else>{{ label }}</button>
+	<button v-else>
+		{{ label }}
+	</button>
 </template>
 
 <style scoped></style>

@@ -4,5 +4,10 @@
 
 export enum IconNames {
   'arrowForward' = 'arrowForward',
-  'invoice' = 'invoice'
+  'chevronDown' = 'chevronDown',
+  'envelopeStars' = 'envelopeStars',
+  'eye' = 'eye',
+  'infoCircle' = 'infoCircle',
+  'invoice' = 'invoice',
+  'thumbsUp' = 'thumbsUp'
 }

@@ -19,7 +19,7 @@ export default defineNuxtConfig({
 		'@': './src'
 	},
 
-	css: ['/src/assets/css/main.css'],
+	css: ['/src/assets/css/main.css', '/src/assets/css/variables.css'],
 	components: [
 		'@/components',
 		{ path: '@/components/core', extensions: ['vue'] }
