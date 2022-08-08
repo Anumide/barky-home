@@ -2,7 +2,10 @@
 	<div>
 		<NuxtLayout name="auth">
 			<template #route-link>
-				<NuxtLink to="/auth/signup" class="underline cursor-pointer underline-offset-2">
+				<NuxtLink
+					to="/auth/signup"
+					class="underline cursor-pointer underline-offset-2 text-dark"
+				>
 					Create account
 				</NuxtLink>
 			</template>
@@ -10,15 +13,15 @@
 				class="flex items-center justify-center w-full h-full mx-auto overflow-x-hidden"
 			>
 				<form class="w-[515px] px-2">
-					<p class="text-[28px] font-medium">
+					<p class="text-[28px] font-medium text-dark">
 						New Password
 					</p>
-                    <p class="mb-[30px] text-sm font-medium">
+					<p class="mb-[30px] text-sm font-medium text-dark">
 						Enter your new password
 					</p>
 					<div class="w-full space-y-[30px]">
 						<!-- password -->
-						<AuthInput
+						<CustomInput
 							title="Password"
 							type="password"
 							placeholder="Password (min of 8 characters)"
@@ -27,9 +30,9 @@
 							<template #icon>
 								<icon name="eye" class="w-[19px]" @click="hide" />
 							</template>
-						</AuthInput>
+						</CustomInput>
 						<!--confirm password -->
-						<AuthInput
+						<CustomInput
 							title="Confirm Password"
 							type="password"
 							placeholder="Password (min of 8 characters)"
@@ -38,9 +41,9 @@
 							<template #icon>
 								<icon name="eye" class="w-[19px]" @click="hide" />
 							</template>
-						</AuthInput>
+						</CustomInput>
 						<!-- submit button -->
-						<AuthButton label="Continue" theme="submit" @click="test" />
+						<CustomButton label="Continue" theme="submit" @click="test" />
 					</div>
 				</form>
 			</section>

@@ -2,14 +2,17 @@
 	<div>
 		<NuxtLayout name="auth">
 			<template #route-link>
-				<NuxtLink to="/auth/signup" class="cursor-pointer underline-offset-2 underline">
+				<NuxtLink
+					to="/auth/signup"
+					class="cursor-pointer underline-offset-2 underline text-dark"
+				>
 					Create account
 				</NuxtLink>
 			</template>
 			<section
 				class="mx-auto flex w-full h-full items-center justify-center overflow-x-hidden"
 			>
-				<form class="w-[515px] px-2">
+				<form class="w-[515px] px-2 text-dark">
 					<p class="text-[28px] font-medium">
 						Forgot your password?
 					</p>
@@ -18,17 +21,20 @@
 					</p>
 					<div class="w-full space-y-[30px]">
 						<!-- email address -->
-						<AuthInput
+						<CustomInput
 							title="Email Address"
 							type="email"
 							placeholder=""
 							error-message="this is a required field"
 						/>
 						<!-- submit button -->
-						<AuthButton label="Continue" theme="submit" @click="test" />
-						<p class="text-base text-center w-full">
+						<CustomButton label="Continue" theme="submit" @click="test" />
+						<p class="text-base text-center w-full text-dark">
 							Remember your password?
-							<NuxtLink to="/auth/signin" class="cursor-pointer text-[#3488ED] underline">
+							<NuxtLink
+								to="/auth/signin"
+								class="cursor-pointer text-primary_link underline"
+							>
 								Login
 							</NuxtLink>
 						</p>

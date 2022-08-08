@@ -1,5 +1,7 @@
 <template>
-	<div class="flex h-full w-full max-w-[640px] md:w-[640px] items-center justify-center lg:pt-[0] pb-[130px]">
+	<div
+		class="flex h-full text-dark w-full max-w-[640px] md:w-[640px] items-center justify-center lg:pt-[0] pb-[130px]"
+	>
 		<form class="w-full px-2">
 			<p class="mb-[60px] text-[28px] font-medium">
 				Hey Bayo, tell us more about your business
@@ -20,7 +22,7 @@
 					>
 					<label
 						for="one"
-						class="flex cursor-pointer w-full items-center justify-center rounded-md bg-transparent py-[23px] text-[14px] font-medium ring-1 ring-black/[0.12] peer-checked:bg-[#536DFE]/[14%] peer-checked:ring-[#536DFE]"
+						class="flex cursor-pointer w-full items-center justify-center rounded-md bg-transparent py-[23px] text-[14px] font-medium ring-1 ring-black/[0.12] peer-checked:bg-primary_light peer-checked:ring-primary"
 					>Sole Proprietorship</label>
 				</div>
 				<!-- Partnership -->
@@ -35,7 +37,7 @@
 					>
 					<label
 						for="two"
-						class="flex cursor-pointer w-full items-center justify-center rounded-md bg-transparent py-[23px] text-[14px] font-medium ring-1 ring-black/[0.12] peer-checked:bg-[#536DFE]/[14%] peer-checked:ring-[#536DFE]"
+						class="flex cursor-pointer w-full items-center justify-center rounded-md bg-transparent py-[23px] text-[14px] font-medium ring-1 ring-black/[0.12] peer-checked:bg-primary_light peer-checked:ring-primary"
 					>Partnership</label>
 				</div>
 				<!-- Limited Liability -->
@@ -50,7 +52,7 @@
 					>
 					<label
 						for="three"
-						class="flex cursor-pointer w-full items-center justify-center rounded-md bg-transparent py-[23px] text-[14px] font-medium ring-1 ring-black/[0.12] peer-checked:bg-[#536DFE]/[14%] peer-checked:ring-[#536DFE]"
+						class="flex cursor-pointer w-full items-center justify-center rounded-md bg-transparent py-[23px] text-[14px] font-medium ring-1 ring-black/[0.12] peer-checked:bg-primary_light peer-checked:ring-primary"
 					>Limited Liability</label>
 				</div>
 				<!-- Public Limited Liability -->
@@ -65,30 +67,28 @@
 					>
 					<label
 						for="four"
-						class="flex cursor-pointer w-full items-center justify-center rounded-md bg-transparent py-[23px] text-[14px] font-medium ring-1 ring-black/[0.12] peer-checked:bg-[#536DFE]/[14%] peer-checked:ring-[#536DFE]"
+						class="flex cursor-pointer w-full items-center justify-center rounded-md bg-transparent py-[23px] text-[14px] font-medium ring-1 ring-black/[0.12] peer-checked:bg-primary_light peer-checked:ring-primary"
 					>Public Limited Liability</label>
 				</div>
 			</div>
 			<!-- select options -->
-			<AuthSelect label="Select Industry" :options="[1,2,3]" />
+			<CustomSelect label="Select Industry" default-option="Select Industry" :options="[1, 2, 3]" />
 			<!-- submit button and switch component -->
 			<div class="grid w-full grid-cols-2 gap-x-5 mt-[50px]">
 				<button
-					class="w-full cursor-pointer rounded-md ring-[#3F51B5] ring-1 h-[48px] py-2 text-base"
+					class="w-full cursor-pointer rounded-md ring-primary ring-1 h-[48px] py-2 text-base"
 					@click.prevent="$emit('componentIsCompanyInfo')"
 				>
 					Previous
 				</button>
-				<AuthButton theme="submit" label="Submit" />
+				<CustomButton theme="submit" label="Submit" />
 			</div>
 		</form>
 	</div>
 </template>
 
 <script setup lang="ts">
-
 defineEmits(['componentIsCompanyInfo'])
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const radio = ref('Sole Proprietorship')
-
 </script>

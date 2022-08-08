@@ -2,7 +2,10 @@
 	<div>
 		<NuxtLayout name="auth">
 			<template #route-link>
-				<NuxtLink to="/auth/signup" class="underline cursor-pointer underline-offset-2">
+				<NuxtLink
+					to="/auth/signup"
+					class="underline cursor-pointer underline-offset-2 text-dark"
+				>
 					Create account
 				</NuxtLink>
 			</template>
@@ -10,19 +13,19 @@
 				class="flex items-center justify-center w-full h-full mx-auto overflow-x-hidden"
 			>
 				<form class="w-[515px]">
-					<p class="mb-[30px] text-[28px] font-medium">
+					<p class="mb-[30px] text-[28px] font-medium text-dark">
 						Welcome back
 					</p>
 					<div class="w-full space-y-[30px]">
 						<!-- email address -->
-						<AuthInput
+						<CustomInput
 							title="Email Address/Phone Number"
 							type="text"
 							placeholder=""
 							error-message="this is a required field"
 						/>
 						<!-- password -->
-						<AuthInput
+						<CustomInput
 							title="Password"
 							type="password"
 							placeholder="Password (min of 8 characters)"
@@ -31,12 +34,15 @@
 							<template #icon>
 								<icon name="eye" class="w-[19px]" @click="hide" />
 							</template>
-						</AuthInput>
+						</CustomInput>
 						<!-- submit button -->
-						<AuthButton label="Sign in" theme="submit" @click="test" />
-						<p class="text-base text-center w-full">
+						<CustomButton label="Sign in" theme="submit" @click="test" />
+						<p class="text-base text-center w-full text-dark">
 							Forgot your password?
-							<NuxtLink to="/auth/forgot-password" class="cursor-pointer text-[#3488ED]">
+							<NuxtLink
+								to="/auth/forgot-password"
+								class="cursor-pointer text-primary_link"
+							>
 								Reset it here
 							</NuxtLink>
 						</p>
