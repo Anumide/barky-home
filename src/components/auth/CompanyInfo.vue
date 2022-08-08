@@ -1,6 +1,6 @@
 <template>
 	<form class="w-full max-w-[640px] px-2 md:w-[640px] pt-[15px] lg:pt-[0] pb-[130px]">
-		<p class="mb-[30px] text-[28px] font-[500]">
+		<p class="mb-[30px] text-[28px] font-medium">
 			Set up your business account
 		</p>
 		<div class="w-full space-y-[30px]">
@@ -79,7 +79,11 @@
 				/>
 			</div>
 			<!-- submit button -->
-			<AuthButton label="Continue" theme="submit" />
+			<AuthButton label="Continue" theme="submit" @click="$emit('componentIsBusinessType')" />
 		</div>
 	</form>
 </template>
+
+<script setup lang="ts">
+defineEmits(['componentIsBusinessType'])
+</script>

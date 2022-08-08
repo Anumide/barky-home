@@ -35,7 +35,7 @@ defineEmits(['update:modelValue'])
 					:value="modelValue"
 					:placeholder="placeholder"
 					:type="type"
-					class="w-full rounded-[6px] h-[48px] py-2 px-6 ring-1 ring-black/[0.12] outline-[#536DFE] bg-transparent focus:bg-[#536DFE]/[14%]"
+					class="w-full rounded-[6px] h-[48px] py-2 px-6 ring-1 ring-black/[0.12] outline-[#536DFE] transition-all duration-200 ease-in bg-transparent focus:bg-[#536DFE]/[14%]"
 					@input="$emit('update:modelValue', $event.target.value)"
 				>
 				<div

@@ -2,18 +2,18 @@
 	<div>
 		<NuxtLayout name="auth">
 			<template #route-link>
-				<span class="cursor-pointer underline-offset-2 underline">
+				<NuxtLink to="/auth/signup" class="underline cursor-pointer underline-offset-2">
 					Create account
-				</span>
+				</NuxtLink>
 			</template>
 			<section
-				class="mx-auto flex w-full h-full items-center justify-center overflow-x-hidden"
+				class="flex items-center justify-center w-full h-full mx-auto overflow-x-hidden"
 			>
 				<form class="w-[515px] px-2">
-					<p class="text-[28px] font-[500]">
+					<p class="text-[28px] font-medium">
 						New Password
 					</p>
-                    <p class="mb-[30px] text-[14px] font-[500]">
+                    <p class="mb-[30px] text-sm font-medium">
 						Enter your new password
 					</p>
 					<div class="w-full space-y-[30px]">

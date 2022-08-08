@@ -2,13 +2,13 @@
 	<div>
 		<NuxtLayout name="auth">
 			<section
-				class="mx-auto flex h-full w-full items-center justify-center overflow-x-hidden"
+				class="flex items-center justify-center w-full h-full mx-auto overflow-x-hidden"
 			>
 				<form class="w-[650px]">
-					<p class="text-[28px] font-[500]">
+					<p class="text-[28px] font-medium">
 						Verify Account
 					</p>
-					<p class="mb-[30px] text-[14px] font-[500]">
+					<p class="mb-[30px] text-[14px] font-medium">
 						Please input the OTP sent to your email
 					</p>
 					<div class="w-full space-y-[30px]">
@@ -18,7 +18,7 @@
 								ref="inputRefs"
 								:key="index"
 								type="text"
-								class="rounded-[6px] bg-transparent text-center md:w-[74px] md:h-[64px] flex items-center justify-center text-[24px] md:text-[32px] font-[600] focus:outline-[#536DFE] ring-2 ring-black/[0.12]"
+								class="rounded-md bg-transparent text-center md:w-[74px] md:h-16 flex items-center justify-center text-2xl md:text-[32px] font-semibold focus:outline-[#536DFE] ring-2 ring-black/[0.12]"
 								:class="{'bg-[#536DFE]/[14%] ring-[#536DFE]': otp[index] !== ''}"
 								:value="otp[index]"
 								@keyup="handleChange($event, index)"
@@ -26,7 +26,6 @@
 						</div>
 						<!-- submit button -->
 						<AuthButton label="Verify OTP" theme="submit" @click="test" />
-						{{ otp }}
 					</div>
 				</form>
 			</section>

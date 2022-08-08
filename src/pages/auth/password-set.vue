@@ -2,27 +2,27 @@
 	<div>
 		<NuxtLayout name="auth">
 			<template #route-link>
-				<span class="cursor-pointer underline-offset-2 underline">
+				<NuxtLink to="/auth/signin" class="underline cursor-pointer underline-offset-2">
 					Log in
-				</span>
+				</NuxtLink>
 			</template>
 			<section
-				class="relative bottom-0 right-0 left-0 flex h-full justify-center pt-[80px]"
+				class="relative bottom-0 left-0 right-0 flex justify-center h-full pt-20"
 			>
 				<div
-					class="h-full w-full md:w-[640px] max-w-[640px] md:border-[1px] md:border-b-0 md:border-[#3F51B5] md:py-[100px] md:px-[120px]"
+					class="h-full w-full rounded-t-md md:w-[640px] max-w-[640px] md:border-[1px] md:border-b-0 md:border-[#3F51B5] md:py-[100px] md:px-[120px]"
 				>
 					<div class="mb-[78px] h-[100px] w-[100px] rounded-full bg-[#3F51B5]/[14%] flex items-center justify-center mx-auto md:mx-0">
-						<icon name="thumbsUp" class=" w-[48px] text-[#3F51B5]" />
+						<icon name="thumbsUp" class=" w-12 text-[#3F51B5]" />
 					</div>
-					<p class="mb-[24px] text-[32px] md:text-[54px] font-[600] text-center md:text-left">
+					<p class="mb-6 text-[32px] md:text-[54px] font-semibold text-center md:text-left">
 						New Password Set
 					</p>
-					<p class="mb-[78px] text-[16px] md:text-[20px] font-[400] text-center md:text-left">
+					<p class="mb-[78px] text-base md:text-xl font-normal text-center md:text-left">
 						You’ve successfully reset your password
 					</p>
-					<div class="w-full flex items-center justify-center md:items-start md:justify-start">
-						<AuthButton label="Go to Login" link-to="#" theme="link" />
+					<div class="flex items-center justify-center w-full md:items-start md:justify-start">
+						<AuthButton label="Go to Login" link-to="/auth/signin" theme="link" />
 					</div>
 				</div>
 			</section>

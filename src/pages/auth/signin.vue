@@ -2,15 +2,15 @@
 	<div>
 		<NuxtLayout name="auth">
 			<template #route-link>
-				<span class="cursor-pointer underline-offset-2 underline">
+				<NuxtLink to="/auth/signup" class="underline cursor-pointer underline-offset-2">
 					Create account
-				</span>
+				</NuxtLink>
 			</template>
 			<section
-				class="mx-auto flex w-full h-full items-center justify-center overflow-x-hidden"
+				class="flex items-center justify-center w-full h-full mx-auto overflow-x-hidden"
 			>
-				<form class="w-[515px] px-2">
-					<p class="mb-[30px] text-[28px] font-[500]">
+				<form class="w-[515px]">
+					<p class="mb-[30px] text-[28px] font-medium">
 						Welcome back
 					</p>
 					<div class="w-full space-y-[30px]">
@@ -34,9 +34,9 @@
 						</AuthInput>
 						<!-- submit button -->
 						<AuthButton label="Sign in" theme="submit" @click="test" />
-						<p class="text-[16px] text-center w-full">
+						<p class="text-base text-center w-full">
 							Forgot your password?
-							<NuxtLink class="cursor-pointer text-[#3488ED] underline">
+							<NuxtLink to="/auth/forgot-password" class="cursor-pointer text-[#3488ED]">
 								Reset it here
 							</NuxtLink>
 						</p>

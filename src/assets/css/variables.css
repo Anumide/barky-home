@@ -1,9 +1,15 @@
 :root {
     --white: #ffffff;
-    --primary: #476ef9;
-    --secondary: #d3f378;
-    --dark_blue: #0a1020;
+    --dark: #212121; 
+    --primary: ##3F51B5;
+    --primaryDark: #201A62;
+    --card-blue: #536DFE;
+    --card-orange: #FF8000;
+    --card-yellow: #F0A202;
+    --card-green: #189B62;
+    --card-red: #FF0000;
+    --cover:#FAFEFF;
+    --pink-primary: #EA4335;
     --grey: #141a29;
     --light_grey: #636a7d;
-    --purple: #b6c6ff;
-}
+    --purple: #b

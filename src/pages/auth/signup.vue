@@ -2,15 +2,15 @@
 	<div>
 		<NuxtLayout name="auth">
 			<template #route-link>
-				<span class="cursor-pointer underline-offset-2 underline">
+				<NuxtLink to="/auth/signin" class="underline cursor-pointer underline-offset-2">
 					Login
-				</span>
+				</NuxtLink>
 			</template>
 			<section
-				class="mx-auto flex w-full items-center justify-center overflow-x-hidden pt-[80px] pb-[130px]"
+				class="mx-auto flex w-full items-center justify-center overflow-x-hidden pt-20 pb-[130px]"
 			>
 				<form class="w-[515px] px-2">
-					<p class="mb-[30px] text-[28px] font-[500]">
+					<p class="mb-[30px] text-[28px] font-medium">
 						Get started
 					</p>
 					<div class="w-full space-y-[30px]">
@@ -67,7 +67,7 @@
 						<!-- consent/agreement -->
 						<div class="flex items-center space-x-2">
 							<input type="checkbox">
-							<span class="text-[12px]">I have read, understood and I agree to Traq’s
+							<span class="text-xs">I have read, understood and I agree to Traq’s
 								<NuxtLink class="cursor-pointer text-[#3488ED]">Privacy Policy</NuxtLink>, and
 								<NuxtLink class="cursor-pointer text-[#3488ED] underline">Terms and Conditions</NuxtLink></span>
 						</div>
