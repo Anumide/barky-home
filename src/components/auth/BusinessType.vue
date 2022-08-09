@@ -75,12 +75,7 @@
 			<CustomSelect label="Select Industry" default-option="Select Industry" :options="[1, 2, 3]" />
 			<!-- submit button and switch component -->
 			<div class="grid w-full grid-cols-2 gap-x-5 mt-[50px]">
-				<button
-					class="w-full cursor-pointer rounded-md ring-primary ring-1 h-[48px] py-2 text-base"
-					@click.prevent="$emit('componentIsCompanyInfo')"
-				>
-					Previous
-				</button>
+				<CustomButton theme="outline" label="Previous" @click="$emit('componentIsCompanyInfo')" />
 				<CustomButton theme="submit" label="Submit" />
 			</div>
 		</form>

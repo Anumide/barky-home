@@ -4,6 +4,11 @@
 		<icon name="arrowForward" class="w-20 text-red-800" />
 		<icon name="invoice" class="w-20 text-[#F0A202]" />
 		<icon name="invoice" class="w-20 text-[#D95D39]" />
+		<custom-button theme="outline" label="Print" class="w-fit text-base px-10 rounded-full text-primary ring-2">
+			<template #icon-left>
+				<icon name="invoice" class="w-5 text-primary" />
+			</template>
+		</custom-button>
 	</div>
 </template>
 

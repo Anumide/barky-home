@@ -36,6 +36,7 @@
 							label="Continue"
 							link-to="/auth/verify-otp"
 							theme="link"
+							class="w-[163px]"
 						/>
 					</div>
 				</div>

@@ -63,7 +63,7 @@
 					placeholder=""
 					error-message="this is a required field"
 				/>
-				<CustomSelect label="Select Industry" default-option="Select Industry" :options="[1, 2, 3]" />
+				<CustomSelect label="Currencies" default-option="Select Currency" :options="[1, 2, 3]" />
 			</div>
 			<!-- financial year start and end-->
 			<div class="grid w-full md:grid-cols-2 gap-y-[30px] gap-x-[15px]">

@@ -15,7 +15,7 @@
 				<form class="w-[515px] px-2">
 					<p class="mb-[30px] text-[28px] font-medium text-dark">
 						Get started
-					</p>orgot-password
+					</p>
 					<div class="w-full space-y-[30px]">
 						<!-- first and last name -->
 						<div class="grid w-full sm:grid-cols-2 gap-y-[30px] gap-x-[15px]">

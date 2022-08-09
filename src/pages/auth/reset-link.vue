@@ -33,7 +33,7 @@
 					<div
 						class="flex items-center justify-center w-full md:items-start md:justify-start"
 					>
-						<CustomButton label="Back to  website" link-to="/" theme="link" />
+						<CustomButton label="Back to  website" link-to="/" theme="link" class="w-[213px]" />
 					</div>
 				</div>
 			</section>

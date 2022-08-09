@@ -37,6 +37,7 @@
 							label="Go to Login"
 							link-to="/auth/signin"
 							theme="link"
+							class="w-[166px]"
 						/>
 					</div>
 				</div>

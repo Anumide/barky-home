@@ -46,7 +46,9 @@
 							@componentIsCompanyInfo="currentComponent = 'CompanyInfo'"
 							@componentIsBusinessType="currentComponent = 'BusinessType'"
 						>
-							<component :is="tabs[currentComponent]" />
+							<TransitionFade>
+								<component :is="tabs[currentComponent]" />
+							</TransitionFade>
 						</KeepAlive>
 					</div>
 				</div>
