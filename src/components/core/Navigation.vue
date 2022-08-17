@@ -1,25 +1,27 @@
 <template>
-	<header class="lg:py-4 py-2 lg:pl-8 pl-4 lg:pr-4 pr-2 border-b border-[#bdbdbd] border-solid flex justify-between items-center">
-		<div class="font-medium text-lg">
+	<header class="header">
+		<div class="font-medium text-2xl">
 			Beauty Care Company
 		</div>
-		<div class="profile-notification md:flex hidden">
-			<div class="notification lg:w-20 w-16 flex justify-between items-center lg:p-3 p-2 border-[#adadad] border-solid border-r">
-				<icon name="notification" class="w-5 text-[#292D32] fill-transparent" />
-				<icon name="category" class="w-5 text-[#292D32] fill-transparent" />
+		<div class="md:flex hidden">
+			<div class="notification">
+				<icon name="notification" class="w-6 text-[#292D32] fill-transparent" />
+				<icon name="category" class="w-6 text-[#292D32] fill-transparent" />
 			</div>
-			<div class="profile lg:w-52 w-48 flex lg:p-3 p-2 items-center justify-between">
-				<div class="profile-image w-8 h-8 text-center rounded-full overflow-hidden text-[#292D32] border border-[#292D32] flex justify-between items-center">
+			<div class="profile">
+				<div class="profile-image">
 					<!-- <img src="@/assets/image/Traq.png" alt=""> -->
-					BA
+					<p class="text-[#EA4335] text-xs">
+						BA
+					</p>
 				</div>
-				<p class="font-medium">
+				<p class="font-medium text-base lg:block hidden">
 					Bayo Adenekan
 				</p>
-				<icon name="arrowDown" class="w-3 text-[#667085] fill-transparent" />
+				<icon name="arrowDown" class="w-3 text-[#667085] fill-transparent lg:block hidden" />
 			</div>
 		</div>
-		<div class="hamburger block md:hidden w-[8%]">
+		<div id="hamburger" class="block md:hidden w-[8%]">
 			<icon name="hamburger" class="w-full text-[#292D32] fill-transparent" />
 		</div>
 	</header>
@@ -29,4 +31,19 @@
 
 </script>
 
-<style scoped></style>
+<style scoped>
+.header{
+	@apply lg:py-4 py-2 xl:pl-24 lg:pl-16 pl-4 lg:pr-4 pr-2 border-b border-[#bdbdbd] border-solid flex justify-between items-center
+}
+.notification{
+	@apply lg:w-24 w-20 flex justify-between items-center lg:py-3 lg:px-4 px-3 py-2 border-solid border-r;
+	border-color: rgba(0, 0, 0, 0.12);
+}
+
+.profile{
+	@apply lg:w-52 w-16 flex lg:p-3 p-2 items-center gap-2 justify-center;
+}
+.profile-image{
+	@apply w-9 h-9 bg-[#EA4335] bg-opacity-10 rounded-full overflow-hidden flex justify-center items-center
+}
+</style>

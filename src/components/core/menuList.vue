@@ -1,11 +1,13 @@
 <template>
 	<div class="side-menu">
-		<icon :name="icon" class="icons" />
-		<span class="grow">{{ menu }}</span>
+		<icon name="category" class="icons" />
+		<span class="grow">Dashboard</span>
 	</div>
 </template>
 
-<script></script>
+<script>
+
+</script>
 
 <style scoped>
  .side-menu {
