@@ -1,12 +1,21 @@
 <template>
-	<div class="side-menu">
-		<icon name="category" class="icons" />
-		<span class="grow">Dashboard</span>
-	</div>
+	<nuxt-link :to="'/' + name.toLowerCase()" class="side-menu">
+		<icon :name="icon" class="icons" />
+		<span class="grow">{{ name }}</span>
+	</nuxt-link>
 </template>
 
-<script>
-
+<script setup lang="ts">
+defineProps({
+	name: {
+		type: String,
+		required: true
+	},
+	icon: {
+		type: String,
+		required: true
+	}
+})
 </script>
 
 <style scoped>

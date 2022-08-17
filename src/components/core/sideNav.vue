@@ -7,17 +7,25 @@
 					<img src="@/assets/image/Traq.png" alt="" class="w-full">
 				</div>
 			</div>
-			<!-- side nav menu lists -->
-			<div class="my-8 lg:my-12">
-				<div v-for="option in sideMenuOptions" :key="option.name" class="side-menu">
-					<icon :name="option.icon" class="icons" />
-					<span class="grow">{{ option.name }}</span>
+			<!-- side menu lists -->
+			<div id="side-menu-parent" class="my-8 lg:my-12">
+				<div v-for="option in sideMenuOptions" :key="option.name">
+					<menu-list
+						:name="option.name"
+						:icon="option.icon"
+					/>
 				</div>
 			</div>
 			<!-- setting and logout -->
 			<div>
-				<menu-list />
-				<menu-list />
+				<menu-list
+					name="Settings"
+					icon="setting"
+				/>
+				<menu-list
+					name="Log out"
+					icon="logout"
+				/>
 			</div>
 		</div>
 		<slot />
@@ -60,6 +68,11 @@
 		icon: 'hrm'
 	}
  ])
+
+// const active = (option) => {
+// 	return option.name === $route.name
+//  }
+
 </script>
 
 <style scoped>
@@ -67,8 +80,20 @@
 	@apply xl:w-[22%] lg:w-1/3 w-[47%] max-w-sm h-full overflow-auto text-white bg-[#201A62] md:block hidden
 }
  .side-menu {
-	@apply pl-4 lg:pl-8 xl:pl-12 pr-2 font-medium text-lg text-neutral-50 py-2 lg:py-4 lg:my-2 my-3 flex gap-2 items-center justify-between hover:bg-[#3488ED] hover:bg-opacity-10 transition duration-200;
+	@apply pl-4 lg:pl-8 xl:pl-12 pr-2 font-medium text-lg text-neutral-50 py-2 lg:py-4 lg:my-2 my-3 flex gap-2 items-center justify-between transition duration-200;
  }
+
+#side-menu-parent a{
+	@apply bg-transparent;
+}
+
+ #side-menu-parent a:hover{
+	@apply hover:bg-[#3488ED] hover:bg-opacity-10;
+ }
+
+.active{
+	@apply border-l-4 border-white border-solid;
+}
 
 .logo{
 	@apply flex items-center text-neutral-50 pl-4 lg:pl-8 xl:pl-12;
