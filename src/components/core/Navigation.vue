@@ -5,13 +5,13 @@
 		</div>
 		<div class="md:flex hidden">
 			<div class="notification">
-				<icon name="notification" class="w-6 text-[#292D32] fill-transparent" />
-				<icon name="category" class="w-6 text-[#292D32] fill-transparent" />
+				<icon name="notification" class="w-6 text-dark fill-transparent" />
+				<icon name="category" class="w-6 text-dark fill-transparent" />
 			</div>
 			<div class="profile">
 				<div class="profile-image">
 					<!-- <img src="@/assets/image/Traq.png" alt=""> -->
-					<p class="text-[#EA4335] text-xs">
+					<p class="text-primary_pink text-xs">
 						BA
 					</p>
 				</div>
@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<div id="hamburger" class="block md:hidden w-[8%]">
-			<icon name="hamburger" class="w-full text-[#292D32] fill-transparent" />
+			<icon name="hamburger" class="w-full text-dark fill-transparent" />
 		</div>
 	</header>
 </template>
@@ -37,7 +37,7 @@
 }
 .notification{
 	@apply lg:w-24 w-20 flex justify-between items-center lg:py-3 lg:px-4 px-3 py-2 border-solid border-r;
-	border-color: rgba(0, 0, 0, 0.12);
+	border-color: #0000001f;
 }
 
 .profile{

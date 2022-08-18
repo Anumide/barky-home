@@ -1,4 +1,8 @@
 {
+<<<<<<< HEAD
+    "nuxt.isNuxtApp": false
+}
+=======
 	"typescript.tsdk": "node_modules/typescript/lib",
 	"[vue]": {
 		"editor.quickSuggestions": {
@@ -13,3 +17,4 @@
 		"source.fixAll.eslint": true
 	}
 }
+>>>>>>> d6bcc4f386155e1776a5c08114ad72ce30b852f9
