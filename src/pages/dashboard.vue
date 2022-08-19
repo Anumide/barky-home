@@ -1,7 +1,6 @@
 <template>
 	<div class="text-8xl font-bold">
 		This is the dashboard
-		<nuxt-child />
 	</div>
 </template>
 

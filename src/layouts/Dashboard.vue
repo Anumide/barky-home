@@ -3,7 +3,9 @@
 		<sideNav />
 		<div class="h-screen grow overflow-auto">
 			<Navigation />
-			<slot />
+			<TransitionFade>
+				<router-view />
+			</TransitionFade>
 		</div>
 	</div>
 </template>
