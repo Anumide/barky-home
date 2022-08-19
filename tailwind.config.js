@@ -22,7 +22,11 @@ module.exports = {
           primary_pink: 'var(--primary_pink)',
           primary_pink_light: 'var(--primary_pink_light)',
           primary_link: 'var(--primary_link)',
-          primary_error: 'var(--primary_error)'
+          primary_error: 'var(--primary_error)',
+          border_color: 'var(--border_color'
+        },
+        fontFamily: {
+          poppins: ['Poppins', 'sans-serif']
         }
 		}
   },

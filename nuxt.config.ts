@@ -14,7 +14,7 @@ export default defineNuxtConfig({
 			{ name: 'format-detection', content: 'telephone=no' }
 		],
 		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
-			   { rel: 'stylesheet', href: 'https://api.fontshare.com/v2/css?f[]=clash-grotesk@500&display=swap' }
+			   { rel: 'stylesheet', href: 'https://api.fontshare.com/v2/css?f[]=clash-grotesk@200,700,400,600,300,1,500&display=swap" rel="stylesheet' }
 		]
 	},
 	alias: {

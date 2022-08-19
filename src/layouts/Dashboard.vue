@@ -3,9 +3,11 @@
 		<sideNav />
 		<div class="h-screen grow overflow-auto">
 			<Navigation />
-			<TransitionFade>
-				<router-view />
-			</TransitionFade>
+			<router-view v-slot="{ Component }">
+				<transitionFade>
+					<component :is="Component" />
+				</transitionFade>
+			</router-view>
 		</div>
 	</div>
 </template>
