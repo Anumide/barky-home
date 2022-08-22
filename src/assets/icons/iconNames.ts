@@ -19,6 +19,7 @@ export enum IconNames {
   'invoice' = 'invoice',
   'logout' = 'logout',
   'notification' = 'notification',
+  'percentage' = 'percentage',
   'report' = 'report',
   'sales' = 'sales',
   'setting' = 'setting',

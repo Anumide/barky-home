@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div v-if="icon" class="w-8 h-8 flex justify-center items-center rounded-full bg-[#f8c96b]">
+		<div v-if="icon" class="w-8 h-8 flex justify-center items-center rounded-full bg-opacity-10" :class="bgColor">
 			<icon :name="icon" class="w-4" :class="iconColor" />
 		</div>
 		<span class="text-xs text-neutral-400 font-poppins tracking-wider"><small>{{ salesType }}</small></span>
@@ -17,9 +17,13 @@ defineProps({
 		required: true,
 		default: ''
 	},
-	// eslint-disable-next-line vue/require-default-prop
 	iconColor: {
-		type: String
+		type: String,
+		default: ''
+	},
+	bgColor: {
+		type: String,
+		default: ''
 	},
 	salesType: {
 		type: String,
@@ -31,4 +35,5 @@ defineProps({
 		default: 'NO'
 	}
 })
+
 </script>
