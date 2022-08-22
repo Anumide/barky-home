@@ -13,7 +13,9 @@ export default defineNuxtConfig({
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 			{ name: 'format-detection', content: 'telephone=no' }
 		],
-		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
+		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+			   { rel: 'stylesheet', href: 'https://api.fontshare.com/v2/css?f[]=clash-grotesk@200,700,400,600,300,1,500&display=swap" rel="stylesheet' }
+		]
 	},
 	alias: {
 		'@': './src'

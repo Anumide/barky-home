@@ -19,7 +19,7 @@
 				<div
 					class="absolute right-8 top-[50%] translate-y-[-50%] cursor-pointer"
 				>
-					<icon name="chevronDown" class="w-6" />
+					<icon name="arrowDown" class="w-6" />
 				</div>
 			</div>
 			<p
