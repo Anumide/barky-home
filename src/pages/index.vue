@@ -11,7 +11,6 @@
 				<icon name="invoice" class="w-5 text-primary" />
 			</template>
 		</custom-button>
-		<icon name="newAccount" />
 	</div>
 </template>
 
