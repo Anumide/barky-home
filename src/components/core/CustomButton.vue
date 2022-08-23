@@ -25,7 +25,7 @@
 		v-else-if="theme == 'outline_link'"
 		v-bind="$attrs"
 		:to="linkTo"
-		class="w-full cursor-pointer text-center rounded-md ring-primary text-dark ring-1  py-[13px] text-base"
+		class="w-full cursor-pointer text-center rounded-md ring-primary text-dark ring-1 py-[13px] text-base"
 	>
 		{{ label }}
 	</NuxtLink>

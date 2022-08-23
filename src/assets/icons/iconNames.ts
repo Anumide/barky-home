@@ -6,6 +6,7 @@ export enum IconNames {
   'accountant' = 'accountant',
   'arrowDown' = 'arrowDown',
   'arrowForward' = 'arrowForward',
+  'arrowUpRight' = 'arrowUpRight',
   'bank' = 'bank',
   'category' = 'category',
   'chevronDown' = 'chevronDown',

@@ -1,7 +1,7 @@
 <template>
 	<div>
-		<div v-if="icon" class="w-8 h-8 flex justify-center items-center rounded-full bg-opacity-10" :class="bgColor">
-			<icon :name="icon" class="w-4" :class="iconColor" />
+		<div v-if="icon" class="w-8 h-8 flex justify-center items-center rounded-full bg-opacity-10" :style="{'backgroundColor': `${iconColor}24`}">
+			<icon :name="icon" class="w-4" :style="{'color': iconColor}" />
 		</div>
 		<span class="text-xs text-neutral-400 font-poppins tracking-wider"><small>{{ salesType }}</small></span>
 		<p class="font-semibold text-sm font-poppins">
@@ -18,10 +18,6 @@ defineProps({
 		default: ''
 	},
 	iconColor: {
-		type: String,
-		default: ''
-	},
-	bgColor: {
 		type: String,
 		default: ''
 	},
