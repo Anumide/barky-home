@@ -6,10 +6,10 @@ module.exports = {
 		node: true
 	},
 	extends: [
-		"eslint:recommended",
-		"plugin:vue/essential",
-		"plugin:@typescript-eslint/recommended",
-		"@nuxtjs/eslint-config-typescript"
+		'eslint:recommended',
+		'plugin:vue/essential',
+		'plugin:@typescript-eslint/recommended',
+		'@nuxtjs/eslint-config-typescript'
 	],
 	parserOptions: {
 		ecmaVersion: 'latest',
@@ -26,6 +26,7 @@ module.exports = {
 		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		'no-tabs': 'off',
 		'no-unused-vars': 'off',
+		"no-unused-vars": "off",
 		'import/no-named-as-default': 'off',
 		'vue/no-template-shadow': 'off',
 		'no-var': 'error',

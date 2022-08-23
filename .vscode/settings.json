@@ -11,6 +11,10 @@
 			"other": "on"
 		},
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"eslint.runtime": "",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
 	}
 }
 >>>>>>> d6bcc4f386155e1776a5c08114ad72ce30b852f9
