@@ -24,11 +24,11 @@
 <script setup lang="ts">
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const bankHistories = [
-    {
-    bankName: 'Fidelity',
-    bankBalance: 'N900,000,000',
-    InAppBalance: 'N900,000,000',
-    bankLogo: '@/assets/icons/source/bankHistory.svg'
-    }
+    // {
+    // bankName: 'Fidelity',
+    // bankBalance: 'N900,000,000',
+    // InAppBalance: 'N900,000,000',
+    // bankLogo: '@/assets/icons/source/bankHistory.svg'
+    // }
 ]
 </script>

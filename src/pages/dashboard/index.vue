@@ -1,6 +1,6 @@
 <template>
-	<div class="grid grid-cols-3 auto-rows-auto gap-4 pl-24 pr-8 pt-8 bg-border_color">
-		<custom-sales-segment
+	<div class="grid grid-cols-3 auto-rows-auto gap-4">
+		<CustomSalesSegment
 			type-of-sales="Profit or Loss"
 			class="col-span-2 mb-4"
 		>
@@ -18,7 +18,7 @@
 					sales-type="Profit/Loss"
 				/>
 			</div>
-		</custom-sales-segment>
+		</CustomSalesSegment>
 
 		<!-- Sales -->
 		<custom-sales-segment
@@ -87,7 +87,7 @@
 				</p>
 				<a href="#" class="links">see all</a>
 			</div>
-			<BankHistory />
+			<DashboardBankHistory />
 		</div>
 
 		<!-- create new account -->
@@ -132,8 +132,9 @@
 </template>
 
 <script setup lang="ts">
-import receivables from '@/components/receivables.vue'
-import payables from '@/components/payables.vue'
+import receivables from '@/components/dashboard/Receivables.vue'
+import payables from '@/components/dashboard/Payables.vue'
+
 definePageMeta({
 	layout: 'dashboard'
 })
