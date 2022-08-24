@@ -37,7 +37,9 @@
 				</nav>
 
 				<div class="bg-cover_background px-[136px] pt-[45px] max-w-[1728px] mx-auto">
-					<slot />
+					<TransitionFade>
+						<router-view />
+					</TransitionFade>
 				</div>
 			</div>
 		</div>

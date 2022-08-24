@@ -1,5 +1,6 @@
 <template>
 	<div class="grid grid-cols-3 pl-24 pr-8 pt-8">
+		hrm page
 		Expense page
 	</div>
 </template>
