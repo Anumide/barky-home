@@ -87,14 +87,7 @@
 				</p>
 				<a href="#" class="links">see all</a>
 			</div>
-			<div class="mt-20 flex items-center flex-col gap-4">
-				<div class="w-40">
-					<img src="@/assets/images/bankHistory.png" alt="" class="w-full h-full">
-				</div>
-				<p class="font-medium text-sm font-sans">
-					Oops! No bank history available
-				</p>
-			</div>
+			<BankHistory />
 		</div>
 
 		<!-- create new account -->

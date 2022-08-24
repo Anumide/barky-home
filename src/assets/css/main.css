@@ -5,7 +5,7 @@
 	transition: all 250ms;
 }
 .hover:hover{
-	transform: scale(1.006);
+	transform: scale(0.995);
 }
 
 @tailwind base;
