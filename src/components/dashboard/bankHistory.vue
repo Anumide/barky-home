@@ -1,5 +1,5 @@
 <template>
-	<div v-if="bankHistories.length == 0" class="mt-20 flex items-center flex-col gap-4">
+	<div v-if="!bankHistories.length" class="mt-20 flex items-center flex-col gap-4">
 		<div class="w-40">
 			<img src="@/assets/icons/source/bankHistory.svg" alt="" class="w-full h-full">
 		</div>
@@ -7,28 +7,34 @@
 			Oops! No bank history available
 		</p>
 	</div>
-	<div v-else>
-		<div v-for="(bankHistory, index) in bankHistories" :key="index">
+	<div v-else class="divide-y divide-cover_background divide-solid max-h-96 overflow-y-scroll">
+		<div v-for="(bankHistory, index) in bankHistories" :key="index" class="flex items-start gap-2 p-6">
 			<div>
-				<img :src="bankHistory.bankLogo" alt="">
+				<!-- <img :src="bankHistory.bankLogo" alt=""> -->
+				<icon name="invoice" class="w-4 text-primary_dark" />
 			</div>
-			<div>
-				<p> {{ bankHistory.bankName }}</p>
-				<div>
-					<span>{{ bankHistory.bankBalance }}</span>
+			<div class="grow">
+				<p calss="text-xs font-medium font-poppins">
+					{{ bankHistory.bankName }}
+				</p>
+				<div class="flex justify-between items-center font-poppins">
+					<span class="text-xs font-normal">Bank Balance</span>
+					<span class="text-xs font-semibold"> {{ bankHistory.bankBalance }} </span>
+				</div>
+				<div class="flex justify-between items-center font-poppins">
+					<span class="text-xs font-normal">In-App Balance</span>
+					<span class="text-xs font-semibold"> {{ bankHistory.InAppBalance }} </span>
 				</div>
 			</div>
 		</div>
 	</div>
 </template>
 <script setup lang="ts">
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const bankHistories = [
-    // {
-    // bankName: 'Fidelity',
-    // bankBalance: 'N900,000,000',
-    // InAppBalance: 'N900,000,000',
-    // bankLogo: '@/assets/icons/source/bankHistory.svg'
-    // }
-]
+defineProps({
+	bankHistories: {
+		type: Array,
+		required: true
+	}
+})
+
 </script>

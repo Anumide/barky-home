@@ -1,10 +1,10 @@
 <template>
-	<div class="hover rounded-lg shadow-lg bg-white">
+	<div class="hover rounded-lg bg-white">
 		<div class="flex justify-between p-4 border-b border-border_color border-solid">
 			<p class="text-sm font-medium">
 				{{ typeOfSales }}
 			</p>
-			<div class="text-card_blue flex gap-2 items-center text-sm font-medium cursor-pointer relative z-0" @click="isPeriod = !isPeriod">
+			<div class="text-card_blue flex gap-2 items-center text-sm font-medium cursor-pointer relative" @click="isPeriod = !isPeriod">
 				<span>{{ Period }}</span>
 				<icon
 					name="arrowDown"
@@ -48,3 +48,6 @@ function periodDisplay(period: string) {
 	Period.value = period
 }
 </script>
+<style>
+
+</style>

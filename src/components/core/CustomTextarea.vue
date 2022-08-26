@@ -4,27 +4,20 @@
 			<span v-if="title" class="text-base font-medium mb-2 text-dark">{{ title }}</span>
 
 			<div class="w-full relative mb-1">
-				<input
-					:value="modelValue"
+				<textarea
 					:placeholder="placeholder"
-					:type="type"
-					class="w-full rounded-[6px] h-12 py-2 px-6 ring-1 ring-black/[0.12] outline-primary transition-all duration-200 ease-in bg-transparent focus:bg-primary_light"
+					class="w-full h-32 rounded-[6px] h-[48px] py-2 px-6 ring-1 ring-black/[0.12] outline-primary transition-all duration-200 ease-in bg-transparent focus:bg-primary_light resize-none"
 					@input="$emit('update:modelValue', $event.target.value)"
-				>
-				<div
-					class="absolute right-6 top-[50%] translate-y-[-50%] cursor-pointer"
-				>
-					<slot name="icon" />
-				</div>
+				/>
 			</div>
-			<p
+			<!-- <p
 				v-if="errorMessage"
 				class="space-x-2 text-xs flex items-center text-primary_error"
 			>
 				<icon name="infoCircle" class="w-[13px] h-[13px]" /><span>{{
 					errorMessage
 				}}</span>
-			</p>
+			</p> -->
 		</div>
 	</div>
 </template>
@@ -39,21 +32,17 @@ defineProps({
     type: String,
     default: ''
   },
-  type: {
-    required: true,
-    type: String,
-    default: 'text'
-  },
   // eslint-disable-next-line vue/require-prop-types
   modelValue: {
     required: true,
     default: ''
-  },
-  errorMessage: {
-    type: String,
-    default: ''
   }
+//   errorMessage: {
+//     type: String,
+//     default: ''
+//   }
 })
 
 defineEmits(['update:modelValue'])
+
 </script>

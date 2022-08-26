@@ -3,8 +3,8 @@
 		<div class="flex w-full h-full overflow-hidden relative">
 			<Sidebar :sidebar-width="selectedWidth" :collapsed="collapsed" />
 			<!-- top nav here -->
-			<div class="bg-cover_background grow overflow-y-auto">
-				<nav class="h-[115px] flex items-center bg-cover_background sticky top-0 w-full border-b border-gray-300">
+			<div class="bg-neutral-400 grow overflow-y-auto">
+				<nav class="h-[115px] flex items-center bg-white shadow-md sticky top-0 w-full border-b border-gray-300 z-50">
 					<icon name="hamburger" class="absolute top-9 left-2 cursor-pointer w-10 text-dark" @click="toggleSidebar" />
 					<!-- <span class="absolute top-4 left-6 rounded bg-red-500 cursor-pointer text-white py-2 px-4 text-xs" @click="toggleSidebar">toggle</span> -->
 					<div class="max-w-[1728px] mx-auto w-full flex items-center pl-[136px] pr-[70px]">

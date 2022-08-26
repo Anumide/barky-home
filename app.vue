@@ -17,5 +17,7 @@
 
 *{
 	font-family: 'Clash Grotesk', sans-serif;
+	scroll-behavior: smooth;
 }
+
 </style>
