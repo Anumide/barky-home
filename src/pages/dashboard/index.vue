@@ -2,20 +2,30 @@
 	<div class="grid grid-cols-3 auto-rows-auto gap-4">
 		<CustomSalesSegment
 			type-of-sales="Profit or Loss"
-			class="col-span-2 mb-4"
+			class="col-span-2"
 		>
-			<div class="grid grid-cols-4">
+			<div class="grid grider">
 				<CustomSalesInfo
 					sales-type="Sales"
+					symbol="-"
+					value="N4,000,000"
 				/>
+				<span class="self-end mt-4 text-center font-semibold text-lg">-</span>
 				<CustomSalesInfo
 					sales-type="Cost of goods"
+					symbol="-"
+					value="N4,000,000"
 				/>
+				<span class="self-end mt-4 text-center font-semibold text-lg">-</span>
 				<CustomSalesInfo
 					sales-type="Expenses"
+					symbol="="
+					value="N4,000,000"
 				/>
+				<span class="self-end mt-4 text-center font-semibold text-lg">=</span>
 				<CustomSalesInfo
 					sales-type="Profit/Loss"
+					value="N4,000,000"
 				/>
 			</div>
 		</CustomSalesSegment>
@@ -81,17 +91,19 @@
 		<!-- bank history -->
 		<!-- border border-border_color border-solid rounded-sm -->
 		<div class="hover rounded-lg shadow-lg row-start-1 row-end-3 col-start-3 font-poppins bg-white">
-			<div class="flex justify-between items-center border-b border-border_color border-solid pt-6 pb-3 px-4">
+			<div class="flex justify-between items-center border-b border-border_color border-solid py-3 px-4">
 				<p class="font-medium text-lg">
 					Bank
 				</p>
-				<a href="#" class="links">see all</a>
+				<a v-if="bankHistories.length" href="#" class="links">see all</a>
 			</div>
-			<DashboardBankHistory />
+			<DashboardBankHistory
+				:bank-histories="bankHistories"
+			/>
 		</div>
 
 		<!-- create new account -->
-		<div class="hover new-account col-start-3 font-poppins tracking-wider">
+		<div class="new-account col-start-3 font-poppins tracking-wider">
 			<p class="text-white text-2xl font-bold w-52">
 				Open a new account with Traq
 			</p>
@@ -102,7 +114,7 @@
 			</custom-button>
 		</div>
 
-		<div class="hover border rounded-t border-border_color row-start-3 col-span-2 p-7 bg-white">
+		<div class="hover rounded-t row-start-3 col-span-2 p-7 bg-white">
 			<div class="flex justify-between items-center">
 				<div class="rounded-full bg-[#f8f8f8] py-1 px-5 flex gap-4 font-poppins">
 					<span
@@ -120,11 +132,11 @@
 						payables
 					</span>
 				</div>
-				<a href="#" class="links">view all</a>
+				<a v-if="receivableInfos.length" href="#" class="links">view all</a>
 			</div>
 			<keep-alive>
 				<TransitionFade>
-					<component :is="comps[currentComponent]" />
+					<component :is="comps[currentComponent]" :receivable-infos="receivableInfos" />
 				</TransitionFade>
 			</keep-alive>
 		</div>
@@ -147,9 +159,72 @@ const comps = {
 	receivables,
 	payables
 }
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const bankHistories = [
+    // {
+    // bankName: 'Fidelity',
+    // bankBalance: 'N900,000,000',
+    // InAppBalance: 'N900,000,000',
+    // bankLogo: '@/assets/icons/source/bankHistory.svg'
+    // },
+	// {
+    // bankName: 'Fidelity',
+    // bankBalance: 'N900,000,000',
+    // InAppBalance: 'N900,000,000',
+    // bankLogo: '@/assets/icons/source/bankHistory.svg'
+    // },
+	// {
+    // bankName: 'Fidelity',
+    // bankBalance: 'N900,000,000',
+    // InAppBalance: 'N900,000,000',
+    // bankLogo: '@/assets/icons/source/bankHistory.svg'
+    // },
+	// {
+    // bankName: 'Fidelity',
+    // bankBalance: 'N900,000,000',
+    // InAppBalance: 'N900,000,000',
+    // bankLogo: '@/assets/icons/source/bankHistory.svg'
+    // },
+	// {
+    // bankName: 'Fidelity',
+    // bankBalance: 'N900,000,000',
+    // InAppBalance: 'N900,000,000',
+    // bankLogo: '@/assets/icons/source/bankHistory.svg'
+    // }
+]
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const receivableInfos = [
+	// {
+	// 	billNo: '#456059',
+	// 	vendor: 'Ademola Holdings',
+	// 	amount: 'N30,0000',
+	// 	dueDates: 'Jan 20, 2022',
+	// 	dueDays: 500
+	// },
+	// {
+	// 	billNo: '#456059',
+	// 	vendor: 'Ademola Holdings',
+	// 	amount: 'N30,0000',
+	// 	dueDates: 'Jan 20, 2022',
+	// 	dueDays: 350
+	// },
+	// {
+	// 	billNo: '#456059',
+	// 	vendor: 'Ademola Holdings',
+	// 	amount: 'N30,0000',
+	// 	dueDates: 'Jan 20, 2022',
+	// 	dueDays: 200
+	// }
+]
 </script>
 
 <style scoped>
+
+.grider{
+	grid-template-columns: repeat(7, 1fr)
+}
 .new-account{
 	background: url('@/assets/images/newAccountbg.png') no-repeat;
 	@apply px-7 pt-24 pb-28 bg-cover rounded-t;
@@ -161,6 +236,7 @@ const comps = {
 }
 
 .active-component{
-	@apply rounded-full bg-white;
+	@apply rounded-full bg-white transition-all duration-200;
 }
+
 </style>

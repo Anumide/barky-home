@@ -2,10 +2,10 @@
 	<!-- select industry -->
 	<div class="w-full">
 		<div class="relative mb-1 flex w-full flex-col">
-			<span class="mb-2 text-[16px] font-[500]">{{ label }}</span>
+			<span class="mb-2 text-base font-medium">{{ label }}</span>
 			<div class="relative mb-1 w-full">
 				<select
-					class="w-full appearance-none rounded-[6px] bg-transparent h-[48px] py-2 px-6 outline-primary ring-1 ring-black/[0.12]"
+					class="w-full appearance-none rounded-[6px] bg-transparent h-12 py-2 px-6 outline-primary ring-1 ring-black/[0.12]"
 					:value="modelValue"
 					@change="$emit('update:modelValue', $event.target.value)"
 				>
@@ -24,7 +24,7 @@
 			</div>
 			<p
 				v-if="errorMessage"
-				class="space-x-2 text-[12px] flex items-center text-primary_error"
+				class="space-x-2 text-xs flex items-center text-primary_error"
 			>
 				<icon name="infoCircle" class="w-[13px] h-[13px]" /><span>{{
 					errorMessage
