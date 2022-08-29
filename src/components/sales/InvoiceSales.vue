@@ -70,7 +70,7 @@
 		<!-- cards end here -->
 
 		<!-- table starts here -->
-		<div class="w-full px-[60px] py-[40px] relative ring-1 rounded-md ring-gray-300 bottom-0 left-0 right-0 grow">
+		<div class="w-full px-[60px] py-[40px] relative rounded-md bottom-0 left-0 right-0 grow bg-white shadow-xl drop-shadow-md">
 			<div class="text-sm font-medium mb-6">
 				Transaction History
 			</div>
@@ -128,7 +128,7 @@
 							</th>
 							<th
 								scope="col"
-								class="font-semibold text-sm text-dark py-6 px-4"
+								class="font-semibold text-sm text-dark py-6 px-4 text-center"
 							>
 								Status
 							</th>
@@ -225,7 +225,7 @@
 								N32,000
 							</td>
 							<td
-								class="text-xs text-dark px-4"
+								class="text-xs text-dark px-4 w-fit"
 							>
 								<!-- <div class="w-full h-7 px-2 rounded-full bg-green-100 flex items-center justify-center font-medium text-green-700">
 									Receive Payment

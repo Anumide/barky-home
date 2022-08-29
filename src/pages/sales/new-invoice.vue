@@ -73,7 +73,8 @@
 							<td
 								class="pr-10"
 							>
-								<CustomInput placeholder="Enter billing address" class="h-10 placeholder:text-xs text-sm" />
+								<CustomTextarea placeholder="Enter billing address" class="placeholder:text-xs text-sm" />
+								<!-- <CustomInput placeholder="Enter billing address" class="h-10 placeholder:text-xs text-sm" /> -->
 							</td>
 							<td
 								class="pr-10"
