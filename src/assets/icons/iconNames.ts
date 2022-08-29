@@ -4,6 +4,8 @@
 
 export enum IconNames {
   'accountant' = 'accountant',
+  'addDocument' = 'addDocument',
+  'arrow-down' = 'arrow-down',
   'arrowDown' = 'arrowDown',
   'arrowForward' = 'arrowForward',
   'arrowUpRight' = 'arrowUpRight',
@@ -11,6 +13,7 @@ export enum IconNames {
   'bankHistory' = 'bankHistory',
   'category' = 'category',
   'chevronDown' = 'chevronDown',
+  'close' = 'close',
   'coin' = 'coin',
   'emptyDocument' = 'emptyDocument',
   'envelopeStars' = 'envelopeStars',
