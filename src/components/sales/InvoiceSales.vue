@@ -7,7 +7,7 @@
 		<!-- cards start here -->
 		<div class="w-full grid grid-cols-4 gap-x-4 mb-10">
 			<TheCard class=" w-full bg-card_blue flex justify-between">
-				<div class="flex flex-col gap-y-2 py-2">
+				<div class="flex flex-col gap-y-2 py-2 z-10">
 					<span class="font-normal text-xs text-white">Total Sales</span>
 					<span class="text-white text-[22px] font-semibold uppercase">No</span>
 					<div class="rounded-full px-2 py-2 text-card_blue text-[7.6px] leading-[14.03px] bg-white font-medium w-[78px] flex">
@@ -15,14 +15,14 @@
 						<icon name="arrow-down" class="w-3 h-4 text-card_blue" fill="currentColor" />
 					</div>
 				</div>
-				<div>
+				<div class="z-10">
 					<div class="w-10 h-10 flex items-center justify-center rounded-full bg-white">
 						<icon name="invoice" class="w-4 h-4 text-card_blue" />
 					</div>
 				</div>
 			</TheCard>
 			<TheCard class=" w-full bg-card_orange flex justify-between">
-				<div class="flex flex-col gap-y-2 py-2">
+				<div class="flex flex-col gap-y-2 py-2 z-10">
 					<span class="font-normal text-xs text-white">Total Paid Invoice</span>
 					<span class="text-white text-[22px] font-semibold uppercase">N6,000,000</span>
 					<div class="rounded-full px-2 py-2 text-card_orange text-[7.6px] leading-[14.03px] bg-white font-medium w-[78px] flex">
@@ -30,7 +30,7 @@
 						<icon name="arrow-down" class="w-3 h-4 text-card_orange fill-current" />
 					</div>
 				</div>
-				<div>
+				<div class="z-10">
 					<div class="w-10 h-10 flex items-center justify-center rounded-full bg-white">
 						<icon name="invoice" class="w-4 h-4 text-card_orange" />
 					</div>

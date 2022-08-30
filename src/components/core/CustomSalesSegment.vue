@@ -1,5 +1,5 @@
 <template>
-	<div class="hover rounded-lg bg-white">
+	<div class="hover shadow-lg rounded-lg bg-white">
 		<div class="flex justify-between p-4 border-b border-border_color border-solid">
 			<p class="text-sm font-medium">
 				{{ typeOfSales }}
@@ -7,7 +7,7 @@
 			<div class="text-card_blue flex gap-2 items-center text-sm font-medium cursor-pointer relative" @click="isPeriod = !isPeriod">
 				<span>{{ Period }}</span>
 				<icon
-					name="arrowDown"
+					name="chevronDown"
 					class="w-3"
 				/>
 				<TransitionFade>
