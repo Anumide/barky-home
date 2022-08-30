@@ -1,5 +1,6 @@
 :root {
     --dark: #212121;
+    --dark_gray: #21212138;
     --primary: #3F51B5;
     --primary_light: #3F51B524;
     --primary_dark: #201A62;
@@ -8,10 +9,10 @@
     --card_yellow: #F0A202;
     --card_green: #189B62;
     --card_red: #FF0000;
-    --cover_background: #ffffffc2;
+    --cover_background: #FAFEFF;
     --primary_pink: #EA4335;
     --primary_pink_light: #EA433536;
     --primary_link: #3488ED;
     --primary_error: #E02B1D;
-    --border_color: #BDBDBD;
+    --light_gray: #C5CAE838;
 }

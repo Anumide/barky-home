@@ -2,29 +2,29 @@
 	<!-- select industry -->
 	<div class="w-full">
 		<div class="relative mb-1 flex w-full flex-col">
-			<span class="mb-2 text-base font-medium">{{ label }}</span>
-			<div class="relative mb-1 w-full">
+			<span v-if="label" class="mb-2 text-[16px] font-[500]">{{ label }}</span>
+			<div class="relative mb-1 w-full h-[48px]" v-bind="$attrs">
 				<select
-					class="w-full appearance-none rounded-[6px] bg-transparent h-12 py-2 px-6 outline-primary ring-1 ring-black/[0.12]"
+					class="appearance-none h-full w-full rounded-md bg-transparent  py-2 px-6 pr-10 outline-primary ring-1 ring-black/[0.12] "
 					:value="modelValue"
 					@change="$emit('update:modelValue', $event.target.value)"
 				>
-					<option v-if="defaultOption" value="" disabled>
+					<option v-if="defaultOption" value="" disabled selected :hidden="hidden">
 						{{ defaultOption }}
 					</option>
-					<option v-for="(option, index) in options" :key="index">
+					<option v-for="(option, index) in options" :key="index" :Value="option">
 						{{ option }}
 					</option>
 				</select>
 				<div
-					class="absolute right-8 top-[50%] translate-y-[-50%] cursor-pointer"
+					class="absolute top-0 right-0 h-full w-10 flex items-center justify-center pointer-events-none"
 				>
-					<icon name="arrowDown" class="w-6" />
+					<icon name="chevronDown" class="w-6" />
 				</div>
 			</div>
 			<p
 				v-if="errorMessage"
-				class="space-x-2 text-xs flex items-center text-primary_error"
+				class="space-x-2 text-[12px] flex items-center text-primary_error"
 			>
 				<icon name="infoCircle" class="w-[13px] h-[13px]" /><span>{{
 					errorMessage
@@ -39,7 +39,7 @@
 defineProps({
   label: {
     type: String,
-    required: true
+	default: ''
   },
   options: {
     type: Array,
@@ -56,6 +56,10 @@ defineProps({
   defaultOption: {
 	type: String,
 	default: ''
+  },
+  hidden: {
+	type: Boolean,
+	default: false
   }
 })
 
