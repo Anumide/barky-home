@@ -4,7 +4,7 @@
 			<Sidebar :sidebar-width="selectedWidth" :collapsed="collapsed" />
 			<!-- top nav here -->
 			<div class="bg-[#F8F8F8] grow w-full flex flex-col overflow-y-auto">
-				<nav class="h-[115px] flex shrink-0 items-center bg-white shadow-md sticky top-0 w-full border-b border-gray-300 z-[99999]">
+				<nav class="h-[115px] flex shrink-0 items-center bg-white shadow-sm sticky top-0 w-full border-b border-gray-300 z-[99999]">
 					<icon name="hamburger" class="absolute top-9 left-2 cursor-pointer w-10 text-dark" @click="toggleSidebar" />
 					<!-- <span class="absolute top-4 left-6 rounded bg-red-500 cursor-pointer text-white py-2 px-4 text-xs" @click="toggleSidebar">toggle</span> -->
 					<div class="max-w-[1728px] mx-auto w-full flex items-center pl-[136px] pr-[70px]">
@@ -36,7 +36,7 @@
 					</div>
 				</nav>
 
-				<div class="bg-[#F8F8F8] pl-[136px] pr-[70px] pt-[45px] max-w-[1728px] w-full grow mx-auto">
+				<div class="bg-transparent w-full grow mx-auto">
 					<slot />
 				</div>
 			</div>

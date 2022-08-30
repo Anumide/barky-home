@@ -8,7 +8,7 @@
 		<div class="overflow-y-auto py-[45px]">
 			<div class="w-full flex flex-col gap-y-1.5">
 				<SidebarLink to="/dashboard" label="Dashboard" icon-name="category" :collapsed="collapsed" />
-				<SidebarLink to="/sales" label="Sales" icon-name="sales" :collapsed="collapsed" />
+				<SidebarLink to="/sales/invoice" label="Sales" icon-name="sales" :collapsed="collapsed" />
 				<SidebarLink to="/expense" label="Expense" icon-name="expense" :collapsed="collapsed" />
 				<SidebarLink to="/bank" label="Bank" icon-name="bank" :collapsed="collapsed" />
 				<SidebarLink to="/accounting" label="Accounting" icon-name="accountant" :collapsed="collapsed" />
