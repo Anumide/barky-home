@@ -76,7 +76,7 @@
 			<!-- submit button and switch component -->
 			<div class="grid w-full grid-cols-2 gap-x-5 mt-[50px]">
 				<CustomButton theme="outline" label="Previous" @click="$emit('componentIsCompanyInfo')" />
-				<CustomButton theme="submit" label="Submit" />
+				<CustomButton theme="submit" label="Submit" @click="$router.push('/dashboard')" />
 			</div>
 		</form>
 	</div>

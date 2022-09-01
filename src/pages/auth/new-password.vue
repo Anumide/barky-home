@@ -43,7 +43,7 @@
 							</template>
 						</CustomInput>
 						<!-- submit button -->
-						<CustomButton label="Continue" theme="submit" @click="test" />
+						<CustomButton label="Continue" theme="submit" @click="$router.push('/auth/password-set')" />
 					</div>
 				</form>
 			</section>

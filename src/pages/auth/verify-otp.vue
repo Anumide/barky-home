@@ -35,7 +35,7 @@
 							>
 						</div>
 						<!-- submit button -->
-						<CustomButton label="Verify OTP" theme="submit" @click="test" />
+						<CustomButton label="Verify OTP" theme="submit" @click="$router.push('/auth/signin')" />
 					</div>
 				</form>
 			</section>

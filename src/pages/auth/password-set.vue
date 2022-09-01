@@ -35,7 +35,7 @@
 					>
 						<CustomButton
 							label="Go to Login"
-							link-to="/auth/signin"
+							link-to="/auth/setup-business"
 							theme="link"
 							class="w-[166px]"
 						/>

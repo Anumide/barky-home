@@ -28,7 +28,7 @@
 							error-message="this is a required field"
 						/>
 						<!-- submit button -->
-						<CustomButton label="Continue" theme="submit" @click="test" />
+						<CustomButton label="Continue" theme="submit" @click="$router.push('/auth/reset-link')" />
 						<p class="text-base text-center w-full text-dark">
 							Remember your password?
 							<NuxtLink
