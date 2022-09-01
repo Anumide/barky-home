@@ -5,7 +5,7 @@
 			<span v-if="label" class="mb-2 text-base font-medium">{{ label }}</span>
 			<div class="relative mb-1 w-full h-12" v-bind="$attrs">
 				<select
-					class="appearance-none h-full w-full rounded-md bg-transparent  py-2 px-6 pr-10 outline-primary ring-1 ring-black/[0.12] "
+					class="appearance-none h-full w-full rounded-md bg-transparent bg-white py-2 px-6 pr-10 outline-primary ring-1 ring-black/[0.12] "
 					:value="modelValue"
 					@change="$emit('update:modelValue', $event.target.value)"
 				>
