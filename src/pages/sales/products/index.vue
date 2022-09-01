@@ -4,7 +4,7 @@
 			<span class="text-2xl leading-6 text-dark font-normal">Products</span>
 			<!-- <CustomButton class="text-white rounded-full w-fit px-6 py-3 text-sm leading-6 font-medium" label="Create Invoice" theme="link" to="/sales/invoice/new-invoice" /> -->
 			<div class="w-48 bg-primary flex gap-5 items-center divide-x-reverse divide-solid divide-white rounded-full pr-6 text-white cursor-pointer relative" @click="isPeriod = !isPeriod">
-				<NuxtLink to="/sales/products/new-product" class="bg-primary hover:bg-card_blue transition text-sm border-r border-white/80 border-solid rounded-l-full pl-6 pr-3 py-3  leading-6 font-medium">
+				<NuxtLink to="/sales/products/new-product" class="bg-primary hover:ring-primary hover:ring-2 hover:ring-offset-2 transition text-sm border-r border-white/80 border-solid rounded-l-full pl-6 pr-3 py-3  leading-6 font-medium">
 					Create Product
 				</NuxtLink>
 				<icon
@@ -71,7 +71,7 @@
 				</p>
 				<div class="flex items-center gap-x-4">
 					<CustomButton label="Upload CSV" theme="outline" class="py-2 px-7 rounded-full text-primary hover:text-white hover:bg-primary transition h-[44px] font-medium text-sm" @click="openModal" />
-					<CustomButton label="Create invoice" theme="link" class="py-2.5 px-7 rounded-full h-[44px] text-white hover:bg-primary hover:bg-opacity-80 transition whitespace-nowrap font-medium text-sm" to="/sales/invoice/new-invoice" />
+					<CustomButton label="Create invoice" theme="link" class="py-2.5 px-7 rounded-full h-[44px] text-white hover:ring-primary hover:ring-2 hover:ring-offset-2 transition whitespace-nowrap font-medium text-sm" to="/sales/invoice/new-invoice" />
 				</div>
 			</div>
 			<div v-else class="mt-6">
@@ -212,8 +212,8 @@ const isPeriod = ref(false)
 const periods = [
 	{ name: 'Import CSV', periodLink: '' },
 	{ name: 'Add Stock', periodLink: 'add-stock' },
-	{ name: 'Stock Adjustment', periodLink: 'stock-adjustment' },
 	{ name: 'Stock Transfer', periodLink: 'stock-transfer' },
+	{ name: 'Stock Adjustment', periodLink: 'stock-adjustment' },
 	{ name: 'New Expenses', periodLink: '' }
 ]
 </script>

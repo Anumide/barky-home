@@ -8,5 +8,15 @@
 				New Product
 			</div>
 		</div>
+		<div class="flex gap-x-4">
+			<CustomButton class="w-36 transition rounded-full text-primary hover:text-white hover:bg-primary" label="Save and New" theme="outline" @click="test" />
+			<CustomButton class="w-36 transition rounded-full hover:ring-primary hover:ring-2 hover:ring-offset-2" label="Save and Close" theme="submit" @click="test" />
+		</div>
 	</div>
 </template>
+<script setup lang="ts">
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	const test = () => {
+	alert('button has been clicked!')
+}
+</script>

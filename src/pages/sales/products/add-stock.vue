@@ -27,7 +27,7 @@
 					<CustomInput type="date" title="Date" class="placeholder:text-xs text-sm" />
 					<CustomInput type="date" title="Expiration Date" class="placeholder:text-xs text-sm" />
 				</div>
-				<CustomButton class="hover:bg-card_blue transition" label="Add Stock" theme="submit" @click="test" />
+				<CustomButton class="hover:ring-primary hover:ring-2 hover:ring-offset-2 transition" label="Add Stock" theme="submit" @click="test" />
 			</div>
 		</div>
 	</div>

@@ -1,40 +1,32 @@
 <template>
 	<div class="full">
 		<div class="flex items-center mb-10">
-			<NuxtLink to="/sales/invoice" class="rounded-full bg-light_gray p-3 cursor-pointer mr-6">
+			<NuxtLink to="/sales/products" class="rounded-full bg-light_gray p-3 cursor-pointer mr-6">
 				<icon name="arrowBack" fill="none" class="w-6 h-6" />
 			</NuxtLink>
 			<div class="text-dark font-medium text-2xl leading-6">
 				Adjust Stock
 			</div>
 		</div>
-		<div>
-			<div class="flex gap-x-6 mb-4">
-				<div class="flex flex-col gap-y-3 min-w-[40%] w-fit max-w-[50%]">
-					<span class="text-sm font-medium">Source Store </span>
-					<CustomSelect label="" :options="['Adebayo Adenekan']" default-option="Select customer" class="text-sm h-10" />
-				</div>
-				<div class="flex flex-col gap-y-3 w-full">
-					<span class="text-sm font-medium">Destination Store </span>
-					<CustomSelect label="" :options="['Adebayo Adenekan']" default-option="Select customer" class="text-sm h-10" />
-				</div>
-				<!-- <CustomSelect label="Quantity" default-option="Select" hidden :options="[1, 2, 3]" class="text-sm min-w-fit" /> -->
-				<CustomInput type="date" title="Expiration Date" class="w-3/4 h-10 placeholder:text-xs text-sm" />
+		<div class="flex gap-x-6 mb-4">
+			<div class="flex flex-col gap-y-3 min-w-[30%] w-2/5 max-w-[50%]">
+				<span class="text-sm font-medium">Source Store </span>
+				<CustomSelect label="" :options="['Adebayo Adenekan']" default-option="Select customer" class="w-[90%] text-sm h-10" />
 			</div>
 		</div>
-		<div class="border-b border-solid border-neutral-100">
+		<div class="border-b border-solid border-neutral-200">
 			<table class="min-w-full text-left mb-3">
 				<thead class="bg-light_gray h-[50px]">
 					<tr class="">
 						<th
 							scope="col"
-							class="font-medium text-sm text-dark py-3 px-2 w-[34%]"
+							class="font-medium text-sm text-dark py-3 px-2 w-[15%]"
 						>
 							Item
 						</th>
 						<th
 							scope="col"
-							class="font-medium text-sm text-dark py-3 px-2 w-[34%]"
+							class="font-medium text-sm text-dark py-3 px-2 w-[15%]"
 						>
 							Instock
 						</th>
@@ -74,9 +66,9 @@
 							<CustomSelect label="" default-option="Select" hidden :options="[1, 2, 3]" class="h-10 text-sm min-w-fit" />
 						</td>
 						<td
-							class="pr-2"
+							class="pr-24"
 						>
-							<CustomInput placeholder="N0.00" class="h-10 placeholder:text-xs text-sm" />
+							<CustomInput placeholder="N0.00" class="w-[90%] h-10 placeholder:text-xs text-sm" />
 						</td>
 					</tr>
 				</tbody>
@@ -95,10 +87,10 @@
 			<CustomTextarea label="" placeholder="Write something..." default-option="Select customer" class="text-sm h-32" />
 		</div>
 		<div class="flex justify-between items-center mt-16">
-			<CustomButton class="w-36 px-20 transition rounded-full text-red ring-red hover:text-white hover:bg-red" label="Cancel and Delete" theme="outline" @click="test" />
+			<CustomButton class="w-36 px-20 transition rounded-full text-red-600 ring-red-600 hover:text-white hover:bg-red-600" label="Cancel and Delete" theme="outline" @click="test" />
 			<div class="flex gap-x-4">
 				<CustomButton class="w-36 transition rounded-full text-primary hover:text-white hover:bg-primary" label="Save and New" theme="outline" @click="test" />
-				<CustomButton class="w-36 transition rounded-full" label="Save and Close" theme="submit" @click="test" />
+				<CustomButton class="w-36 transition rounded-full hover:ring-primary hover:ring-2 hover:ring-offset-2" label="Save and Close" theme="submit" @click="test" />
 			</div>
 		</div>
 	</div>
