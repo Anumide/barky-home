@@ -3,7 +3,7 @@
 		<icon :name="iconName" class="text-white w-[22px] h-[22px]" fill="none" />
 		<span v-if="!collapsed" class="font-medium">{{ label }}</span>
 	</div>
-	<NuxtLink v-else class="text-white h-[40px] flex items-center border-transparent border-l-[6px] space-x-2 w-full cursor-pointer hover:bg-primary_light transition-colors duration-300 px-[20px] justify-start" :class="{'justify-center px-0': collapsed, 'link-active': $route.path === to || $route.path.startsWith(to)}" :to="to">
+	<NuxtLink v-else class="text-white h-[40px] flex items-center border-transparent border-l-[6px] space-x-2 w-full cursor-pointer hover:bg-primary_light transition-colors duration-300 px-[20px] justify-start" :class="{'justify-center px-0': collapsed, 'link-active': $route.path === to || $route.path.startsWith(to)|| $route.path.split('/')[1] == to.split('/')[1]}" :to="to">
 		<icon :name="iconName" class="text-white w-[22px] h-[22px]" fill="none" />
 		<span v-if="!collapsed" class="font-medium capitalize">{{ label }}</span>
 	</NuxtLink>

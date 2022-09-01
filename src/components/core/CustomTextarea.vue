@@ -3,7 +3,7 @@
 		<div class="flex flex-col mb-1 w-full relative">
 			<span v-if="title" class="text-base font-medium mb-2 text-dark">{{ title }}</span>
 
-			<div class="w-full relative mb-1">
+			<div class="w-full relative">
 				<textarea
 					v-bind="$attrs"
 					:placeholder="placeholder"

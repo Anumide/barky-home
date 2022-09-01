@@ -12,7 +12,7 @@
 			<div class="flex items-center justify-between w-full mb-6">
 				<div class="flex flex-col gap-y-3 w-[40%] max-w-[380px]">
 					<span class="text-sm font-medium">Who is this invoice for?</span>
-					<CustomSelect label="" :options="['Bayo Adenekan']" default-option="select customer" class="text-sm h-10" />
+					<CustomSelect label="" :options="['Bayo Adenekan']" default-option="select customer" class="text-sm h-10 bg-white" />
 				</div>
 				<div class="flex items-center flex-col gap-y-3">
 					<span class="text-lg">Total Amout</span>
@@ -50,27 +50,27 @@
 				</thead>
 				<tbody class="">
 					<tr
-						class=""
+						class="align-top"
 					>
 						<td
 							class="pr-10"
 						>
-							<CustomInput placeholder="Enter billing address" class="h-10 placeholder:text-xs text-sm" />
+							<CustomTextarea placeholder="Enter billing address" class="h-20 placeholder:text-xs text-sm bg-white" />
 						</td>
 						<td
 							class="pr-10"
 						>
-							<CustomInput type="date" placeholder="" class="h-10 placeholder:text-xs text-sm" />
+							<CustomInput type="date" placeholder="" class="h-10 placeholder:text-xs text-sm bg-white" />
 						</td>
 						<td
 							class="pr-10"
 						>
-							<CustomInput type="date" placeholder="" class="h-10 placeholder:text-xs text-sm" />
+							<CustomInput type="date" placeholder="" class="h-10 placeholder:text-xs text-sm bg-white" />
 						</td>
 						<td
 							class=""
 						>
-							<CustomInput placeholder="INV32019" class="h-10 placeholder:text-xs text-sm" />
+							<CustomInput placeholder="INV32019" class="h-10 placeholder:text-xs text-sm bg-white" />
 						</td>
 					</tr>
 				</tbody>
@@ -80,7 +80,7 @@
 					<tr class="">
 						<th
 							scope="col"
-							class="font-medium text-sm text-dark py-3 px-2 w-[35%]"
+							class="font-medium text-sm text-dark py-3 px-2 w-[25%]"
 						>
 							Product
 						</th>
@@ -98,13 +98,13 @@
 						</th>
 						<th
 							scope="col"
-							class="font-medium text-sm text-dark py-3 px-2 w-[10%]"
+							class="font-medium text-sm text-dark py-3 px-2 w-[15%]"
 						>
 							Price
 						</th>
 						<th
 							scope="col"
-							class="font-medium text-sm text-dark py-3 px-2 w-[10%] text-center"
+							class="font-medium text-sm text-dark py-3 px-2 w-[15%] text-center"
 						>
 							Amount
 						</th>
@@ -119,22 +119,22 @@
 						<td
 							class="pr-10"
 						>
-							<CustomInput v-model="product.name" placeholder="Enter product name" class="h-10 placeholder:text-xs text-sm" />
+							<CustomInput v-model="product.name" placeholder="Enter product name" class="h-10 placeholder:text-xs text-sm bg-white" />
 						</td>
 						<td
 							class="pr-10"
 						>
-							<CustomInput v-model="product.description" placeholder="Enter description" class="h-10 placeholder:text-xs text-sm" />
+							<CustomInput v-model="product.description" placeholder="Enter description" class="h-10 placeholder:text-xs text-sm bg-white" />
 						</td>
 						<td
 							class="pr-10"
 						>
-							<CustomInput v-model="product.qty" placeholder="" class="h-10 placeholder:text-xs text-sm" />
+							<CustomInput v-model="product.qty" placeholder="" class="h-10 placeholder:text-xs text-sm bg-white" />
 						</td>
 						<td
 							class="pr-10"
 						>
-							<CustomInput v-model="product.price" placeholder="" class="h-10 placeholder:text-xs text-sm" />
+							<CustomInput v-model="product.price" placeholder="" class="h-10 placeholder:text-xs text-sm bg-white" />
 						</td>
 						<td
 							class="pr-2 text-center"
@@ -161,7 +161,7 @@
 			<!-- subtotal ends here -->
 
 			<!-- discount table -->
-			<div class="border border-dark_gray w-full px-6 py-5 rounded-md mb-6">
+			<div class="border border-dark_gray w-full px-6 py-5 rounded-md mb-6 bg-white shadow-md">
 				<table class="w-full">
 					<tbody class="">
 						<tr
@@ -177,12 +177,12 @@
 							<td
 								class="pr-10 w-[35%]"
 							>
-								<CustomSelect label="" default-option="Percentage discount" hidden :options="['Percentage discount']" class="h-10 text-sm" />
+								<CustomSelect label="" default-option="Percentage discount" hidden :options="['Percentage discount']" class="h-10 text-sm bg-dashboard_background" />
 							</td>
 							<td
 								class="pr-10 w-[10%]"
 							>
-								<CustomInput placeholder="" class="h-10 placeholder:text-xs text-sm" />
+								<CustomInput placeholder="" class="h-10 placeholder:text-xs text-sm bg-dashboard_background" />
 							</td>
 							<td
 								class="pr-10 w-[10%]"
@@ -209,7 +209,7 @@
 							<td
 								class="pr-10"
 							>
-								<CustomInput placeholder="" class="h-10 placeholder:text-xs text-sm" />
+								<CustomInput placeholder="" class="h-10 placeholder:text-xs text-sm bg-dashboard_background" />
 							</td>
 							<td
 								class="pr-10 w-[10%]"
@@ -251,7 +251,7 @@
 			<!-- discount table ends here -->
 
 			<!-- send invoices here -->
-			<div class="border border-dark_gray w-full px-6 pt-5 pb-10 mb-24 rounded-md">
+			<div class="border border-dark_gray w-full px-6 pt-5 pb-10 mb-24 rounded-md bg-white shadow-md">
 				<h2 class="text-base font-medium text-dark mb-2">
 					Send invoices in instalments
 				</h2>
@@ -310,17 +310,17 @@
 							<td
 								class="pr-10"
 							>
-								<CustomInput type="date" class="h-10 placeholder:text-xs text-sm" />
+								<CustomInput type="date" class="h-10 placeholder:text-xs text-sm bg-dashboard_background" />
 							</td>
 							<td
 								class="pr-10"
 							>
-								<CustomInput type="date" class="h-10 placeholder:text-xs text-sm" />
+								<CustomInput type="date" class="h-10 placeholder:text-xs text-sm bg-dashboard_background" />
 							</td>
 							<td
 								class="pr-10"
 							>
-								<CustomInput class="h-10 placeholder:text-xs text-sm" />
+								<CustomInput class="h-10 placeholder:text-xs text-sm bg-dashboard_background" />
 							</td>
 							<td
 								class="pr-10"
@@ -343,17 +343,17 @@
 							<td
 								class="pr-10"
 							>
-								<CustomInput type="date" class="h-10 placeholder:text-xs text-sm" />
+								<CustomInput type="date" class="h-10 placeholder:text-xs text-sm bg-dashboard_background" />
 							</td>
 							<td
 								class="pr-10"
 							>
-								<CustomInput type="date" class="h-10 placeholder:text-xs text-sm" />
+								<CustomInput type="date" class="h-10 placeholder:text-xs text-sm bg-dashboard_background" />
 							</td>
 							<td
 								class="pr-10"
 							>
-								<CustomInput class="h-10 placeholder:text-xs text-sm" />
+								<CustomInput class="h-10 placeholder:text-xs text-sm bg-dashboard_background" />
 							</td>
 							<td
 								class="pr-10"
@@ -375,7 +375,7 @@
 			<!-- save buttons here -->
 			<div class="w-full flex items-center justify-end gap-x-4">
 				<CustomButton label="Save and new" theme="outline" class="py-2 px-7 rounded-full text-primary h-[44px] font-medium text-sm w-fit whitespace-nowrap" />
-				<CustomButton label="Save and close" theme="submit" class="py-2.5 px-7 rounded-full h-[44px] text-white font-medium text-sm w-fit whitespace-nowrap" />
+				<CustomButton label="Save and close" theme="submit" class="py-2.5 px-7 rounded-full h-[44px] text-white font-medium text-sm w-fit whitespace-nowrap" @click="$router.push('/sales/invoice/edit-invoice')" />
 			</div>
 			<!-- save buttons ends here -->
 		</div>

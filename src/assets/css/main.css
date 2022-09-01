@@ -8,7 +8,7 @@
 
 @layer components {
 	.container {
-		@apply pl-[136px] pr-[70px] pt-[45px] max-w-[1728px]
+		@apply pl-[100px] pr-[100px] mx-auto pt-[45px] max-w-[1728px]
 	}
 }
 

@@ -13,11 +13,11 @@
 				<div class="flex w-full gap-x-10">
 					<div class="flex flex-col gap-y-3 w-[40%] max-w-[380px]">
 						<span class="text-sm font-medium">Choose customer</span>
-						<CustomSelect label="" :options="['Bayo Adenekan']" default-option="select customer" class="text-sm h-10" />
+						<CustomSelect label="" :options="['Bayo Adenekan']" default-option="select customer" class="text-sm h-10 bg-white" />
 					</div>
 					<div class="flex flex-col gap-y-3 w-[40%] max-w-[380px]">
 						<span class="text-sm font-medium">Payment Date</span>
-						<CustomInput type="date" placeholder="" class="h-10 placeholder:text-xs text-sm" />
+						<CustomInput type="date" placeholder="" class="h-10 placeholder:text-xs text-sm bg-white" />
 					</div>
 				</div>
 				<div class="flex items-center flex-col gap-y-3">
@@ -42,19 +42,19 @@
 						</th>
 						<th
 							scope="col"
-							class="font-medium text-sm text-dark py-3 px-2 w-fit"
+							class="font-medium text-sm text-dark py-3 px-2 w-[30%]"
 						>
 							Deposit to
 						</th>
 						<th
 							scope="col"
-							class="font-medium text-sm text-dark py-3 px-2 min-w-[10%] w-fit"
+							class="font-medium text-sm text-dark py-3 px-2 min-w-[15%] w-fit"
 						>
 							Bank Balance
 						</th>
 						<th
 							scope="col"
-							class="font-medium text-sm text-dark py-3 px-2 w-[10%] text-center"
+							class="font-medium text-sm text-dark py-3 px-2 w-[15%] text-center"
 						>
 							Amount Received
 						</th>
@@ -69,17 +69,17 @@
 						<td
 							class="pr-10"
 						>
-							<CustomSelect label="" :options="['Cash','Transfer']" default-option="select method" class="text-sm h-10" />
+							<CustomSelect label="" :options="['Cash','Transfer']" default-option="select method" class="text-sm h-10 bg-white" />
 						</td>
 						<td
 							class="pr-10"
 						>
-							<CustomInput v-model="product.description" placeholder="0994889940" class="h-10 placeholder:text-xs text-sm" />
+							<CustomInput v-model="product.description" placeholder="0994889940" class="h-10 placeholder:text-xs text-sm bg-white" />
 						</td>
 						<td
 							class="pr-10"
 						>
-							<CustomSelect label="" :options="['Guaranty Trust Bank']" default-option="select bank" class="text-sm h-10" />
+							<CustomSelect label="" :options="['Guaranty Trust Bank']" default-option="select bank" class="text-sm h-10 bg-white" />
 						</td>
 						<td
 							class="pr-10"
@@ -90,7 +90,7 @@
 						<td
 							class="pr-2 text-center"
 						>
-							<CustomInput v-model="product.description" placeholder="" class="h-10 placeholder:text-xs text-sm" />
+							<CustomInput v-model="product.description" placeholder="" class="h-10 placeholder:text-xs text-sm bg-white" />
 						</td>
 					</tr>
 				</tbody>
@@ -100,7 +100,7 @@
 
 			<div class="flex flex-col gap-y-3 w-[40%] max-w-[380px] mb-10">
 				<span class="text-sm font-medium">Outstanding Transactions</span>
-				<CustomInput type="text" placeholder="Find invoice no." class="h-10 placeholder:text-xs text-sm" />
+				<CustomInput type="text" placeholder="Find invoice no." class="h-10 placeholder:text-xs text-sm bg-white" />
 			</div>
 
 			<table class="min-w-full text-center mb-24">
@@ -110,7 +110,7 @@
 							scope="col"
 							class="pr-4 text-left"
 						>
-							<input type="checkbox" class="w-4 h-4 cursor-pointer">
+							<input type="checkbox" class="w-4 h-4 cursor-pointer bg-white">
 						</th>
 						<th
 							scope="col"
@@ -178,7 +178,7 @@
 						<td
 							class="text-xs text-dark px-4"
 						>
-							<CustomInput placeholder="" class="h-10 placeholder:text-xs text-sm" />
+							<CustomInput placeholder="" class="h-10 placeholder:text-xs text-sm bg-white" />
 						</td>
 					</tr>
 				</tbody>
@@ -187,7 +187,7 @@
 			<!-- save buttons here -->
 			<div class="w-full flex items-center justify-end gap-x-4">
 				<CustomButton label="Save and new" theme="outline" class="py-2 px-7 rounded-full text-primary h-[44px] font-medium text-sm w-fit whitespace-nowrap" />
-				<CustomButton label="Save and close" theme="submit" class="py-2.5 px-7 rounded-full h-[44px] text-white font-medium text-sm w-fit whitespace-nowrap" />
+				<CustomButton label="Save and close" theme="submit" class="py-2.5 px-7 rounded-full h-[44px] text-white font-medium text-sm w-fit whitespace-nowrap" @click="$router.push('/sales/invoice/sales-receipt')" />
 			</div>
 			<!-- save buttons ends here -->
 		</div>

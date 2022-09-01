@@ -5,23 +5,17 @@
 				<icon name="arrowBack" fill="none" class="w-6 h-6" />
 			</NuxtLink>
 			<div class="text-dark font-medium text-2xl leading-6">
-				Sales Receipt
+				Edit Invoice
 			</div>
 		</div>
 		<div class="w-full h-full flex flex-col pb-[100px]">
-			<div class="flex items-center justify-between w-full mb-10">
-				<div class="flex w-full gap-x-10">
-					<div class="flex flex-col gap-y-3 w-[40%] max-w-[380px]">
-						<span class="text-sm font-medium">Who is this invoice for? </span>
-						<CustomSelect label="" :options="['Bayo Adenekan']" default-option="Select customer" class="text-sm h-10 bg-white" />
-					</div>
-					<div class="flex flex-col gap-y-3 min-w-[40%] w-fit max-w-[50%]">
-						<span class="text-sm font-medium">Select Bank </span>
-						<CustomSelect label="" :options="['GTB']" default-option="Select Bank" class="text-sm h-10 bg-white" />
-					</div>
+			<div class="flex items-center justify-between w-full mb-6">
+				<div class="flex flex-col gap-y-3 w-[40%] max-w-[380px]">
+					<span class="text-sm font-medium">Who is this invoice for?</span>
+					<CustomSelect label="" :options="['Bayo Adenekan']" default-option="select customer" class="text-sm h-10 bg-white" />
 				</div>
 				<div class="flex items-center flex-col gap-y-3">
-					<span class="text-lg whitespace-nowrap">Total Amount</span>
+					<span class="text-lg">Total Amout</span>
 					<span class="font-bold text-2xl leading-6">N600,000</span>
 				</div>
 			</div>
@@ -38,19 +32,19 @@
 							scope="col"
 							class="font-medium text-sm text-dark py-3 pr-10 w-[20%]"
 						>
-							Payment Date
+							Invoice Date
 						</th>
 						<th
 							scope="col"
 							class="font-medium text-sm text-dark py-3 pr-10 w-[20%]"
 						>
-							Payment Method
+							Due Date
 						</th>
 						<th
 							scope="col"
 							class="font-medium text-sm text-dark py-3 pr-10 w-[20%]"
 						>
-							Receipt Number
+							Invoice number
 						</th>
 					</tr>
 				</thead>
@@ -71,7 +65,7 @@
 						<td
 							class="pr-10"
 						>
-							<CustomSelect label="" :options="['Cash','Transfer']" default-option="select method" class="text-sm h-10 bg-white" />
+							<CustomInput type="date" placeholder="" class="h-10 placeholder:text-xs text-sm bg-white" />
 						</td>
 						<td
 							class=""
@@ -166,8 +160,8 @@
 			</div>
 			<!-- subtotal ends here -->
 
-            <!-- discount table -->
-			<div class="border border-dark_gray w-full px-6 py-5 rounded-md mb-24 bg-white shadow-md">
+			<!-- discount table -->
+			<div class="border border-dark_gray w-full px-6 py-5 rounded-md mb-6 bg-white shadow-md">
 				<table class="w-full">
 					<tbody class="">
 						<tr
@@ -256,10 +250,132 @@
 			</div>
 			<!-- discount table ends here -->
 
+			<!-- send invoices here -->
+			<div class="border border-dark_gray w-full px-6 pt-5 pb-10 mb-24 rounded-md bg-white shadow-md">
+				<h2 class="text-base font-medium text-dark mb-2">
+					Send invoices in instalments
+				</h2>
+				<p class="font-normal text-xs text-dark mb-2">
+					How many instalments will this invoice be paid?
+				</p>
+				<table class="min-w-full text-left relative">
+					<thead class="">
+						<tr>
+							<th
+								scope="col"
+								class="font-medium text-sm text-dark py-3 pr-10 w-[20%]"
+							>
+								Instalment no.
+							</th>
+							<th
+								scope="col"
+								class="font-medium text-sm text-dark py-3 pr-10 w-1/4"
+							>
+								Invoice Date
+							</th>
+							<th
+								scope="col"
+								class="font-medium text-sm text-dark py-3 pr-10 w-1/4"
+							>
+								Due Date
+							</th>
+							<th
+								scope="col"
+								class="font-medium text-sm text-dark py-3 w-[10%]"
+							>
+								Percentage Split
+							</th>
+							<th
+								scope="col"
+								class="font-medium text-sm text-dark py-3 pr-10 w-[10%]"
+							/>
+							<th
+								scope="col"
+								class="font-medium text-sm text-dark py-3 pr-2 w-[10%] text-center"
+							>
+								Amount
+							</th>
+						</tr>
+					</thead>
+					<tbody class=" border-l-2 border-light_gray">
+						<tr
+							class="h-14 "
+						>
+							<td
+								class="pr-10 relative"
+							>
+								<span class="absolute top-0 left-[-11px] z-10 rounded-full text-xs font-medium bg-gray-100 p-1 w-5 h-5 text-cemter flex items-center justify-center">1</span>
+								<!-- <CustomInput placeholder="Enter product name" class="h-10 placeholder:text-xs text-sm" /> -->
+							</td>
+							<td
+								class="pr-10"
+							>
+								<CustomInput type="date" class="h-10 placeholder:text-xs text-sm bg-dashboard_background" />
+							</td>
+							<td
+								class="pr-10"
+							>
+								<CustomInput type="date" class="h-10 placeholder:text-xs text-sm bg-dashboard_background" />
+							</td>
+							<td
+								class="pr-10"
+							>
+								<CustomInput class="h-10 placeholder:text-xs text-sm bg-dashboard_background" />
+							</td>
+							<td
+								class="pr-10"
+							/>
+							<td
+								class="pr-2 text-center text-sm"
+							>
+								-N0.00
+							</td>
+						</tr>
+						<tr
+							class="h-14 "
+						>
+							<td
+								class="pr-10 relative"
+							>
+								<span class="absolute top-0 left-[-11px] z-10 rounded-full text-xs font-medium bg-gray-100 p-1 w-5 h-5 text-cemter flex items-center justify-center">2</span>
+								<!-- <CustomInput placeholder="Enter product name" class="h-10 placeholder:text-xs text-sm" /> -->
+							</td>
+							<td
+								class="pr-10"
+							>
+								<CustomInput type="date" class="h-10 placeholder:text-xs text-sm bg-dashboard_background" />
+							</td>
+							<td
+								class="pr-10"
+							>
+								<CustomInput type="date" class="h-10 placeholder:text-xs text-sm bg-dashboard_background" />
+							</td>
+							<td
+								class="pr-10"
+							>
+								<CustomInput class="h-10 placeholder:text-xs text-sm bg-dashboard_background" />
+							</td>
+							<td
+								class="pr-10"
+							/>
+							<td
+								class="pr-2 text-center text-sm"
+							>
+								N0.00
+							</td>
+						</tr>
+					</tbody>
+					<div class="flex items-center justify-center absolute left-[-10px] cursor-pointer bg-dark w-5 h-5 text-center rounded-full  text-white hover:scale-110 transition-transform duration-300">
+						+
+					</div>
+				</table>
+			</div>
+			<!-- send invoices  ends here -->
+
 			<!-- save buttons here -->
 			<div class="w-full flex items-center justify-end gap-x-4">
 				<CustomButton label="Save and new" theme="outline" class="py-2 px-7 rounded-full text-primary h-[44px] font-medium text-sm w-fit whitespace-nowrap" />
-				<CustomButton label="Save and close" theme="submit" class="py-2.5 px-7 rounded-full h-[44px] text-white font-medium text-sm w-fit whitespace-nowrap" />
+				<CustomButton label="Save and close" theme="submit" class="py-2.5 px-7 rounded-full h-[44px] text-white font-medium text-sm w-fit whitespace-nowrap" @click="$router.push('/sales/invoice/receive-payment')" />
 			</div>
 			<!-- save buttons ends here -->
 		</div>

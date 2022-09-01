@@ -24,7 +24,8 @@ module.exports = {
           primary_link: 'var(--primary_link)',
           primary_error: 'var(--primary_error)',
           border_color: 'var(--border_color)',
-          light_gray: 'var(--light_gray)'
+          light_gray: 'var(--light_gray)',
+          dashboard_background: 'var(--dashboard_background)'
         },
         fontFamily: {
           poppins: ['Poppins', 'sans-serif']

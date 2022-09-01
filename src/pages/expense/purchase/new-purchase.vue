@@ -1,27 +1,21 @@
 <template>
 	<div class="w-full">
 		<div class="flex items-center mb-10">
-			<NuxtLink to="/sales/invoice" class="rounded-full bg-light_gray p-3 cursor-pointer mr-6">
+			<NuxtLink to="/expense/purchase" class="rounded-full bg-light_gray p-3 cursor-pointer mr-6">
 				<icon name="arrowBack" fill="none" class="w-6 h-6" />
 			</NuxtLink>
 			<div class="text-dark font-medium text-2xl leading-6">
-				Sales Receipt
+				New Purchase
 			</div>
 		</div>
 		<div class="w-full h-full flex flex-col pb-[100px]">
-			<div class="flex items-center justify-between w-full mb-10">
-				<div class="flex w-full gap-x-10">
-					<div class="flex flex-col gap-y-3 w-[40%] max-w-[380px]">
-						<span class="text-sm font-medium">Who is this invoice for? </span>
-						<CustomSelect label="" :options="['Bayo Adenekan']" default-option="Select customer" class="text-sm h-10 bg-white" />
-					</div>
-					<div class="flex flex-col gap-y-3 min-w-[40%] w-fit max-w-[50%]">
-						<span class="text-sm font-medium">Select Bank </span>
-						<CustomSelect label="" :options="['GTB']" default-option="Select Bank" class="text-sm h-10 bg-white" />
-					</div>
+			<div class="flex items-center justify-between w-full mb-6">
+				<div class="flex flex-col gap-y-3 w-[40%] max-w-[380px]">
+					<span class="text-sm font-medium">Who is this purchase for?</span>
+					<CustomSelect label="" :options="['Bayo Adenekan']" default-option="select vendor" class="text-sm h-10 bg-white" />
 				</div>
 				<div class="flex items-center flex-col gap-y-3">
-					<span class="text-lg whitespace-nowrap">Total Amount</span>
+					<span class="text-lg">Total Amout</span>
 					<span class="font-bold text-2xl leading-6">N600,000</span>
 				</div>
 			</div>
@@ -38,20 +32,18 @@
 							scope="col"
 							class="font-medium text-sm text-dark py-3 pr-10 w-[20%]"
 						>
-							Payment Date
+							Purchase Date
 						</th>
 						<th
 							scope="col"
 							class="font-medium text-sm text-dark py-3 pr-10 w-[20%]"
 						>
-							Payment Method
+							Invoice number
 						</th>
 						<th
 							scope="col"
 							class="font-medium text-sm text-dark py-3 pr-10 w-[20%]"
-						>
-							Receipt Number
-						</th>
+						/>
 					</tr>
 				</thead>
 				<tbody class="">
@@ -69,15 +61,13 @@
 							<CustomInput type="date" placeholder="" class="h-10 placeholder:text-xs text-sm bg-white" />
 						</td>
 						<td
-							class="pr-10"
-						>
-							<CustomSelect label="" :options="['Cash','Transfer']" default-option="select method" class="text-sm h-10 bg-white" />
-						</td>
-						<td
 							class=""
 						>
 							<CustomInput placeholder="INV32019" class="h-10 placeholder:text-xs text-sm bg-white" />
 						</td>
+						<td
+							class="pr-10"
+						/>
 					</tr>
 				</tbody>
 			</table>
@@ -86,13 +76,13 @@
 					<tr class="">
 						<th
 							scope="col"
-							class="font-medium text-sm text-dark py-3 px-2 w-[25%]"
+							class="font-medium text-sm text-dark py-3 px-2 w-[20%]"
 						>
 							Product
 						</th>
 						<th
 							scope="col"
-							class="font-medium text-sm text-dark py-3 px-2 w-[35%]"
+							class="font-medium text-sm text-dark py-3 px-2 w-[30%]"
 						>
 							Description
 						</th>
@@ -110,9 +100,15 @@
 						</th>
 						<th
 							scope="col"
-							class="font-medium text-sm text-dark py-3 px-2 w-[15%] text-center"
+							class="font-medium text-sm text-dark py-3 px-2 w-[15%]"
 						>
 							Amount
+						</th>
+						<th
+							scope="col"
+							class="font-medium text-sm text-dark py-3 px-2 w-[10%] text-center"
+						>
+							Tax
 						</th>
 					</tr>
 				</thead>
@@ -140,12 +136,17 @@
 						<td
 							class="pr-10"
 						>
-							<CustomInput v-model="product.price" placeholder="" class="h-10 placeholder:text-xs text-sm bg-white" />
+							<CustomInput v-model="product.amount" placeholder="" class="h-10 placeholder:text-xs text-sm bg-white" />
+						</td>
+						<td
+							class="pr-10"
+						>
+							<span class="text-sm font-medium">N{{ product.total = product.amount * product.qty }}.00</span>
 						</td>
 						<td
 							class="pr-2 text-center"
 						>
-							<span class="text-sm font-medium">N{{ product.amount = product.price * product.qty }}.00</span>
+							<CustomSelect v-model="product.tax" :options="['75%']" default-option="" class="h-10 placeholder:text-xs text-sm bg-white" />
 						</td>
 					</tr>
 				</tbody>
@@ -166,7 +167,7 @@
 			</div>
 			<!-- subtotal ends here -->
 
-            <!-- discount table -->
+			<!-- discount table -->
 			<div class="border border-dark_gray w-full px-6 py-5 rounded-md mb-24 bg-white shadow-md">
 				<table class="w-full">
 					<tbody class="">
@@ -267,13 +268,14 @@
 </template>
 
 <script setup lang="ts">
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	const productList = ref([{
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
+		const productList = ref([{
 		name: '',
 		description: '',
 		qty: 0,
-		price: 0,
-		amount: 0
+		amount: 0,
+		total: 0,
+		tax: '75%'
 	}])
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -282,8 +284,9 @@
 			name: '',
 			description: '',
 			qty: 0,
-			price: 0,
-			amount: 0
+			amount: 0,
+			total: 0,
+			tax: '75%'
 		})
 	}
 

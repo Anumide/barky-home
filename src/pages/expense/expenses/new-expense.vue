@@ -1,23 +1,23 @@
 <template>
 	<div class="w-full">
 		<div class="flex items-center mb-10">
-			<NuxtLink to="/sales/invoice" class="rounded-full bg-light_gray p-3 cursor-pointer mr-6">
+			<NuxtLink to="/expense/expenses" class="rounded-full bg-light_gray p-3 cursor-pointer mr-6">
 				<icon name="arrowBack" fill="none" class="w-6 h-6" />
 			</NuxtLink>
 			<div class="text-dark font-medium text-2xl leading-6">
-				Sales Receipt
+				New Expense
 			</div>
 		</div>
 		<div class="w-full h-full flex flex-col pb-[100px]">
 			<div class="flex items-center justify-between w-full mb-10">
 				<div class="flex w-full gap-x-10">
 					<div class="flex flex-col gap-y-3 w-[40%] max-w-[380px]">
-						<span class="text-sm font-medium">Who is this invoice for? </span>
-						<CustomSelect label="" :options="['Bayo Adenekan']" default-option="Select customer" class="text-sm h-10 bg-white" />
+						<span class="text-sm font-medium">Payee</span>
+						<CustomSelect label="" :options="['Bayo Adenekan']" default-option="select payee" class="text-sm h-10 bg-white" />
 					</div>
-					<div class="flex flex-col gap-y-3 min-w-[40%] w-fit max-w-[50%]">
-						<span class="text-sm font-medium">Select Bank </span>
-						<CustomSelect label="" :options="['GTB']" default-option="Select Bank" class="text-sm h-10 bg-white" />
+					<div class="flex flex-col gap-y-3 w-[40%] max-w-[380px]">
+						<span class="text-sm font-medium">Date</span>
+						<CustomInput type="date" placeholder="" class="h-10 placeholder:text-xs text-sm bg-white" />
 					</div>
 				</div>
 				<div class="flex items-center flex-col gap-y-3">
@@ -26,58 +26,65 @@
 				</div>
 			</div>
 			<table class="min-w-full text-left mb-10">
-				<thead class="">
-					<tr>
+				<thead class="bg-light_gray h-[50px]">
+					<tr class="">
 						<th
 							scope="col"
-							class="font-medium text-sm text-dark py-3 pr-10 w-[40%]"
-						>
-							Billing Address
-						</th>
-						<th
-							scope="col"
-							class="font-medium text-sm text-dark py-3 pr-10 w-[20%]"
-						>
-							Payment Date
-						</th>
-						<th
-							scope="col"
-							class="font-medium text-sm text-dark py-3 pr-10 w-[20%]"
+							class="font-medium text-sm text-dark py-3 px-2 w-[20%]"
 						>
 							Payment Method
 						</th>
 						<th
 							scope="col"
-							class="font-medium text-sm text-dark py-3 pr-10 w-[20%]"
+							class="font-medium text-sm text-dark py-3 px-2 w-[20%]"
 						>
-							Receipt Number
+							Reference no.
 						</th>
+						<th
+							scope="col"
+							class="font-medium text-sm text-dark py-3 px-2 w-[30%]"
+						>
+							Payment from
+						</th>
+						<th
+							scope="col"
+							class="font-medium text-sm text-dark py-3 px-2 w-[15%]"
+						>
+							Bank Balance
+						</th>
+						<th
+							scope="col"
+							class="font-medium text-sm text-dark py-3 px-2 w-[15%] text-center"
+						/>
 					</tr>
 				</thead>
 				<tbody class="">
 					<tr
-						class="align-top"
+						class="h-[65px]"
 					>
 						<td
 							class="pr-10"
 						>
-							<CustomTextarea placeholder="Enter billing address" class="h-20 placeholder:text-xs text-sm bg-white" />
+							<CustomSelect default-option="Select" :options="['Cash']" class="h-10 placeholder:text-xs text-sm bg-white" />
 						</td>
 						<td
 							class="pr-10"
 						>
-							<CustomInput type="date" placeholder="" class="h-10 placeholder:text-xs text-sm bg-white" />
+							<CustomInput placeholder="" class="h-10 placeholder:text-xs text-sm bg-white" />
 						</td>
 						<td
 							class="pr-10"
 						>
-							<CustomSelect label="" :options="['Cash','Transfer']" default-option="select method" class="text-sm h-10 bg-white" />
+							<CustomSelect default-option="Select" :options="['Bayo Adenekan']" class="h-10 placeholder:text-xs text-sm bg-white" />
 						</td>
 						<td
-							class=""
+							class="pr-10"
 						>
-							<CustomInput placeholder="INV32019" class="h-10 placeholder:text-xs text-sm bg-white" />
+							N0.00
 						</td>
+						<td
+							class="pr-2 text-center"
+						/>
 					</tr>
 				</tbody>
 			</table>
@@ -86,13 +93,13 @@
 					<tr class="">
 						<th
 							scope="col"
-							class="font-medium text-sm text-dark py-3 px-2 w-[25%]"
+							class="font-medium text-sm text-dark py-3 px-2 w-[20%]"
 						>
-							Product
+							Expense Account
 						</th>
 						<th
 							scope="col"
-							class="font-medium text-sm text-dark py-3 px-2 w-[35%]"
+							class="font-medium text-sm text-dark py-3 px-2 w-[30%]"
 						>
 							Description
 						</th>
@@ -106,13 +113,19 @@
 							scope="col"
 							class="font-medium text-sm text-dark py-3 px-2 w-[15%]"
 						>
-							Price
+							Amount
 						</th>
 						<th
 							scope="col"
-							class="font-medium text-sm text-dark py-3 px-2 w-[15%] text-center"
+							class="font-medium text-sm text-dark py-3 px-2 w-[15%]"
 						>
-							Amount
+							Total Amount
+						</th>
+						<th
+							scope="col"
+							class="font-medium text-sm text-dark py-3 px-2 w-[10%] text-center"
+						>
+							Tax
 						</th>
 					</tr>
 				</thead>
@@ -125,7 +138,7 @@
 						<td
 							class="pr-10"
 						>
-							<CustomInput v-model="product.name" placeholder="Enter product name" class="h-10 placeholder:text-xs text-sm bg-white" />
+							<CustomSelect v-model="product.account" :options="['Bayo Adenekan']" default-option="Select" class="h-10 placeholder:text-xs text-sm bg-white" />
 						</td>
 						<td
 							class="pr-10"
@@ -140,12 +153,17 @@
 						<td
 							class="pr-10"
 						>
-							<CustomInput v-model="product.price" placeholder="" class="h-10 placeholder:text-xs text-sm bg-white" />
+							<CustomInput v-model="product.amount" placeholder="" class="h-10 placeholder:text-xs text-sm bg-white" />
+						</td>
+						<td
+							class="pr-10"
+						>
+							<span class="text-sm font-medium">N{{ product.total = product.amount * product.qty }}.00</span>
 						</td>
 						<td
 							class="pr-2 text-center"
 						>
-							<span class="text-sm font-medium">N{{ product.amount = product.price * product.qty }}.00</span>
+							<CustomSelect v-model="product.tax" :options="['75%']" default-option="" class="h-10 placeholder:text-xs text-sm bg-white" />
 						</td>
 					</tr>
 				</tbody>
@@ -156,17 +174,10 @@
 					<path d="M9 13.5V4.5" stroke="#536DFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 				</svg>
 
-				<span class="inline-block text-card_blue text-sm font-medium hover:text-primary transition-colors duration-300" @click="addNewProduct ">Add a new invoice product</span>
+				<span class="inline-block text-card_blue text-sm font-medium hover:text-primary transition-colors duration-300" @click="addNewProduct ">Add another line</span>
 			</div>
 
-			<!-- subtotal -->
-			<div class="h-[42px] flex items-center justify-between px-6 bg-light_gray font-medium text-sm mb-8">
-				<span>Subtotal</span>
-				<span>-N0.00</span>
-			</div>
-			<!-- subtotal ends here -->
-
-            <!-- discount table -->
+			<!-- discount table -->
 			<div class="border border-dark_gray w-full px-6 py-5 rounded-md mb-24 bg-white shadow-md">
 				<table class="w-full">
 					<tbody class="">
@@ -269,21 +280,23 @@
 <script setup lang="ts">
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const productList = ref([{
-		name: '',
+		account: '',
 		description: '',
 		qty: 0,
-		price: 0,
-		amount: 0
+		amount: 0,
+		total: 0,
+		tax: '75%'
 	}])
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const addNewProduct = () => {
 		productList.value.push({
-			name: '',
+			account: '',
 			description: '',
 			qty: 0,
-			price: 0,
-			amount: 0
+			amount: 0,
+			total: 0,
+			tax: '75%'
 		})
 	}
 
