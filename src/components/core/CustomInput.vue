@@ -1,7 +1,7 @@
 <template>
 	<div class="w-full text-dark">
 		<div class="flex flex-col mb-1 w-full relative">
-			<span v-if="title" class="text-[16px] font-[500] mb-2 text-dark">{{ title }}</span>
+			<span v-if="title" class="text-base font-medium mb-2 text-dark">{{ title }}</span>
 
 			<div class="w-full relative mb-1">
 				<input
@@ -9,7 +9,7 @@
 					:value="modelValue"
 					:placeholder="placeholder"
 					:type="type"
-					class="w-full rounded-[6px] h-[48px] py-2 px-6 ring-1 ring-black/[0.12] outline-primary transition-all duration-200 ease-in bg-transparent focus:bg-primary_light"
+					class="w-full bg-white rounded-[6px] h-12 py-2 px-6 ring-1 ring-black/[0.12] outline-primary transition-all duration-200 ease-in bg-transparent focus:bg-primary_light"
 					@input="$emit('update:modelValue', $event.target.value)"
 				>
 				<div
@@ -47,7 +47,8 @@ defineProps({
   },
   modelValue: {
     required: true,
-    default: ''
+    default: '',
+	type: [String, Number]
   },
   errorMessage: {
     type: String,

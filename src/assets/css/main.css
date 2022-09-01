@@ -6,11 +6,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+	.container {
+		@apply pl-[136px] pr-[70px] pt-[45px] max-w-[1728px]
+	}
+}
 
 .hover{
 	transition: box-shadow 400ms;
 }
 
 .hover:hover{
-	box-shadow: 0px 0px 10px 10px #BDBDBD;
+	box-shadow: 0px 0px 10px 8px #BDBDBD;
 }
+
