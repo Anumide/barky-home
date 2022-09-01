@@ -13,11 +13,10 @@
 }
 
 .hover{
-	box-shadow: 0px 0px 6px 1px #BDBDBD;
 	transition: box-shadow 400ms;
 }
 
 .hover:hover{
-	box-shadow: 0px 0px 12px 10px #BDBDBD;
+	box-shadow: 0px 0px 10px 8px #BDBDBD;
 }
 

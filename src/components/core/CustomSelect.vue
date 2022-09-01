@@ -2,8 +2,8 @@
 	<!-- select industry -->
 	<div class="w-full">
 		<div class="relative mb-1 flex w-full flex-col">
-			<span v-if="label" class="mb-2 text-[16px] font-[500]">{{ label }}</span>
-			<div class="relative mb-1 w-full h-[48px]" v-bind="$attrs">
+			<span v-if="label" class="mb-2 text-base font-medium">{{ label }}</span>
+			<div class="relative mb-1 w-full h-12" v-bind="$attrs">
 				<select
 					class="appearance-none h-full w-full rounded-md bg-transparent  py-2 px-6 pr-10 outline-primary ring-1 ring-black/[0.12] "
 					:value="modelValue"
@@ -24,7 +24,7 @@
 			</div>
 			<p
 				v-if="errorMessage"
-				class="space-x-2 text-[12px] flex items-center text-primary_error"
+				class="space-x-2 text-xs flex items-center text-primary_error"
 			>
 				<icon name="infoCircle" class="w-[13px] h-[13px]" /><span>{{
 					errorMessage

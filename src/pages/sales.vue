@@ -16,7 +16,7 @@
 					to="/sales/customers"
 					:class="{
 						'border-b-[3px] border-primary text-primary':
-							$route.path === '/sales/customers',
+							$route.path.startsWith('/sales/customers'),
 					}"
 					class="cursor-pointer py-2 border-b-[3px] border-transparent"
 				>
@@ -26,7 +26,7 @@
 					to="/sales/products"
 					:class="{
 						'border-b-[3px] border-primary text-primary':
-							$route.path === '/sales/products',
+							$route.path.startsWith('/sales/products'),
 					}"
 					class="cursor-pointer py-2 border-b-[3px] border-transparent"
 				>

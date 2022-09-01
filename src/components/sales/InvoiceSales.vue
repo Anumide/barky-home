@@ -120,53 +120,42 @@
 				<table class="min-w-full text-left">
 					<thead class="border-b border-dark_gray">
 						<tr>
-							<th
-								scope="col"
-								class="px-4"
-							>
-								<input type="checkbox" class="w-4 h-4 cursor-pointer">
-							</th>
+							<th />
 							<th
 								scope="col"
 								class="font-semibold text-sm text-dark py-6 px-4 text-center"
 							>
-								Status
+								Product Name
 							</th>
 							<th
 								scope="col"
 								class="font-semibold text-sm text-dark py-6 px-4"
 							>
-								Customer
+								Category
 							</th>
 							<th
 								scope="col"
 								class="font-semibold text-sm text-dark py-6 px-4"
 							>
-								Invoice Date
+								Category Income
 							</th>
 							<th
 								scope="col"
 								class="font-semibold text-sm text-dark py-6 px-4"
 							>
-								Invoice No.
+								Description
 							</th>
 							<th
 								scope="col"
 								class="font-semibold text-sm text-dark py-6 px-4"
 							>
-								Invoice Amount
+								Price
 							</th>
 							<th
 								scope="col"
 								class="font-semibold text-sm text-dark py-6 px-4"
 							>
 								Tax
-							</th>
-							<th
-								scope="col"
-								class="font-semibold text-sm text-dark py-6 px-4"
-							>
-								Total Amount
 							</th>
 							<th
 								scope="col"
@@ -218,11 +207,6 @@
 								class="text-xs text-dark px-4"
 							>
 								N320,000
-							</td>
-							<td
-								class="text-xs text-dark px-4"
-							>
-								N32,000
 							</td>
 							<td
 								class="text-xs text-dark px-4 w-fit"
