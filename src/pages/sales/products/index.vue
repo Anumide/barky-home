@@ -25,7 +25,7 @@
 				<TransitionFade>
 					<div v-if="isPeriod" class="absolute top-[3.3rem] right-3 z-10 bg-white rounded drop-shadow-lg shadow-xl text-black w-44">
 						<ul class="divide-y divide-boder_color">
-							<li v-for="period in periods" :key="period.name" class="py-2 pl-3 cursor-pointer hover:bg-neutral-200 transition" @click="periodDisplay(period)">
+							<li v-for="period in periods" :key="period.name" class="py-2 pl-3 cursor-pointer hover:bg-neutral-200 transition">
 								<NuxtLink :to="'/sales/products/' + period.periodLink">
 									{{ period.name }}
 								</NuxtLink>
@@ -72,7 +72,7 @@
 					</button>
 				</div>
 			</div>
-			<div v-if="!data" class="pt-[70px] pb-[30px] mt-8 flex flex-col items-center justify-center">
+			<div v-if="data" class="pt-[70px] pb-[30px] mt-8 flex flex-col items-center justify-center">
 				<img src="@/assets/icons/source/emptyDocument.svg" alt="" class="[119px] h-[144px]">
 				<p class="font-medium mt-2 text-2xl leading-6 mb-3">
 					Oops! No invoice available
@@ -87,12 +87,14 @@
 			</div>
 			<div v-else class="mt-6">
 				<table class="min-w-full text-left">
-					<thead class="border-b border-dark text-center">
+					<thead class="border-b border-dark text-left">
 						<tr>
-							<th><input type="checkbox" class="w-4 h-4 cursor-pointer"></th>
+							<th class="py-5 px-4 w-[6%]">
+								<input type="checkbox" class="w-4 h-4 cursor-pointer">
+							</th>
 							<th
 								scope="col"
-								class="font-semibold text-sm text-dark py-6 px-4"
+								class="w-[14%] font-semibold text-sm text-dark py-6 px-4"
 							>
 								Product Name
 							</th>
@@ -104,7 +106,7 @@
 							</th>
 							<th
 								scope="col"
-								class="font-semibold text-sm text-dark py-6 px-4"
+								class="w-[16%] font-semibold text-sm text-dark py-6 px-4"
 							>
 								Category Income
 							</th>
@@ -128,7 +130,7 @@
 							</th>
 							<th
 								scope="col"
-								class="font-semibold text-sm text-dark py-6 px-4"
+								class="w-[10%] font-semibold text-sm text-dark py-6 px-4"
 							>
 								Action
 							</th>
