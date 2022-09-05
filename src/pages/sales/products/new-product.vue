@@ -8,16 +8,7 @@
 				New Product
 			</div>
 		</div>
-		<div class="flex gap-12">
-			<div class="flex gap-2 items-center my-2 mb-6">
-				<input id="good" type="checkbox" class="w-4 h-4">
-				<label for="good" class="text-sm font-medium">Good</label>
-			</div>
-			<div class="flex gap-2 items-center my-2 mb-6">
-				<input id="service" type="checkbox" class="w-4 h-4">
-				<label for="service" class="text-sm font-medium">Service</label>
-			</div>
-		</div>
+		<CustomSelect label="Type of Product" :options="['Good', 'Service']" default-option="Select" class="text-sm my-2 min-w-fit max-w-xs" />
 		<div class="flex gap-x-40 py-6 border-b border-solid border-neutral-200">
 			<div class="w-1/3 min-w-fit first:mt-0 last:mb-0">
 				<CustomInput type="text" title="Product Name" placeholder="Enter product name" class="placeholder:text-xs text-sm my-2" />
@@ -26,60 +17,80 @@
 			</div>
 			<div class="w-[35%] flex justify-center items-center">
 				<div
-					class="border border-dark_gray rounded-md border-dashed flex flex-col transition-colors duration-200 items-center justify-center h-4/5 w-full"
+					v-if="!droppedFile"
+					class="bg-white border border-dark_gray rounded-md border-dashed flex flex-col transition-colors duration-200 items-center justify-center h-4/5 w-full"
 					:class="{'bg-card_blue': dropZoneActive}"
 					@dragenter.prevent="toggleActive"
 					@dragleave.prevent="toggleActive"
 					@dragover.prevent
 					@drop.prevent="handleDrop($event)"
 				>
-					<label for="csv_file_input" class="cursor-pointer"><icon name="addImage" class="w-14 h-16" /></label>
+					<label for="img_file_input" class="cursor-pointer"><icon name="addImage" class="w-14 h-16" /></label>
 
-					<label for="csv_file_input" class="text-sm font-medium cursor-pointer mt-4">
+					<label for="img_file_input" class="text-sm font-medium cursor-pointer mt-4">
 						Select an image to upload
 					</label>
 					<p class="text-xs text-gray-400">
 						or drag and drop it here
 					</p>
-					<input id="csv_file_input" ref="inputFileRef" class="hidden" type="file" @change="handleFileInput">
+					<input
+						id="img_file_input"
+						ref="inputFileRef"
+						class="hidden"
+						type="file"
+						accept="image/*"
+						@change="handleFileInput"
+					>
+				</div>
+				<div v-else ref="imgInput" class="h-4/5 w-full">
+					<span>{{ droppedFile.name }}</span>
+					<span class="text-red-500 font-medium ml-4 cursor-pointer" @click="removeFile">delete</span>
 				</div>
 			</div>
 		</div>
 		<div class="flex gap-x-40 py-6 border-b border-solid border-neutral-200">
 			<!-- sales Information -->
 			<div class="w-1/3 min-w-fit first:mt-0 last:mb-0">
-				<div class="flex gap-2 items-center my-2 mb-6">
+				<div class="flex gap-2 items-center my-2 mb-8">
 					<input id="salesInfo" type="checkbox" class="w-4 h-4">
 					<label for="salesInfo" class="text-sm font-medium">Sales Information</label>
-					<icon name="information" class="w-4" />
+					<icon name="information" class="icon_color w-4" />
 				</div>
-				<CustomInput type="text" title="Selling Price" placeholder="NGN0.00" class="placeholder:text-xs text-sm my-2" />
-				<div class="flex flex-col gap-y-3">
-					<span class="text-sm font-medium flex items-center gap-1">Account <icon name="information" class="w-4" /></span>
+				<CustomInput type="text" title="Selling Price" placeholder="NGN0.00" class="placeholder:text-xs text-sm my-2 mb-4" />
+				<div class="flex flex-col gap-y-3 mb-4">
+					<span class="text-sm font-medium flex items-center gap-1">Account <icon name="information" class="icon_color w-4" /></span>
 					<CustomSelect label="" :options="[1, 2, 3]" default-option="Select" class="text-sm" />
 				</div>
-				<CustomTextarea title="Description" placeholder="Enter product description" class="placeholder:text-xs text-sm my-2 mb-12 h-16" />
-				<div class="flex flex-col gap-y-3">
-					<span class="text-sm font-medium flex items-center gap-1">Select Account <icon name="information" class="w-4" /></span>
+				<CustomTextarea title="Description" placeholder="Enter product description" class="placeholder:text-xs text-sm mb-4" />
+				<div class="flex flex-col gap-y-3 mb-4">
+					<span class="text-sm font-medium flex items-center gap-1">Select Account <icon name="information" class="icon_color w-4" /></span>
 					<CustomSelect label="" :options="[1, 2, 3]" default-option="Select" class="text-sm" />
+				</div>
+				<div class="flex flex-col gap-y-3 mb-4">
+					<span class="text-sm font-medium flex items-center gap-1">Tax <icon name="information" class="icon_color w-4" /></span>
+					<CustomSelect label="" :options="[1, 2, 3]" default-option="Select Account" class="text-sm" />
 				</div>
 			</div>
 			<!-- purchase Information -->
 			<div class="w-1/3 min-w-fit first:mt-0 last:mb-0">
-				<div class="flex gap-2 items-center my-2 mb-6">
+				<div class="flex gap-2 items-center my-2 mb-8">
 					<input id="costInfo" type="checkbox" class="w-4 h-4">
 					<label for="costInfo" class="text-sm font-medium">Cost Information</label>
-					<icon name="information" class="w-4" />
+					<icon name="information" class="icon_color w-4" />
 				</div>
-				<CustomInput type="text" title="Selling Price" placeholder="NGN0.00" class="placeholder:text-xs text-sm my-2" />
-				<div class="flex flex-col gap-y-3">
-					<span class="text-sm font-medium flex items-center gap-1">Account <icon name="information" class="w-4" /></span>
+				<CustomInput type="text" title="Selling Price" placeholder="NGN0.00" class="placeholder:text-xs text-sm my-2 mb-4" />
+				<div class="flex flex-col gap-y-3 mb-4">
+					<span class="text-sm font-medium flex items-center gap-1">Account <icon name="information" class="icon_color w-4" /></span>
 					<CustomSelect label="" :options="[1, 2, 3]" default-option="Select" class="text-sm" />
 				</div>
-				<CustomTextarea title="Description" placeholder="Enter product description" class="placeholder:text-xs text-sm my-2 mb-16 h-16" />
-				<div class="flex flex-col gap-y-3">
-					<span class="text-sm font-medium flex items-center gap-1">Select Account <icon name="information" class="w-4" /></span>
+				<CustomTextarea title="Description" placeholder="Enter product description" class="placeholder:text-xs text-sm mb-4" />
+				<div class="flex flex-col gap-y-3 mb-4">
+					<span class="text-sm font-medium flex items-center gap-1">Select Account <icon name="information" class="icon_color w-4" /></span>
 					<CustomSelect label="" :options="[1, 2, 3]" default-option="Select" class="text-sm" />
+				</div>
+				<div class="flex flex-col gap-y-3 mb-4">
+					<span class="text-sm font-medium flex items-center gap-1">Tax <icon name="information" class="icon_color w-4" /></span>
+					<CustomSelect label="" :options="[1, 2, 3]" default-option="Select Account" class="text-sm" />
 				</div>
 			</div>
 		</div>
@@ -100,11 +111,11 @@
 		</div>
 		<div class="w-11/12 flex gap-x-6 mb-4">
 			<div class="flex flex-col gap-y-3 w-2/5">
-				<span class="text-sm font-medium flex items-center gap-1">Inventory Account <icon name="information" class="w-4" /></span>
+				<span class="text-sm font-medium flex items-center gap-1">Inventory Account <icon name="information" class="icon_color w-4" /></span>
 				<CustomSelect label="" :options="['Adebayo Adenekan']" default-option="Select customer" class="text-sm h-10" />
 			</div>
 			<div class="flex flex-col gap-y-3 w-2/5">
-				<span class="text-sm font-medium flex items-center gap-1">Vendor <icon name="information" class="w-4" /></span>
+				<span class="text-sm font-medium flex items-center gap-1">Vendor <icon name="information" class="icon_color w-4" /></span>
 				<CustomInput type="text" placeholder="Enter vendor name" class="h-10 placeholder:text-xs text-sm" />
 			</div>
 			<div class="flex flex-col gap-y-3 w-1/6">
@@ -125,6 +136,9 @@
 <script setup lang="ts">
 	const inputFileRef = ref(null)
 
+	const imgInput = ref(null)
+	const uploadedImage = ref(null)
+
 	const droppedFile = ref('')
 	const dropZoneActive = ref(false)
 
@@ -142,7 +156,20 @@
 	const handleFileInput = () => {
 		if (inputFileRef.value) {
 			droppedFile.value = inputFileRef.value.files[0]
+			const reader = new FileReader()
+			reader.addEventListener('load', () => {
+				uploadedImage.value = reader.result
+				console.log(uploadedImage.value)
+
+				imgInput.value.style.backgroundImage = `url(${uploadedImage.value})`
+			})
+			console.log(reader)
 		}
+	}
+
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	const removeFile = () => {
+		droppedFile.value = ''
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -150,3 +177,11 @@
 	alert('button has been clicked!')
 }
 </script>
+<style scoped>
+.icon_color{
+	fill: white;
+	fill-opacity: 0.2;
+	stroke-opacity: 0.2;
+}
+
+</style>

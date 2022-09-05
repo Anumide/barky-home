@@ -84,7 +84,7 @@
 		</div>
 		<div class="flex flex-col gap-y-3 w-96 my-4">
 			<span class="text-base font-medium">Notes</span>
-			<CustomTextarea label="" placeholder="Write something..." default-option="Select customer" class="text-sm h-32" />
+			<CustomTextarea label="" placeholder="Write something..." default-option="Select customer" class="text-sm" />
 		</div>
 		<div class="flex justify-between items-center mt-16">
 			<CustomButton class="w-36 px-20 transition rounded-full text-red-600 ring-red-600 hover:text-white hover:bg-red-600" label="Cancel and Delete" theme="outline" @click="test" />

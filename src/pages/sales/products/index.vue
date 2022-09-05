@@ -2,17 +2,28 @@
 	<div class="w-full h-full flex flex-col">
 		<div class="flex items-center justify-between mb-16">
 			<span class="text-2xl leading-6 text-dark font-normal">Products</span>
-			<!-- <CustomButton class="text-white rounded-full w-fit px-6 py-3 text-sm leading-6 font-medium" label="Create Invoice" theme="link" to="/sales/invoice/new-invoice" /> -->
-			<div class="w-48 bg-primary flex gap-5 items-center divide-x-reverse divide-solid divide-white rounded-full pr-6 text-white cursor-pointer relative" @click="isPeriod = !isPeriod">
-				<NuxtLink to="/sales/products/new-product" class="bg-primary hover:ring-primary hover:ring-2 hover:ring-offset-2 transition text-sm border-r border-white/80 border-solid rounded-l-full pl-6 pr-3 py-3  leading-6 font-medium">
+			<!-- create button with dropdown -->
+			<div
+
+				class="w-48 bg-primary flex items-center divide-x-reverse divide-solid divide-white rounded-full text-white cursor-pointer relative"
+			>
+				<NuxtLink to="/sales/products/new-product" class="bg-primary hover:ring-primary hover:ring-2 hover:ring-offset-2 transition text-sm border-r border-white/80 border-solid rounded-l-full pl-6 pr-3 py-3 leading-6 font-medium">
 					Create Product
 				</NuxtLink>
-				<icon
-					name="arrowDown"
-					class="w-4"
-				/>
+				<div
+					tabindex="0"
+					class="flex justify-center items-center bg-primary rounded-r-full pl-5 p-4"
+					@click="isPeriod = !isPeriod"
+					@blur="isPeriod = false"
+				>
+					<icon
+						name="arrowDown"
+						class="w-4"
+					/>
+				</div>
+
 				<TransitionFade>
-					<div v-if="isPeriod" class="absolute top-[3.3rem] right-6 z-10 bg-white rounded drop-shadow-lg shadow-xl text-black w-44">
+					<div v-if="isPeriod" class="absolute top-[3.3rem] right-3 z-10 bg-white rounded drop-shadow-lg shadow-xl text-black w-44">
 						<ul class="divide-y divide-boder_color">
 							<li v-for="period in periods" :key="period.name" class="py-2 pl-3 cursor-pointer hover:bg-neutral-200 transition" @click="periodDisplay(period)">
 								<NuxtLink :to="'/sales/products/' + period.periodLink">
@@ -22,7 +33,7 @@
 						</ul>
 					</div>
 				</TransitionFade>
-			</div>
+			</div> <!-- end of create button with dropdown -->
 		</div>
 		<!-- products history  -->
 		<div class="w-full px-[60px] py-[40px] relative rounded-md bottom-0 left-0 right-0 grow bg-white shadow-xl drop-shadow-md">
@@ -78,10 +89,10 @@
 				<table class="min-w-full text-left">
 					<thead class="border-b border-dark text-center">
 						<tr>
-							<th />
+							<th><input type="checkbox" class="w-4 h-4 cursor-pointer"></th>
 							<th
 								scope="col"
-								class="font-semibold text-sm text-dark py-6 px-4 text-center"
+								class="font-semibold text-sm text-dark py-6 px-4"
 							>
 								Product Name
 							</th>
@@ -135,32 +146,32 @@
 								<input type="checkbox" class="w-4 h-4 cursor-pointer">
 							</td>
 							<td
-								class="text-xs text-dark px-4 text-center"
+								class="text-xs text-dark px-4"
 							>
 								Apple
 							</td>
 							<td
-								class="text-xs text-dark px-4 text-center"
+								class="text-xs text-dark px-4"
 							>
 								Laptop
 							</td>
 							<td
-								class="text-xs text-dark px-4 text-center"
+								class="text-xs text-dark px-4"
 							>
 								N900,000
 							</td>
 							<td
-								class="text-xs text-dark px-4 text-center"
+								class="text-xs text-dark px-4"
 							>
 								Macbook Pro
 							</td>
 							<td
-								class="text-xs text-dark px-4 text-center"
+								class="text-xs text-dark px-4"
 							>
 								N900,000
 							</td>
 							<td
-								class="text-xs text-dark px-4 text-center"
+								class="text-xs text-dark px-4"
 							>
 								N20,000
 							</td>
@@ -213,8 +224,7 @@ const periods = [
 	{ name: 'Import CSV', periodLink: '' },
 	{ name: 'Add Stock', periodLink: 'add-stock' },
 	{ name: 'Stock Transfer', periodLink: 'stock-transfer' },
-	{ name: 'Stock Adjustment', periodLink: 'stock-adjustment' },
-	{ name: 'New Expenses', periodLink: '' }
+	{ name: 'Stock Adjustment', periodLink: 'stock-adjustment' }
 ]
 </script>
 
