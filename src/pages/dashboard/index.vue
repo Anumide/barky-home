@@ -2,7 +2,7 @@
 	<div class="container grid grid-cols-3 auto-rows-auto gap-4">
 		<CustomSalesSegment
 			type-of-sales="Profit or Loss"
-			class="col-span-2"
+			class="col-span-2 z-10"
 		>
 			<div class="grid grider">
 				<CustomSalesInfo

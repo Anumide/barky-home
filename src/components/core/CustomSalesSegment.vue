@@ -1,6 +1,6 @@
 <template>
 	<div class="hover rounded-lg drop-shadow-md bg-white">
-		<div class="flex justify-between p-4 border-b border-border_color border-solid z-10">
+		<div class="flex justify-between p-4 border-b border-border_color border-solid">
 			<p class="text-sm font-medium">
 				{{ typeOfSales }}
 			</p>

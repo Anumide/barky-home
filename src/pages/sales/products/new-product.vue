@@ -42,8 +42,8 @@
 						@change="handleFileInput"
 					>
 				</div>
-				<div v-else ref="imgInput" class="h-4/5 w-full">
-					<span>{{ droppedFile.name }}</span>
+				<div v-else class="h-4/5 w-full flex flex-col justify-center items-center">
+					<span><img ref="imgInput" class="w-72 h-72 object-contain"></span>
 					<span class="text-red-500 font-medium ml-4 cursor-pointer" @click="removeFile">delete</span>
 				</div>
 			</div>
@@ -161,9 +161,9 @@
 				uploadedImage.value = reader.result
 				console.log(uploadedImage.value)
 
-				imgInput.value.style.backgroundImage = `url(${uploadedImage.value})`
+				imgInput.value.setAttribute('src', uploadedImage.value)
 			})
-			console.log(reader)
+			reader.readAsDataURL(inputFileRef.value.files[0])
 		}
 	}
 
