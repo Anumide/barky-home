@@ -9,7 +9,7 @@
 			</div>
 		</div>
 		<div>
-			<div class="flex gap-x-6 mb-4">
+			<div class="flex gap-x-48 mb-4">
 				<div class="flex flex-col gap-y-3 w-full">
 					<span class="text-sm font-medium">Source Store </span>
 					<CustomSelect label="" :options="['Adebayo Adenekan']" default-option="Select customer" class="text-sm h-10" />
@@ -18,8 +18,7 @@
 					<span class="text-sm font-medium">Destination Store </span>
 					<CustomSelect label="" :options="['Adebayo Adenekan']" default-option="Select customer" class="text-sm h-10" />
 				</div>
-				<!-- <CustomSelect label="Quantity" default-option="Select" hidden :options="[1, 2, 3]" class="text-sm min-w-fit" /> -->
-				<CustomInput type="date" title="Expiration Date" class="w-3/4 h-10 placeholder:text-xs text-sm" />
+				<!-- <CustomInput type="date" title="Expiration Date" class="w-3/4 h-10 placeholder:text-xs text-sm" /> -->
 			</div>
 		</div>
 		<div class="border-b border-solid border-neutral-200">
@@ -28,13 +27,13 @@
 					<tr class="">
 						<th
 							scope="col"
-							class="font-medium text-sm text-dark py-3 px-2 w-[34%]"
+							class="font-medium text-sm text-dark py-3 px-2 w-[28%]"
 						>
 							Item
 						</th>
 						<th
 							scope="col"
-							class="font-medium text-sm text-dark py-3 px-2 w-[34%]"
+							class="font-medium text-sm text-dark py-3 px-2 w-[28%]"
 						>
 							Receiving Person
 						</th>
@@ -82,12 +81,12 @@
 						<td
 							class="pr-6"
 						>
-							<CustomSelect label="" default-option="Select" hidden :options="[1, 2, 3]" class="h-10 text-sm min-w-fit" />
+							<CustomInput placeholder="N0.00" class="h-10 placeholder:text-xs text-sm min-w-fit" />
 						</td>
 						<td
 							class="pr-2"
 						>
-							<CustomInput placeholder="N0.00" class="h-10 placeholder:text-xs text-sm" />
+							<CustomInput placeholder="N0.00" class="h-10 placeholder:text-xs text-sm min-w-fit" />
 						</td>
 					</tr>
 				</tbody>
@@ -103,7 +102,7 @@
 		</div>
 		<div class="flex flex-col gap-y-3 w-96 my-4">
 			<span class="text-base font-medium">Notes</span>
-			<CustomTextarea label="" placeholder="Write something..." default-option="Select customer" class="text-sm h-32" />
+			<CustomTextarea label="" placeholder="Write something..." default-option="Select customer" class="text-sm" />
 		</div>
 		<div class="flex justify-between items-center mt-16">
 			<CustomButton class="w-36 px-20 transition rounded-full text-red-600 ring-red-600 hover:text-white hover:bg-red-600" label="Cancel and Delete" theme="outline" @click="test" />
