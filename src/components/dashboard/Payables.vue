@@ -44,6 +44,6 @@ defineProps({
 </script>
 <style scoped>
 table th, table td{
-	@apply p-6;
+	@apply px-2 py-6;
 }
 </style>
