@@ -5,6 +5,7 @@
 export enum IconNames {
   'accountant' = 'accountant',
   'addDocument' = 'addDocument',
+  'addImage' = 'addImage',
   'arrow-down' = 'arrow-down',
   'arrowBack' = 'arrowBack',
   'arrowDown' = 'arrowDown',
@@ -24,6 +25,7 @@ export enum IconNames {
   'hamburger' = 'hamburger',
   'hrm' = 'hrm',
   'infoCircle' = 'infoCircle',
+  'information' = 'information',
   'invoice' = 'invoice',
   'logout' = 'logout',
   'mail' = 'mail',

@@ -1,19 +1,17 @@
 <template>
-	<div class="grid grid-cols-3 auto-rows-auto gap-4">
+	<div class="container grid grid-cols-3 auto-rows-auto gap-4">
 		<CustomSalesSegment
 			type-of-sales="Profit or Loss"
-			class="col-span-2"
+			class="col-span-2 z-10"
 		>
 			<div class="grid grider">
 				<CustomSalesInfo
 					sales-type="Sales"
-					symbol="-"
 					value="N4,000,000"
 				/>
 				<span class="self-end mt-4 text-center font-semibold text-lg">-</span>
 				<CustomSalesInfo
 					sales-type="Cost of goods"
-					symbol="-"
 					value="N4,000,000"
 				/>
 				<span class="self-end mt-4 text-center font-semibold text-lg">-</span>
@@ -24,6 +22,7 @@
 				/>
 				<span class="self-end mt-4 text-center font-semibold text-lg">=</span>
 				<CustomSalesInfo
+					text-color="green-500"
 					sales-type="Profit/Loss"
 					value="N4,000,000"
 				/>
@@ -114,18 +113,18 @@
 			</custom-button>
 		</div>
 
-		<div class="hover rounded-t row-start-3 col-span-2 p-7 bg-white">
+		<div class="hover rounded-t row-start-3 col-span-2 p-7 bg-white drop-shadow-md">
 			<div class="flex justify-between items-center">
-				<div class="rounded-full bg-[#f8f8f8] py-1 px-5 flex gap-4 font-poppins">
+				<div class="rounded-full bg-light_gray p-1 flex gap-4 font-poppins">
 					<span
-						class="p-3 text-xs cursor-pointer"
+						class="py-1 px-4 text-primary text-xs cursor-pointer tracking-wide font-medium"
 						:class="{'active-component': currentComponent === 'receivables'}"
 						@click="currentComponent = 'receivables'"
 					>
 						Receivables
 					</span>
 					<span
-						class="p-3 text-xs cursor-pointer"
+						class="py-1 px-4 text-primary text-xs cursor-pointer tracking-wide font-medium"
 						:class="{'active-component': currentComponent === 'payables'}"
 						@click="currentComponent = 'payables'"
 					>

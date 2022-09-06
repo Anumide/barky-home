@@ -1,17 +1,13 @@
 <template>
-	<div class="w-full text-dark">
-		<div class="flex flex-col mb-1 w-full relative">
-			<span v-if="title" class="text-base font-medium mb-2 text-dark">{{ title }}</span>
-
-			<div class="w-full relative">
-				<textarea
-					v-bind="$attrs"
-					:placeholder="placeholder"
-					class="w-full rounded-[6px] h-[48px] py-2 px-6 ring-1 ring-black/[0.12] outline-primary transition-all duration-200 ease-in bg-transparent focus:bg-primary_light resize-none"
-					@input="$emit('update:modelValue', $event.target.value)"
-				/>
-			</div>
-			<!-- <p
+	<div class="flex flex-col mb-1 w-full">
+		<span v-if="title" class="text-base font-medium mb-2 text-dark">{{ title }}</span>
+		<textarea
+			v-bind="$attrs"
+			:placeholder="placeholder"
+			class="w-full mb-1 h-16 max-h-52 min-h-fit bg-white rounded-[6px] py-2 px-4 ring-1 ring-black/[0.12] outline-primary transition-all duration-200 ease-in bg-transparent focus:bg-primary_light"
+			@input="$emit('update:modelValue', $event.target.value)"
+		/>
+		<!-- <p
 				v-if="errorMessage"
 				class="space-x-2 text-xs flex items-center text-primary_error"
 			>
@@ -19,7 +15,6 @@
 					errorMessage
 				}}</span>
 			</p> -->
-		</div>
 	</div>
 </template>
 

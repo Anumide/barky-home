@@ -5,13 +5,10 @@
 				<icon :name="icon" class="w-4" :style="{'color': iconColor}" />
 			</div>
 			<span class="text-xs text-neutral-400 font-poppins tracking-wider"><small>{{ salesType }}</small></span>
-			<p class="font-semibold text-lg font-poppins">
+			<p class="font-semibold text-lg font-poppins" :class="`text-${textColor}`">
 				{{ value }}
 			</p>
 		</div>
-		<!-- <div v-if="symbol" class="self-end font-semibold text-lg">
-			{{ symbol }}
-		</div> -->
 	</div>
 </template>
 
@@ -23,6 +20,10 @@ defineProps({
 		default: ''
 	},
 	iconColor: {
+		type: String,
+		default: ''
+	},
+	textColor: {
 		type: String,
 		default: ''
 	},

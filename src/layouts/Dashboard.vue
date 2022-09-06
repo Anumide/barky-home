@@ -58,4 +58,12 @@ const toggleSidebar = () => {
 
 </script>
 
-<style scoped></style>
+<style>
+.hover{
+	transition: box-shadow 400ms;
+}
+
+.hover:hover{
+	box-shadow: 0px 0px 2px 2px #BDBDBD;
+}
+</style>
