@@ -36,6 +36,9 @@
 						</div>
 						<!-- submit button -->
 						<CustomButton label="Verify OTP" theme="submit" @click="$router.push('/auth/signin')" />
+						<div class="text-sm font-medium text-primary text-center">
+							<NuxtLink to="/auth/signin">Return to Login</NuxtLink>
+						</div>
 					</div>
 				</form>
 			</section>
@@ -47,11 +50,6 @@
 definePageMeta({
   layout: false
 })
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const test = () => {
-  alert('hello there')
-}
 
 const otp = ref(new Array(6).fill(''))
 const inputRefs = ref([])

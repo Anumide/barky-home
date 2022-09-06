@@ -22,7 +22,7 @@
 										>
 											<span class="text-xs font-medium leading-6">BA</span>
 										</div>
-										<select class="text-sm cursor-pointer font-medium outline-none bg-transparent">
+										<select class="text-sm cursor-pointer font-medium outline-none bg-transparent pr-3">
 											<option class="font-medium">
 												Bayo Adenekan
 											</option>
