@@ -8,7 +8,7 @@
 				<span>{{ Period }}</span>
 				<icon
 					name="chevronDown"
-					class="w-3"
+					class="w-6"
 				/>
 				<TransitionFade>
 					<div
