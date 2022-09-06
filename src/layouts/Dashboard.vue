@@ -1,17 +1,15 @@
 <template>
-	<div class="h-screen w-full overflow-hidden bg-[#F8F8F8]">
+	<div class="h-screen w-full overflow-hidden bg-dashboard_background">
 		<div class="flex w-full h-full overflow-hidden relative">
 			<Sidebar :sidebar-width="selectedWidth" :collapsed="collapsed" />
 			<!-- top nav here -->
-			<div class="bg-[#F8F8F8] grow w-full flex flex-col overflow-y-auto">
-				<nav class="h-[115px] flex shrink-0 items-center bg-white shadow-sm sticky top-0 w-full border-b border-gray-300 z-[99999]">
-					<icon name="hamburger" class="absolute top-9 left-2 cursor-pointer w-10 text-dark" @click="toggleSidebar" />
-					<!-- <span class="absolute top-4 left-6 rounded bg-red-500 cursor-pointer text-white py-2 px-4 text-xs" @click="toggleSidebar">toggle</span> -->
-					<div class="max-w-[1728px] mx-auto w-full flex items-center pl-[136px] pr-[70px]">
+			<div class="bg-dashboard_background grow w-full flex flex-col overflow-y-auto">
+				<nav class="h-[100px] flex shrink-0 items-center bg-white shadow-sm sticky top-0 w-full border-b border-gray-300 z-[99999]">
+					<icon name="hamburger" class="absolute top-1/2 translate-y-[-50%] left-2 cursor-pointer w-10 text-dark" @click="toggleSidebar" />					<div class="max-w-[1728px] mx-auto w-full flex items-center pl-[100px] pr-[100px]">
 						<slot name="top_nav_menu">
 							<div class="flex items-center justify-between w-full">
-								<div class="text-2xl leading-6 text-dark font-medium capitalize">
-									Beauty Care Company
+								<div class="flex items-center jusitify-center gap-x-4">
+									<span class="italic text-2xl text-red-500 bg-red-200 p-2 rounded-tr-xl rounded-bl-xl">BC</span><span class="text-2xl leading-6 text-dark font-medium capitalize">Beauty Care Company</span>
 								</div>
 								<div class="flex items-center">
 									<div class="flex items-center gap-x-6 pr-6 border-r py-6">
@@ -24,7 +22,7 @@
 										>
 											<span class="text-xs font-medium leading-6">BA</span>
 										</div>
-										<select class="text-sm cursor-pointer font-medium outline-none bg-transparent">
+										<select class="text-sm cursor-pointer font-medium outline-none bg-transparent pr-3">
 											<option class="font-medium">
 												Bayo Adenekan
 											</option>

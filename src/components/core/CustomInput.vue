@@ -9,7 +9,7 @@
 					:value="modelValue"
 					:placeholder="placeholder"
 					:type="type"
-					class="w-full bg-white rounded-[6px] h-12 py-2 px-6 ring-1 ring-black/[0.12] outline-primary transition-all duration-200 ease-in bg-transparent focus:bg-primary_light"
+					class="w-full bg-white rounded-[2px] h-12 py-2 px-6 ring-1 ring-black/[0.12] outline-primary transition-all duration-200 ease-in bg-transparent focus:bg-primary_light"
 					@input="$emit('update:modelValue', $event.target.value)"
 				>
 				<div

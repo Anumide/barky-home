@@ -75,7 +75,7 @@
 				Transaction History
 			</div>
 			<div class="flex items-center justify-between mb-4 w-full">
-				<CustomInput placeholder="Search Customers" class="w-full max-w-[330px] h-10 placeholder:text-xs text-sm" />
+				<CustomInput placeholder="Search Customers" class="w-full max-w-[330px] h-10 placeholder:text-xs text-sm bg-dashboard_background" />
 				<div class="flex items-center gap-x-4">
 					<CustomButton theme="outline" label="Print" class="text-primary text-xs rounded-full px-2 py-1.5">
 						<template #icon-left>
@@ -95,7 +95,7 @@
 				</div>
 			</div>
 			<div class="flex items-center justify-between">
-				<CustomSelect label="" default-option="All statuses" hidden :options="['All statuses','next option international and global dimensions']" class="h-10 text-sm w-fit min-w-fit" />
+				<CustomSelect label="" default-option="All statuses" hidden :options="['All statuses','next option international and global dimensions']" class="h-10 text-sm w-fit min-w-fit bg-dashboard_background" />
 				<div class="flex items-center gap-x-4">
 					<CustomButton class="h-[35px] py-1.5 px-2.5 font-medium text-xs" label="Apply filters" theme="submit" @click="uploadCsv" />
 					<button class="h-[35px] py-1.5 px-2.5 font-medium text-xs rounded-md bg-gray-100 text-gray-400 flex items-center justify-center w-fit whitespace-nowrap">
@@ -258,7 +258,7 @@ import { useModal } from '~~/src/composables/use-modal'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const uploadCsv = () => {
-    data.value = true
+    data.value = !data.value
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
