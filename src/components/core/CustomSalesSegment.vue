@@ -4,7 +4,17 @@
 			<p class="text-sm font-medium">
 				{{ typeOfSales }}
 			</p>
-			<div tabindex="0" class="text-card_blue flex gap-2 items-center text-sm font-medium cursor-pointer relative" @click="isPeriod = !isPeriod" @blur="isPeriod = false">
+			<CustomSelect
+				custom-class="items-center text-card_blue text-sm"
+				select-type="dropdown"
+				:label="Period"
+				:hidden="isPeriod"
+				:options="periods"
+				@blur="isPeriod = false"
+				@click="isPeriod = !isPeriod"
+				@itemsClick="periodDisplay($event)"
+			/>
+			<!-- <div tabindex="0" class="text-card_blue flex gap-2 items-center text-sm font-medium cursor-pointer relative" @click="isPeriod = !isPeriod" @blur="isPeriod = false">
 				<span>{{ Period }}</span>
 				<icon
 					name="chevronDown"
@@ -24,7 +34,7 @@
 						</ul>
 					</div>
 				</TransitionFade>
-			</div>
+			</div> -->
 		</div>
 		<!-- p-4 border border-border_color border-solid rounded-md -->
 		<div class="p-4">
@@ -51,6 +61,7 @@ const periods = ['This Week', 'This Month', 'This Quarter', 'This Year']
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function periodDisplay(period: string) {
 	Period.value = period
+	console.log(Period.value)
 }
 </script>
 <style>

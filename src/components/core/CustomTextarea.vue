@@ -4,7 +4,7 @@
 		<textarea
 			v-bind="$attrs"
 			:placeholder="placeholder"
-			class="w-full mb-1 h-16 max-h-52 min-h-fit bg-white rounded-[6px] py-2 px-4 ring-1 ring-black/[0.12] outline-primary transition-all duration-200 ease-in bg-transparent focus:bg-primary_light"
+			class="w-full mb-1 h-16 max-h-52 min-h-fit bg-white rounded-[2px] py-2 px-4 ring-1 ring-black/[0.12] outline-primary transition-all duration-200 ease-in bg-transparent focus:bg-primary_light"
 			@input="$emit('update:modelValue', $event.target.value)"
 		/>
 		<!-- <p

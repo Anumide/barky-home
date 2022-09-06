@@ -1,3 +1,4 @@
+
 <template>
 	<div class="w-full h-full flex flex-col">
 		<div class="flex items-center justify-between mb-16">
@@ -89,48 +90,48 @@
 				<table class="min-w-full text-left">
 					<thead class="border-b border-dark text-left">
 						<tr>
-							<th class="py-5 px-4 w-[6%]">
+							<th class="py-5 px-3 w-[5%]">
 								<input type="checkbox" class="w-4 h-4 cursor-pointer">
 							</th>
 							<th
 								scope="col"
-								class="w-[14%] font-semibold text-sm text-dark py-6 px-4"
+								class="w-[17%] font-semibold text-sm text-dark py-6 px-3"
 							>
 								Product Name
 							</th>
 							<th
 								scope="col"
-								class="font-semibold text-sm text-dark py-6 px-4"
+								class="font-semibold text-sm text-dark py-6 px-3"
 							>
 								Category
 							</th>
 							<th
 								scope="col"
-								class="w-[16%] font-semibold text-sm text-dark py-6 px-4"
+								class="w-[19%] font-semibold text-sm text-dark py-6 px-3"
 							>
 								Category Income
 							</th>
 							<th
 								scope="col"
-								class="font-semibold text-sm text-dark py-6 px-4"
+								class="font-semibold text-sm text-dark py-6 px-3"
 							>
 								Description
 							</th>
 							<th
 								scope="col"
-								class="font-semibold text-sm text-dark py-6 px-4"
+								class="font-semibold text-sm text-dark py-6 px-3"
 							>
 								Price
 							</th>
 							<th
 								scope="col"
-								class="font-semibold text-sm text-dark py-6 px-4"
+								class="font-semibold text-sm text-dark py-6 px-3"
 							>
 								Tax
 							</th>
 							<th
 								scope="col"
-								class="w-[10%] font-semibold text-sm text-dark py-6 px-4"
+								class="w-20 font-semibold text-sm text-dark py-6 px-3"
 							>
 								Action
 							</th>
@@ -143,49 +144,58 @@
 							class=" border-b border-black/20 h-[68px] cursor-pointer hover:bg-slate-100 transition-colors duration-200"
 						>
 							<td
-								class="py-5 px-4"
+								class="py-5 px-3"
 							>
 								<input type="checkbox" class="w-4 h-4 cursor-pointer">
 							</td>
 							<td
-								class="text-xs text-dark px-4"
+								class="text-xs text-dark px-3"
 							>
 								Apple
 							</td>
 							<td
-								class="text-xs text-dark px-4"
+								class="text-xs text-dark px-3"
 							>
 								Laptop
 							</td>
 							<td
-								class="text-xs text-dark px-4"
+								class="text-xs text-dark px-3"
 							>
 								N900,000
 							</td>
 							<td
-								class="text-xs text-dark px-4"
+								class="text-xs text-dark px-3"
 							>
 								Macbook Pro
 							</td>
 							<td
-								class="text-xs text-dark px-4"
+								class="text-xs text-dark px-3"
 							>
 								N900,000
 							</td>
 							<td
-								class="text-xs text-dark px-4"
+								class="text-xs text-dark px-3"
 							>
 								N20,000
 							</td>
 							<td
-								class="text-xs text-dark px-4 text-right"
+								class="text-xs text-dark px-3 text-right"
 							>
 								<!-- <div class="w-full h-7 px-2 rounded-full bg-green-100 flex items-center justify-center font-medium text-green-700">
 									Receive Payment
 								</div> -->
-								<select class="p-2 rounded-full outline-none bg-primary_light font-medium text-primary">
-									<option>Options</option>
-								</select>
+								<div class="w-[6.6rem] m-auto p-2 rounded-full outline-none bg-primary_light font-medium text-primary">
+									<CustomSelect
+										custom-class="gap-1 text-xs"
+										icon-width="w-5"
+										select-type="dropdown"
+										:label="'Make active'"
+										:hidden="isOpened"
+										:options="['Edit', 'Run report', 'Duplicate']"
+										@blur="isOpened = false"
+										@click="isOpened = !isOpened"
+									/>
+								</div>
 							</td>
 						</tr>
 					</tbody>
@@ -208,6 +218,9 @@
 
 <script setup>
 import { useModal } from '~~/src/composables/use-modal'
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const isOpened = ref(false)
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const uploadCsv = () => {
