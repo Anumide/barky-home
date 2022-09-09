@@ -40,8 +40,8 @@
 		tabindex="0"
 		:class="customClass"
 		class="flex gap-2 items-start font-medium cursor-pointer relative"
-		@click="$emit('click')"
-		@blur="$emit('blur')"
+		@click="hidden = !hidden"
+		@blur="hidden = false"
 	>
 		<span>{{ label }}</span>
 		<icon
@@ -52,13 +52,46 @@
 			<!-- dropdown options -->
 			<div
 				v-if="hidden"
-				class="absolute top-6 right-0 z-20 drop-shadow bg-white rounded shadow-xl text-black w-36"
+				class="absolute top-6 right-0 z-20 drop-shadow bg-white rounded shadow-xl text-black w-32"
 			>
 				<ul
 					class="divide-y divide-slate-50"
 				>
-					<li v-for="option in options" :key="option" class="py-2 pl-3 text-sm cursor-pointer hover:bg-neutral-200 transition" @click="$emit('itemsClick', option)">
-						{{ option }}
+					<li v-for="option in options" :key="option.name" class="py-2 pl-3 text-sm cursor-pointer hover:bg-neutral-200 transition text-left" @click="$emit('itemsClick', option)">
+						{{ option.name }}
+					</li>
+				</ul>
+			</div>
+		</TransitionFade>
+	</div>
+
+	<!-- create button with dropdown -->
+	<div
+		v-else-if="selectType === 'btnDropdown'"
+		class="w-48 bg-primary flex items-center divide-x-reverse divide-solid divide-white rounded-full text-white cursor-pointer relative"
+	>
+		<NuxtLink :to="link" class="bg-primary hover:ring-primary hover:ring-2 hover:ring-offset-2 transition text-sm border-r border-white/80 border-solid rounded-l-full pl-6 pr-3 py-3 leading-6 font-medium">
+			{{ label }}
+		</NuxtLink>
+		<div
+			tabindex="0"
+			class="flex justify-center items-center bg-primary rounded-r-full pl-5 p-4"
+			@click="hidden = !hidden"
+			@blur="hidden = false"
+		>
+			<icon
+				name="arrowDown"
+				class="w-4"
+			/>
+		</div>
+
+		<TransitionFade>
+			<div v-if="hidden" class="absolute top-[3.3rem] right-3 z-10 bg-white rounded drop-shadow-lg shadow-xl text-black w-44">
+				<ul class="divide-y divide-boder_color">
+					<li v-for="option in options" :key="option.name" class="py-2 pl-3 cursor-pointer hover:bg-neutral-200 transition" @click="$emit('itemsClick', option)">
+						<NuxtLink :to="option.link">
+							{{ option.name }}
+						</NuxtLink>
 					</li>
 				</ul>
 			</div>
@@ -105,8 +138,16 @@ defineProps({
 	type: String,
 	required: true,
 	default: 'default'
-  }
+},
+link: {
+	type: String,
+	required: true,
+	default: ''
+}
 })
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const hidden = ref(false)
 
 defineEmits(['update:modelValue', 'click', 'blur', 'itemsClick'])
 </script>

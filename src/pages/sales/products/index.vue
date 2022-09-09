@@ -4,7 +4,13 @@
 		<div class="flex items-center justify-between mb-16">
 			<span class="text-2xl leading-6 text-dark font-normal">Products</span>
 			<!-- create button with dropdown -->
-			<div
+			<CustomSelect
+				select-type="btnDropdown"
+				:label="'Create Product'"
+				:options="periods"
+				link="/sales/products/new-product"
+			/>
+			<!-- <div
 
 				class="w-48 bg-primary flex items-center divide-x-reverse divide-solid divide-white rounded-full text-white cursor-pointer relative"
 			>
@@ -34,7 +40,8 @@
 						</ul>
 					</div>
 				</TransitionFade>
-			</div> <!-- end of create button with dropdown -->
+			</div> -->
+			<!-- end of create button with dropdown -->
 		</div>
 		<!-- products history  -->
 		<div class="w-full px-[60px] py-[40px] relative rounded-md bottom-0 left-0 right-0 grow bg-white shadow-xl drop-shadow-md">
@@ -139,7 +146,7 @@
 					</thead>
 					<tbody class="">
 						<tr
-							v-for="staff in 4"
+							v-for="(staff, index) in 4"
 							:key="staff"
 							class=" border-b border-black/20 h-[68px] cursor-pointer hover:bg-slate-100 transition-colors duration-200"
 						>
@@ -181,19 +188,16 @@
 							<td
 								class="text-xs text-dark px-3 text-right"
 							>
-								<!-- <div class="w-full h-7 px-2 rounded-full bg-green-100 flex items-center justify-center font-medium text-green-700">
-									Receive Payment
-								</div> -->
-								<div class="w-[6.6rem] m-auto p-2 rounded-full outline-none bg-primary_light font-medium text-primary">
+								<div
+									class="w-[6.6rem] m-auto p-2 rounded-full outline-none bg-primary_light font-medium text-primary"
+									@click="isShow(index)"
+								>
 									<CustomSelect
 										custom-class="gap-1 text-xs"
 										icon-width="w-5"
 										select-type="dropdown"
 										:label="'Make active'"
-										:hidden="isOpened"
-										:options="['Edit', 'Run report', 'Duplicate']"
-										@blur="isOpened = false"
-										@click="isOpened = !isOpened"
+										:options="[{name: 'Edit'}, {name: 'Run report'}, {name: 'Duplicate'}]"
 									/>
 								</div>
 							</td>
@@ -207,9 +211,7 @@
 		<TransitionFade>
 			<Modal v-if="modalIsOpen" @closeModal="closeModal">
 				<TransitionFade>
-					<UploadCsv @close-modal="closeModal">
-						/>
-					</uploadcsv>
+					<UploadCsv @close-modal="closeModal" />
 				</TransitionFade>
 			</Modal>
 		</TransitionFade>
@@ -233,14 +235,13 @@ const data = ref(false)
 const { modalIsOpen, openModal, closeModal } = useModal()
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const isPeriod = ref(false)
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const periods = [
-	{ name: 'Import CSV', periodLink: '' },
-	{ name: 'Add Stock', periodLink: 'add-stock' },
-	{ name: 'Stock Transfer', periodLink: 'stock-transfer' },
-	{ name: 'Stock Adjustment', periodLink: 'stock-adjustment' }
+	{ name: 'Import CSV', link: '' },
+	{ name: 'Add Stock', link: '/sales/products/' + 'add-stock' },
+	{ name: 'Stock Transfer', link: '/sales/products/' + 'stock-transfer' },
+	{ name: 'Stock Adjustment', link: '/sales/products/' + 'stock-adjustment' }
 ]
+
 </script>
 
 <style lang="scss" scoped>
