@@ -2,7 +2,7 @@
 	<button
 		v-if="theme === 'submit'"
 		v-bind="$attrs"
-		class="w-full cursor-pointer flex items-center justify-center gap-x-1.5 rounded-md bg-primary py-[13px] text-base text-white"
+		class="w-full whitespace-nowrap cursor-pointer flex items-center justify-center gap-x-1.5 rounded-md bg-primary py-[13px] text-base text-white"
 		:disabled="disabled"
 		@click.prevent="$emit('click')"
 	>
@@ -15,7 +15,7 @@
 		v-else-if="theme == 'link'"
 		v-bind="$attrs"
 		:to="linkTo"
-		class="inline-block text-center cursor-pointer rounded-full bg-primary py-[18px] w-full text-base text-white"
+		class="inline-block whitespace-nowrap text-center cursor-pointer rounded-full bg-primary py-[18px] w-full text-base text-white"
 	>
 		{{ label }}
 	</NuxtLink>
@@ -25,14 +25,14 @@
 		v-else-if="theme == 'outline_link'"
 		v-bind="$attrs"
 		:to="linkTo"
-		class="w-full cursor-pointer text-center rounded-md ring-primary text-dark ring-1  py-[13px] text-base"
+		class="w-full whitespace-nowrap cursor-pointer text-center rounded-md ring-primary text-dark ring-1 py-[13px] text-base"
 	>
 		{{ label }}
 	</NuxtLink>
 	<button
 		v-else-if="theme === 'outline'"
 		v-bind="$attrs"
-		class="w-full cursor-pointer flex items-center justify-center gap-x-1.5 rounded-md ring-primary text-dark ring-1  py-[13px] text-base"
+		class="w-full whitespace-nowrap cursor-pointer flex items-center justify-center gap-x-1.5 rounded-md ring-primary text-dark ring-1  py-[13px] text-base"
 		:disabled="disabled"
 		@click.prevent="$emit('click')"
 	>

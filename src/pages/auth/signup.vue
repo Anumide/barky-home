@@ -37,14 +37,14 @@
 							title="Email Address"
 							type="email"
 							placeholder="E.g: hello@gmail.com"
-							error-message="this is a required field"
+							error-message=""
 						/>
 						<!-- phone number -->
 						<CustomInput
 							title="Phone"
 							type="text"
 							placeholder="E.g +2348123456789"
-							error-message="this is a required field"
+							error-message=""
 						/>
 						<!-- password -->
 						<CustomInput
@@ -61,7 +61,7 @@
 							title="Confirm password"
 							type="password"
 							placeholder="Password (min of 8 characters)"
-							error-message="this is a required field"
+							error-message=""
 						>
 							<template #icon>
 								<icon name="eye" class="w-[19px]" @click="hide" />
@@ -75,7 +75,7 @@
 								<NuxtLink class="cursor-pointer text-primary_link underline">Terms and Conditions</NuxtLink></span>
 						</div>
 						<!-- submit button -->
-						<CustomButton label="Create Account" theme="submit" @click="test" />
+						<CustomButton label="Create Account" theme="submit" @click="$router.push('/auth/signup-success')" />
 					</div>
 				</form>
 			</section>

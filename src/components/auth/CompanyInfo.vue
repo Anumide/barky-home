@@ -25,35 +25,35 @@
 				title="Email Address"
 				type="email"
 				placeholder="E.g: hello@gmail.com"
-				error-message="this is a required field"
+				error-message=""
 			/>
 			<!-- phone number -->
 			<CustomInput
 				title="Phone"
 				type="text"
 				placeholder="E.g +2348123456789"
-				error-message="this is a required field"
+				error-message=""
 			/>
 			<!-- website -->
 			<CustomInput
 				title="Website"
 				type="text"
 				placeholder=""
-				error-message="this is a required field"
+				error-message=""
 			/>
 			<!-- Address -->
 			<CustomInput
 				title="Address"
 				type="text"
 				placeholder=""
-				error-message="this is a required field"
+				error-message=""
 			/>
 			<!-- Contact Name -->
 			<CustomInput
 				title="Contact Name"
 				type="text"
 				placeholder=""
-				error-message="this is a required field"
+				error-message=""
 			/>
 			<!-- tax number and currencies-->
 			<div class="grid w-full md:grid-cols-2 gap-y-[30px] gap-x-[15px]">
@@ -61,7 +61,7 @@
 					title="Tax Identification Number"
 					type="text"
 					placeholder=""
-					error-message="this is a required field"
+					error-message=""
 				/>
 				<CustomSelect label="Currencies" default-option="Select Currency" :options="[1, 2, 3]" />
 			</div>
@@ -71,13 +71,13 @@
 					title="Financial Year Start"
 					type="text"
 					placeholder=""
-					error-message="this is a required field"
+					error-message=""
 				/>
 				<CustomInput
 					title="Financial Year End"
 					type="text"
 					placeholder=""
-					error-message="this is a required field"
+					error-message=""
 				/>
 			</div>
 			<!-- submit button -->
