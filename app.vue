@@ -15,7 +15,9 @@
 	border-radius: 10px;
 }
 
-*{
+/* *{
 	font-family: 'Clash Grotesk', sans-serif;
-}
+	scroll-behavior: smooth;
+} */
+
 </style>

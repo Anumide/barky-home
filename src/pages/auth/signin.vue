@@ -36,7 +36,7 @@
 							</template>
 						</CustomInput>
 						<!-- submit button -->
-						<CustomButton label="Sign in" theme="submit" @click="test" />
+						<CustomButton label="Sign in" theme="submit" @click="$router.push('/auth/forgot-password')" />
 						<p class="text-base text-center w-full text-dark">
 							Forgot your password?
 							<NuxtLink

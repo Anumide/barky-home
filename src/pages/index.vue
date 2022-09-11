@@ -11,13 +11,15 @@
 				<icon name="invoice" class="w-5 text-primary" />
 			</template>
 		</custom-button>
+
+		<div class="grid grid-cols-3 pl-24 pr-8 pt-8">
+			Home page
+		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-	layout: 'default'
-})
+
 </script>
 
 <style scoped></style>
