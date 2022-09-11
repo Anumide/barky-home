@@ -44,7 +44,7 @@
 			<div class="flex items-center justify-between mb-4 w-full">
 				<CustomInput placeholder="Search Customers" class="w-full max-w-[330px] h-10 placeholder:text-xs text-sm bg-dashboard_background" />
 				<div class="flex items-center gap-x-4">
-					<CustomButton theme="outline" label="Print" class="text-primary text-xs rounded-full px-2 py-1.5" @click="uploadCsv" >
+					<CustomButton theme="outline" label="Print" class="text-primary text-xs rounded-full px-2 py-1.5" @click="uploadCsv">
 						<template #icon-left>
 							<icon name="printer" fill="none" class="w-4 h-4" />
 						</template>

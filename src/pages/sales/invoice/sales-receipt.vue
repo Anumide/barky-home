@@ -166,7 +166,7 @@
 			</div>
 			<!-- subtotal ends here -->
 
-            <!-- discount table -->
+			<!-- discount table -->
 			<div class="border border-dark_gray w-full px-6 py-5 rounded-md mb-24 bg-white shadow-md">
 				<table class="w-full">
 					<tbody class="">

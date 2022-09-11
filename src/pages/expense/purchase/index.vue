@@ -164,37 +164,37 @@
 							<td
 								class="text-xs text-dark px-4"
 							>
-							July 7, 2022
+								July 7, 2022
 							</td>
 							<td
 								class="text-xs text-dark px-4"
 							>
-							334651
+								334651
 							</td>
 							<td
 								class="text-xs text-dark px-4"
 							>
-							Femi Dozie
+								Femi Dozie
 							</td>
 							<td
 								class="text-xs text-dark px-4"
 							>
-							N300,000
+								N300,000
 							</td>
 							<td
 								class="text-xs text-dark px-4"
 							>
-							N3,000
+								N3,000
 							</td>
 							<td
 								class="text-xs text-dark px-4"
 							>
-							N5,000
+								N5,000
 							</td>
 							<td
 								class="text-xs text-dark pl-4 text-right"
 							>
-							N450,000
+								N450,000
 							</td>
 						</tr>
 					</tbody>

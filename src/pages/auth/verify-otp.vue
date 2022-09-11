@@ -37,7 +37,9 @@
 						<!-- submit button -->
 						<CustomButton label="Verify OTP" theme="submit" @click="$router.push('/auth/signin')" />
 						<div class="text-sm font-medium text-primary text-center">
-							<NuxtLink to="/auth/signin">Return to Login</NuxtLink>
+							<NuxtLink to="/auth/signin">
+								Return to Login
+							</NuxtLink>
 						</div>
 					</div>
 				</form>
