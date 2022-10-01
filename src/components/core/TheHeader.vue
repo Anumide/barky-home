@@ -33,13 +33,13 @@
 		</div>
 		<!-- profile -->
 		<div class="md:hidden">
-			<div v-if="!isLogin">
+			<div v-if="isLogin">
 				<NuxtLink to="" class="links text-blue-600">
 					Sign In
 				</NuxtLink>
 			</div>
-			<div v-else>
-				profile
+			<div v-else class="bg-pink-200 text-pink-500 flex justify-center items-center text-xs rounded-full w-8 h-8">
+				BA
 			</div>
 		</div>
 		<div class="hidden md:block grow">
@@ -60,9 +60,14 @@
 					</NuxtLink>
 				</li>
 				<li>
-					<NuxtLink to="" class="links text-blue-600">
-						Sign In
-					</NuxtLink>
+					<div v-if="isLogin">
+						<NuxtLink to="" class="links text-blue-600">
+							Sign In
+						</NuxtLink>
+					</div>
+					<div v-else class="bg-pink-200 text-pink-500 flex justify-center items-center text-xs rounded-full w-8 h-8">
+						BA
+					</div>
 				</li>
 			</ul>
 		</div>
