@@ -7,9 +7,9 @@
 @tailwind utilities;
 
 @layer components {
-	.container {
-		@apply pl-[100px] pr-[100px] mx-auto pt-[45px] max-w-[1728px]
-	}
+    .container{
+        @apply max-w-7xl mx-auto;
+    }
 }
 
 

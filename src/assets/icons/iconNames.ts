@@ -3,5 +3,5 @@
 /* eslint-disable */
 
 export enum IconNames {
-  
+  'hamburger' = 'hamburger'
 }
