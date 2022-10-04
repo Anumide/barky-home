@@ -1,7 +1,7 @@
 <template>
-	<div class="flex justify-between items-center p-2 bg-transparent container">
+	<div class="flex justify-between items-center p-2 bg-transparent container sticky">
 		<!-- menu list  -->
-		<div class="md:hidden w-8">
+		<div class="md:hidden w-7">
 			<img src="@/assets/icons/source/hamburger.svg" alt="" class="w-full h-full">
 		</div>
 		<div class="hidden md:block grow">
@@ -33,7 +33,7 @@
 		</div>
 		<!-- profile -->
 		<div class="md:hidden">
-			<div v-if="isLogin">
+			<div v-if="!isLogin">
 				<NuxtLink to="" class="links text-blue-600">
 					Sign In
 				</NuxtLink>
@@ -60,7 +60,7 @@
 					</NuxtLink>
 				</li>
 				<li>
-					<div v-if="isLogin">
+					<div v-if="!isLogin">
 						<NuxtLink to="" class="links text-blue-600">
 							Sign In
 						</NuxtLink>
