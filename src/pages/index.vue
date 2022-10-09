@@ -9,6 +9,54 @@
 				</span>
 			</form>
 		</header>
+		<main class="my-8 mx-auto lg:max-w-[90%] mt-8 mb-20">
+			<div class="flex flex-col md:flex-row gap-8 md:gap-0 justify-around">
+				<DashboardCategory
+					category-type="Buy a home"
+					category-text="houses for sale, for sale by owner, for sale by agent, new construction, old constructed, all homes"
+					image-src="buyhome"
+					text="Browse homes"
+					text-class="md:w-full w-[60%]"
+				/>
+				<DashboardCategory
+					category-type="Rent homes"
+					category-text="new constructions, park out, halls, hostels, offices, trucks, cars, all"
+					image-src="renthome"
+					text="Find rentals"
+					text-class="w-[60%] md:w-3/4"
+				/>
+				<DashboardCategory
+					category-type="Shortlets"
+					category-text="party, stay, filming, beach house, all"
+					image-src="shortlet"
+					text="Find shortlets"
+					text-class="w-[60%] md:w-3/4"
+				/>
+			</div>
+			<div class="flex flex-col md:flex-row gap-8 md:gap-0 justify-around mt-4 md:mt-20">
+				<DashboardCategory
+					category-type="Lands"
+					category-text="lease (farming, company, shops, store, garage) buy, all"
+					image-src="land"
+					text="Browse Lands"
+					text-class="w-[60%] md:w-3/4"
+				/>
+				<DashboardCategory
+					category-type="Agent finder"
+					category-text="real estate agents, property manager/mandates, home inspectors, house builders, developers, all"
+					image-src="agentfinder"
+					text="Find agents"
+					text-class="md:w-full w-[60%]"
+				/>
+				<DashboardCategory
+					category-type="Invest with us"
+					category-text="Partner with us and earn high ROI"
+					image-src="invest"
+					text="Invest"
+					text-class="w-[60%] md:w-3/4"
+				/>
+			</div>
+		</main>
 	</div>
 </template>
 

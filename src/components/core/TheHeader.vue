@@ -1,5 +1,5 @@
 <template>
-	<div class="flex justify-between items-center p-2 bg-transparent container sticky">
+	<div class="flex justify-between items-center p-2 md:px-4 bg-transparent container sticky top-0 backdrop-blur text-red-50">
 		<!-- menu list  -->
 		<div class="md:hidden w-7">
 			<img src="@/assets/icons/source/hamburger.svg" alt="" class="w-full h-full">
@@ -80,6 +80,6 @@
 
 <style scoped>
     .links{
-        @apply hover:underline text-sm lg:text-base;
+        @apply hover:underline text-sm lg:text-base cursor-pointer;
     }
 </style>

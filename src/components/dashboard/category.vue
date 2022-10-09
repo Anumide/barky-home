@@ -1,11 +1,15 @@
 <template>
-	<div>
-		<div>
-			<img src="" alt="">
+	<div class="flex flex-col items-center gap-2 md:rounded-lg md:shadow-md md:w-[27%] p-4 md:bg-cover_background md:hover:scale-105">
+		<div class="w-1/2">
+			<img :src="imgUrl(imageSrc)" alt="" class="w-full h-full md:h-40 md:object-contain">
 		</div>
-		<h1>{{ categoryType }}</h1>
-		<p>{{ categoryText }}</p>
-		<CustomButton text="" />
+		<h1 class="text-xl font-medium">
+			{{ categoryType }}
+		</h1>
+		<p class="text-sm text-center" :class="textClass">
+			{{ categoryText }}
+		</p>
+		<CustomButton :text="text" class="my-2 px-2 py-1 font-medium text-primary hover:text-white hover:bg-primary" />
 	</div>
 </template>
 
@@ -18,6 +22,23 @@ defineProps({
     categoryText: {
         type: String,
         required: true
+    },
+    imageSrc: {
+        type: String,
+        required: true
+    },
+    text: {
+        type: String,
+        required: true
+    },
+    textClass: {
+        type: String,
+        required: true,
+        default: ''
     }
 })
+
+const imgUrl = (imageSrc) => {
+    return new URL(`/src/assets/images/${imageSrc}.png`, import.meta.url).href
+  }
 </script>
