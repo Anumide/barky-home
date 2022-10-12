@@ -18,7 +18,7 @@
 *{
 	font-family: 'Inter', sans-serif;
 	scroll-behavior: smooth;
-	@apply transition-all;
+	@apply transition-all duration-300;
 }
 
 </style>

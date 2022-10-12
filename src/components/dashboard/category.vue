@@ -1,12 +1,12 @@
 <template>
-	<div class="flex flex-col items-center gap-2 md:rounded-lg md:shadow-md md:w-[27%] p-4 md:bg-cover_background md:hover:scale-105">
-		<div class="w-1/2">
-			<img :src="imgUrl(imageSrc)" alt="" class="w-full h-full md:h-40 md:object-contain">
+	<div class="flex flex-col items-center justify-end gap-2 md:rounded-lg md:shadow-md md:w-[29%] lg:w-[27%] p-4 md:bg-cover_background md:hover:scale-[1.03]">
+		<div class="w-1/2 md:w-[11rem]" :class="imageWidth">
+			<img :src="imgUrl(imageSrc)" alt="" class="w-full">
 		</div>
 		<h1 class="text-xl font-medium">
 			{{ categoryType }}
 		</h1>
-		<p class="text-sm text-center" :class="textClass">
+		<p class="text-xs text-center" :class="textClass">
 			{{ categoryText }}
 		</p>
 		<CustomButton :text="text" class="my-2 px-2 py-1 font-medium text-primary hover:text-white hover:bg-primary" />
@@ -26,6 +26,11 @@ defineProps({
     imageSrc: {
         type: String,
         required: true
+    },
+    imageWidth: {
+        type: String,
+        required: false,
+        default: ''
     },
     text: {
         type: String,

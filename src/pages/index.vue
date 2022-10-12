@@ -22,6 +22,7 @@
 					category-type="Rent homes"
 					category-text="new constructions, park out, halls, hostels, offices, trucks, cars, all"
 					image-src="renthome"
+					image-width="md:w-[15rem]"
 					text="Find rentals"
 					text-class="w-[60%] md:w-3/4"
 				/>
@@ -29,6 +30,7 @@
 					category-type="Shortlets"
 					category-text="party, stay, filming, beach house, all"
 					image-src="shortlet"
+					image-width="md:w-[12rem]"
 					text="Find shortlets"
 					text-class="w-[60%] md:w-3/4"
 				/>
@@ -38,6 +40,7 @@
 					category-type="Lands"
 					category-text="lease (farming, company, shops, store, garage) buy, all"
 					image-src="land"
+					image-width="md:w-[12rem]"
 					text="Browse Lands"
 					text-class="w-[60%] md:w-3/4"
 				/>
@@ -52,6 +55,7 @@
 					category-type="Invest with us"
 					category-text="Partner with us and earn high ROI"
 					image-src="invest"
+					image-width="md:w-[12rem]"
 					text="Invest"
 					text-class="w-[60%] md:w-3/4"
 				/>
@@ -65,7 +69,7 @@ import { useIntersectionObserver } from '@vueuse/core'
 
 const header = ref(null)
 const isVisible = ref(true)
-const rootMargin = '-50px 0px 0px 0px'
+const rootMargin = '-100px 0px 0px 0px'
 
 useIntersectionObserver(
 	header,
@@ -81,13 +85,13 @@ useIntersectionObserver(
 	.header{
 		background: center / cover no-repeat url('@/assets/images/header-mobile-bg.png') ;
 		height: 45vh;
-		padding: 5rem;
+		padding-top: 3rem;
 	}
 	@media screen and (min-width: 768px){
 		.header{
 			background: center / cover no-repeat url('@/assets/images/header-bg.png');
 			height: 40vh;
-			padding: 3rem;
+			padding: 5rem;
 		}
 	}
 </style>
