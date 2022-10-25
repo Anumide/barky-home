@@ -1,5 +1,5 @@
 <template>
-	<nav class="w-full fixed backdrop-blur top-0 left-0 text-red-50 z-50 transition-all">
+	<nav class="w-full fixed backdrop-blur top-0 left-0 text-red-50 z-50 transition-all duration-75">
 		<div class="flex justify-between items-center p-2 md:px-4 bg-transparent container">
 			<!-- menu list  -->
 			<div class="md:hidden w-7">
@@ -8,22 +8,22 @@
 			<div class="hidden md:block grow">
 				<ul class="flex justify-between items-center">
 					<li>
-						<NuxtLink to="" class="links">
+						<NuxtLink to="/src/pages/buy/index.vue" class="links">
 							Buy
 						</NuxtLink>
 					</li>
 					<li>
-						<NuxtLink to="" class="links">
+						<NuxtLink to="/src/pages/rent/index.vue" class="links">
 							Rent
 						</NuxtLink>
 					</li>
 					<li>
-						<NuxtLink to="" class="links">
+						<NuxtLink to="/src/pages/shortlets/index.vue" class="links">
 							Shortlets
 						</NuxtLink>
 					</li>
 					<li>
-						<NuxtLink to="" class="links">
+						<NuxtLink to="/src/pages/lands/index.vue" class="links">
 							Lands
 						</NuxtLink>
 					</li>
@@ -46,12 +46,12 @@
 			<div class="hidden md:block grow">
 				<ul class="flex justify-between items-center">
 					<li>
-						<NuxtLink to="" class="links">
+						<NuxtLink to="/src/pages/agent-finder/index.vue" class="links">
 							Agent finder
 						</NuxtLink>
 					</li>
 					<li>
-						<NuxtLink to="" class="links">
+						<NuxtLink to="/src/pages/ads/index.vue" class="links">
 							Advert
 						</NuxtLink>
 					</li>
