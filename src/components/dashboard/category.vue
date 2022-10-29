@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col items-center justify-end gap-2 md:rounded-lg md:shadow-md md:w-[29%] lg:w-[27%] p-4 md:bg-cover_background md:hover:scale-[1.03]">
+	<div class="flex flex-col items-center justify-end gap-2 md:rounded-lg md:shadow-md md:w-[29%] lg:w-[27%] p-4 md:bg-cover_background md:hover:scale-[1.02] duration-[350ms]">
 		<div class="w-1/2 md:w-[11rem]" :class="imageWidth">
 			<img :src="imgUrl(imageSrc)" alt="" class="w-full">
 		</div>

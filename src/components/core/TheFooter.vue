@@ -68,6 +68,6 @@
 
 <style scoped>
     .links{
-        @apply hover:underline text-sm lg:text-base;
+        @apply hover:underline text-sm lg:text-base cursor-pointer;
     }
 </style>
