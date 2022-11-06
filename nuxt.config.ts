@@ -13,7 +13,11 @@ export default defineNuxtConfig({
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 			{ name: 'format-detection', content: 'telephone=no' }
 		],
-		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
+		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+			   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+			   { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+			   { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap' }
+		]
 	},
 	alias: {
 		'@': './src'

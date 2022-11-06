@@ -1,7 +1,7 @@
 <template>
 	<div>
-		This is the default layout
 		<slot />
+		<TheFooter />
 	</div>
 </template>
 

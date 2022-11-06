@@ -40,6 +40,7 @@
 		"vite-plugin-eslint": "^1.7.0"
 	},
 	"dependencies": {
+		"@vueuse/core": "^9.3.0",
 		"gsap": "^3.11.1"
 	}
 }
