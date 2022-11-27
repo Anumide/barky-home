@@ -1,6 +1,6 @@
 <template>
 	<div class="flex flex-col justify-between h-screen">
-		<div class="my-4">
+		<div class="mt-4 mb-8">
 			<p class="max-w-lg mx-auto mb-4 font-semibold text-xl text-center">
 				Welcome to Barkyhomes
 			</p>

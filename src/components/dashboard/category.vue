@@ -9,7 +9,7 @@
 		<p class="text-xs text-center" :class="textClass">
 			{{ categoryText }}
 		</p>
-		<CustomButton :text="text" class="my-2 px-2 py-1 font-medium text-primary hover:text-white hover:bg-primary" />
+		<CustomButton :text="text" class="my-2 px-2 py-1 font-medium border-primary text-primary hover:text-white hover:bg-primary" />
 	</div>
 </template>
 

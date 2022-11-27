@@ -1,5 +1,5 @@
 <template>
-	<button class="border-solid border-primary border rounded font-medium text-xs" @click="$emit('click')">
+	<button class="border-solid border rounded font-medium text-xs" @click.prevent="$emit('click')">
 		{{ text }}
 	</button>
 </template>
