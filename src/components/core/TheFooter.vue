@@ -1,6 +1,6 @@
 <template>
-	<footer class="container">
-		<div class="flex justify-between p-4 md:w-11/12 mx-auto">
+	<footer class="container my-10">
+		<div class="flex justify-between p-4 md:w-11/12 mx-auto my-8">
 			<div class="md:grow">
 				<ul class="flex flex-col md:flex-row gap-4 md:justify-around">
 					<li>
@@ -40,7 +40,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="flex justify-between w-48 md:w-1/3 mx-auto my-6">
+		<div class="flex justify-between w-48 md:w-1/3 mx-auto my-10">
 			<!-- <icon name="facebook" class="w-4" />
 			<icon name="instagram" class="w-4" />
 			<icon name="twitter" class="w-4" />

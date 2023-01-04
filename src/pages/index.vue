@@ -9,7 +9,7 @@
 				</span>
 			</form>
 		</header>
-		<main class="my-8 mx-auto lg:max-w-[90%] mt-8 mb-20">
+		<main class="my-8 mx-auto xl:max-w-[85%] lg:max-w-[90%] mt-8 mb-20">
 			<div class="flex flex-col md:flex-row gap-8 md:gap-0 justify-around">
 				<DashboardCategory
 					category-type="Buy a home"
@@ -17,14 +17,16 @@
 					image-src="buyhome"
 					text="Browse homes"
 					text-class="md:w-full w-[60%]"
+					@click="$router.push('/buy')"
 				/>
 				<DashboardCategory
 					category-type="Rent homes"
 					category-text="new constructions, park out, halls, hostels, offices, trucks, cars, all"
 					image-src="renthome"
-					image-width="md:w-[15rem]"
+					image-width="md:w-[13rem]"
 					text="Find rentals"
 					text-class="w-[60%] md:w-3/4"
+					@click="$router.push('/rent')"
 				/>
 				<DashboardCategory
 					category-type="Shortlets"
@@ -33,6 +35,7 @@
 					image-width="md:w-[12rem]"
 					text="Find shortlets"
 					text-class="w-[60%] md:w-3/4"
+					@click="$router.push('/shortlets')"
 				/>
 			</div>
 			<div class="flex flex-col md:flex-row gap-8 md:gap-0 justify-around mt-4 md:mt-20">
@@ -43,6 +46,7 @@
 					image-width="md:w-[12rem]"
 					text="Browse Lands"
 					text-class="w-[60%] md:w-3/4"
+					@click="$router.push('/lands')"
 				/>
 				<DashboardCategory
 					category-type="Agent finder"
@@ -50,6 +54,7 @@
 					image-src="agentfinder"
 					text="Find agents"
 					text-class="md:w-full w-[60%]"
+					@click="$router.push('/agent-finder')"
 				/>
 				<DashboardCategory
 					category-type="Invest with us"
@@ -69,7 +74,7 @@ import { useIntersectionObserver } from '@vueuse/core'
 
 const header = ref(null)
 const isVisible = ref(true)
-const rootMargin = '-100px 0px 0px 0px'
+const rootMargin = '-150px 0px 0px 0px'
 
 useIntersectionObserver(
 	header,
@@ -84,13 +89,12 @@ useIntersectionObserver(
 <style scoped>
 	.header{
 		background: center / cover no-repeat url('@/assets/images/header-mobile-bg.png') ;
-		height: 45vh;
+		height: 50vh;
 		padding-top: 3rem;
 	}
 	@media screen and (min-width: 768px){
 		.header{
 			background: center / cover no-repeat url('@/assets/images/header-bg.png');
-			height: 40vh;
 			padding: 5rem;
 		}
 	}

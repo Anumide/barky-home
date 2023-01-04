@@ -8,22 +8,22 @@
 			<div class="hidden md:block grow">
 				<ul class="flex justify-between items-center">
 					<li>
-						<NuxtLink to="/src/pages/buy/index.vue" class="links">
+						<NuxtLink to="/buy" class="links">
 							Buy
 						</NuxtLink>
 					</li>
 					<li>
-						<NuxtLink to="/src/pages/rent/index.vue" class="links">
+						<NuxtLink to="/rent" class="links">
 							Rent
 						</NuxtLink>
 					</li>
 					<li>
-						<NuxtLink to="/src/pages/shortlets/index.vue" class="links">
+						<NuxtLink to="/shortlets" class="links">
 							Shortlets
 						</NuxtLink>
 					</li>
 					<li>
-						<NuxtLink to="/src/pages/lands/index.vue" class="links">
+						<NuxtLink to="/lands" class="links">
 							Lands
 						</NuxtLink>
 					</li>
@@ -35,7 +35,7 @@
 			<!-- profile -->
 			<div class="md:hidden">
 				<div v-if="!isLogin">
-					<NuxtLink to="" class="links text-blue-600">
+					<NuxtLink to="/sign-in" class="links text-blue-600">
 						Sign In
 					</NuxtLink>
 				</div>
@@ -46,12 +46,12 @@
 			<div class="hidden md:block grow">
 				<ul class="flex justify-between items-center">
 					<li>
-						<NuxtLink to="/src/pages/agent-finder/index.vue" class="links">
+						<NuxtLink to="/agent-finder" class="links">
 							Agent finder
 						</NuxtLink>
 					</li>
 					<li>
-						<NuxtLink to="/src/pages/ads/index.vue" class="links">
+						<NuxtLink to="/ads" class="links">
 							Advert
 						</NuxtLink>
 					</li>
@@ -62,7 +62,7 @@
 					</li>
 					<li>
 						<div v-if="!isLogin">
-							<NuxtLink to="" class="links text-blue-600">
+							<NuxtLink to="/sign-in" class="links text-blue-600">
 								Sign In
 							</NuxtLink>
 						</div>

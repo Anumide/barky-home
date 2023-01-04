@@ -41,6 +41,7 @@
 	},
 	"dependencies": {
 		"@vueuse/core": "^9.3.0",
-		"gsap": "^3.11.1"
+		"gsap": "^3.11.1",
+		"swiper": "^8.4.5"
 	}
 }
