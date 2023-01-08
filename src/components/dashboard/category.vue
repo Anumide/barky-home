@@ -43,7 +43,7 @@ defineProps({
     }
 })
 
-const imgUrl = (imageSrc) => {
+const imgUrl = (imageSrc: any) => {
     return new URL(`/src/assets/images/${imageSrc}.png`, import.meta.url).href
   }
 </script>

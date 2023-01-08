@@ -1,5 +1,4 @@
 import { fileURLToPath, URL } from 'node:url'
-import { defineNuxtConfig } from 'nuxt'
 import eslintPlugin from 'vite-plugin-eslint'
 
 export default defineNuxtConfig({
@@ -22,8 +21,8 @@ export default defineNuxtConfig({
 	alias: {
 		'@': './src'
 	},
-
-	css: ['/src/assets/css/main.css'],
+	modules: ['@nuxtjs/tailwindcss'],
+	css: ['/src/assets/css/tailwind.css'],
 	components: [
 		'@/components',
 		{ path: '@/components/core', extensions: ['vue'] }
