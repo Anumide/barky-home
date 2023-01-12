@@ -1,16 +1,19 @@
 <template>
-	<swiper
-		class="w-full h-full"
-		loop
-		:slides-per-view="1"
-		:space-between="50"
-		navigation
-		:pagination="{ clickable: true }"
-	>
-		<swiper-slide>Slide 1</swiper-slide>
-		<swiper-slide>Slide 2</swiper-slide>
-		<swiper-slide>Slide 3</swiper-slide>
-	</swiper>
+	<div class="relative w-full h-full">
+		<swiper
+			class="w-full h-full"
+			loop
+			:slides-per-view="1"
+			:space-between="50"
+			navigation
+			:pagination="{ clickable: true }"
+		>
+			<swiper-slide v-for="image in images" :key="image">
+				<img :src="image" class="object-cover">
+			</swiper-slide>
+		</swiper>
+		<Icon name="uil:github" class="absolute top-2 right-2" />
+	</div>
 </template>
 <script setup lang="ts">
  import { Swiper, SwiperSlide } from 'swiper/vue'
@@ -21,4 +24,10 @@
 
  SwiperCore.use([Navigation, Pagination])
 
+const images = ref([
+	'https://picsum.photos/id/233/320/224',
+    'https://picsum.photos/id/236/320/224',
+    'https://picsum.photos/id/253/320/224',
+    'https://picsum.photos/id/231/320/224'
+])
 </script>
