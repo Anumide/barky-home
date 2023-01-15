@@ -1,5 +1,5 @@
 <template>
-	<footer class="container my-10">
+	<footer class="container mt-10 mb-2">
 		<div class="flex justify-between p-4 md:w-11/12 mx-auto my-8">
 			<div class="md:grow">
 				<ul class="flex flex-col md:flex-row gap-4 md:justify-around">
@@ -41,22 +41,10 @@
 			</div>
 		</div>
 		<div class="flex justify-between w-48 md:w-1/3 mx-auto my-10">
-			<!-- <icon name="facebook" class="w-4" />
-			<icon name="instagram" class="w-4" />
-			<icon name="twitter" class="w-4" />
-			<icon name="email" class="w-4" /> -->
-			<div class="w-3">
-				<img src="@/assets/icons/source/facebook.svg" alt="" class="w-full h-full">
-			</div>
-			<div class="w-5">
-				<img src="@/assets/icons/source/instagram.svg" alt="" class="w-full h-full">
-			</div>
-			<div class="w-6">
-				<img src="@/assets/icons/source/twitter.svg" alt="" class="w-full h-full">
-			</div>
-			<div class="w-6">
-				<img src="@/assets/icons/source/email.svg" alt="" class="w-full h-full">
-			</div>
+			<Icon name="ri:facebook-fill" size="30px" class="origin-bottom hover:translate-y-[-3px] hover:scale-110 cursor-pointer" />
+			<Icon name="ri:instagram-line" size="30px" class="origin-bottom hover:translate-y-[-3px] hover:scale-110 cursor-pointer" />
+			<Icon name="mdi:twitter" size="30px" class="origin-bottom hover:translate-y-[-3px] hover:scale-110 cursor-pointer" />
+			<Icon name="mdi:whatsapp" size="30px" class="origin-bottom hover:translate-y-[-3px] hover:scale-110 cursor-pointer" />
 		</div>
 		<div class="flex justify-between text-[11px] mx-auto w-48">
 			<span>&copy;2022</span>

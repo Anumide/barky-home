@@ -1,5 +1,5 @@
 <template>
-	<div class="relative w-full h-full">
+	<div class="relative w-full">
 		<swiper
 			class="w-full h-full"
 			loop
@@ -12,7 +12,7 @@
 				<img :src="image" class="object-cover">
 			</swiper-slide>
 		</swiper>
-		<Icon name="uil:github" class="absolute top-2 right-2" />
+		<Icon name="ic:round-favorite" size="35px" class="absolute top-4 text-white right-4 z-50 cursor-pointer drop-shadow" />
 	</div>
 </template>
 <script setup lang="ts">
@@ -24,10 +24,10 @@
 
  SwiperCore.use([Navigation, Pagination])
 
-const images = ref([
-	'https://picsum.photos/id/233/320/224',
-    'https://picsum.photos/id/236/320/224',
-    'https://picsum.photos/id/253/320/224',
-    'https://picsum.photos/id/231/320/224'
-])
+defineProps({
+	images: {
+		type: Array,
+		required: true
+	}
+})
 </script>

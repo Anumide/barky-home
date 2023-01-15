@@ -29,7 +29,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="md:mx-8 lg:mx-16 xl:mx-20">
+			<div class="md:mx-8 lg:mx-16 xl:mx-20 cursor-pointer" @click="$router.push('/')">
 				<img src="@/assets/images/barky-home-logo.png" alt="" class="xl:h-12">
 			</div>
 			<!-- profile -->
