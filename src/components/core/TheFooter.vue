@@ -41,7 +41,7 @@
 			</div>
 		</div>
 		<div class="flex justify-between w-48 md:w-1/3 mx-auto my-10">
-			<Icon name="ri:facebook-fill" size="30px" class="origin-bottom hover:translate-y-[-3px] hover:scale-110 cursor-pointer" />
+			<Icon name="ri:facebook-fill" size="30px" class="origin-bottom hover:translate-y-[-3px] hover:scale-110 cursor-pointer hover:drop-shadow" />
 			<Icon name="ri:instagram-line" size="30px" class="origin-bottom hover:translate-y-[-3px] hover:scale-110 cursor-pointer" />
 			<Icon name="mdi:twitter" size="30px" class="origin-bottom hover:translate-y-[-3px] hover:scale-110 cursor-pointer" />
 			<Icon name="mdi:whatsapp" size="30px" class="origin-bottom hover:translate-y-[-3px] hover:scale-110 cursor-pointer" />

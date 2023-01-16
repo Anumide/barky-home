@@ -2,8 +2,8 @@
 	<nav class="w-full fixed backdrop-blur top-0 left-0 text-red-50 z-50 transition-all duration-75">
 		<div class="flex justify-between items-center p-2 md:px-4 bg-transparent container">
 			<!-- menu list  -->
-			<div class="md:hidden w-7">
-				<img src="@/assets/icons/source/hamburger.svg" alt="" class="w-full h-full">
+			<div class="md:hidden">
+				<Icon name="pajamas:hamburger" size="23px" class="cursor-pointer text-black" @click="showModal = true" />
 			</div>
 			<div class="hidden md:block grow">
 				<ul class="flex justify-between items-center">
@@ -73,11 +73,15 @@
 				</ul>
 			</div>
 		</div>
+		<Teleport to="body">
+			<Modal :show="showModal" @close="showModal = false" />
+		</Teleport>
 	</nav>
 </template>
 
 <script setup lang="ts">
     const isLogin = ref(false)
+	const showModal = ref(false)
 </script>
 
 <style scoped>

@@ -12,7 +12,7 @@
 				<img :src="image" class="object-cover">
 			</swiper-slide>
 		</swiper>
-		<Icon name="ic:round-favorite" size="35px" class="absolute top-4 text-white right-4 z-50 cursor-pointer drop-shadow" />
+		<Icon name="ic:round-favorite" size="35px" class="absolute top-4 text-white right-4 z-10 cursor-pointer drop-shadow" />
 	</div>
 </template>
 <script setup lang="ts">
