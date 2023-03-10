@@ -17,6 +17,7 @@
 </template>
 <script setup lang="ts">
  import { Swiper, SwiperSlide } from 'swiper/vue'
+ import { PropType } from 'vue'
  import SwiperCore, { Navigation, Pagination } from 'swiper'
  import 'swiper/css'
  import 'swiper/css/navigation'
@@ -26,7 +27,7 @@
 
 defineProps({
 	images: {
-		type: Array,
+		type: Array as PropType<string[]>,
 		required: true
 	}
 })

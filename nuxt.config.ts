@@ -22,7 +22,7 @@ export default defineNuxtConfig({
 	alias: {
 		'@': './src'
 	},
-	modules: ['@nuxtjs/tailwindcss', 'nuxt-icon'],
+	modules: ['@nuxtjs/tailwindcss', 'nuxt-icon', '@pinia/nuxt'],
 	css: ['/src/assets/css/tailwind.css'],
 	components: [
 		'@/components',
